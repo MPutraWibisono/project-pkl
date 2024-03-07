@@ -13,34 +13,67 @@ tailwind.config = {
   },
 };
 
+// Ambil elemen tombol mobile dan menu navigasi
+// const mobileButton = document.querySelector(".lg\\:hidden");
+const mobileButton = document.querySelector(".mobile");
+const navigationMenu = document.querySelector(".navigation");
+
+// Tambahkan event listener untuk klik pada tombol mobile
+mobileButton.addEventListener("click", function () {
+  // Toggle nilai aria-expanded tombol mobile
+  const expanded =
+    mobileButton.getAttribute("aria-expanded") === "true" || false;
+  mobileButton.setAttribute("aria-expanded", !expanded);
+
+  // Toggle visibilitas menu navigasi
+  if (expanded) {
+    mobileButton.classList.remove("visible");
+    mobileButton.classList.remove("opacity-100");
+    navigationMenu.classList.remove("opacity-100");
+    navigationMenu.classList.remove("visible");
+    navigationMenu.classList.add("invisible");
+    navigationMenu.classList.add("opacity-0");
+    navigationMenu.setAttribute("aria-hidden", "true");
+  } else {
+    navigationMenu.classList.remove("opacity-0");
+    navigationMenu.classList.remove("invisible");
+    mobileButton.classList.add("visible");
+    mobileButton.classList.add("opacity-100");
+    navigationMenu.classList.add("opacity-100");
+    navigationMenu.classList.add("visible");
+    navigationMenu.setAttribute("aria-hidden", "false");
+  }
+});
+
 function startTime() {
   const today = new Date();
 
   let d = today.getDate();
   const weekday = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
+    "Minggu",
+    "Senin",
+    "Selasa",
+    "Rabu",
+    "Kamis",
+    "Jumat",
+    "Sabtu",
   ];
   let day = weekday[today.getDay()];
   const monthYear = [
-    "January",
-    "February",
-    "March",
+    "Januari",
+    "Februari",
+    "Maret",
     "April",
-    "May",
-    "June",
-    "July",
-    "August",
+    "Mei",
+    "Juni",
+    "Juli",
+    "Agustus",
     "September",
-    "October",
+    "Oktober",
     "November",
-    "December",
+    "Desember",
   ];
+
   let mo = monthYear[today.getMonth()];
   let y = today.getFullYear();
   let h = today.getHours();

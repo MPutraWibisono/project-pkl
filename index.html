@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Selamat Datang di Website Resmi Dinas Pemuda, Olahraga dan Pariwisata Kota Samarinda</title>
+    <!-- <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" /> -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="script.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,20 +16,86 @@
 </head>
 
 <body onload="startTime()">
-    <div class="bg-base text-white sm:flex px-4 md:px-20 items-center justify-center">
-        <div class="poppins-bold flex">
-            <div>
-
-            </div>
+    <div class="bg-base text-white flex px-4 md:px-20 items-center justify-center text-xs sm:text-medium">
+        <div class="poppins-bold flex justify-center">
             <div class="" id="time">
             </div>
         </div>
-        <div class="ms-auto flex gap-2 p-2">
+        <div class="ms-auto flex gap-2 p-2 items-center justify-center">
             <a href="" class="border px-2">Webmail</a>
             <a href="" class="border px-2">Kontak kami</a>
             <a href="" class="border px-2">SSO Login</a>
         </div>
     </div>
+    <div
+        class="relative z-20 w-full border-b shadow-lg border-b-1 border-slate-200 bg-white/90 shadow-slate-700/5 after:absolute after:top-full after:left-0 after:z-10 after:block after:h-px after:w-full after:bg-slate-200 lg:border-slate-200 lg:backdrop-blur-sm lg:after:hidden ">
+        <div class="relative mx-auto max-w-full px-6 lg:max-w-5xl xl:max-w-7xl 2xl:max-w-[96rem]">
+            <nav aria-label="main navigation"
+                class="flex h-[5.5rem] items-stretch justify-between font-medium text-slate-700" role="navigation">
+                <!-- Brand logo -->
+                <a id="WindUI" aria-label="WindUI logo" aria-current="page"
+                    class="flex items-center gap-2 py-3 text-lg whitespace-nowrap focus:outline-none lg:flex-1"
+                    href="javascript:void(0)">
+                    <img src="assets/logo3 (1) 1.png" alt="disporapar" class="h-full">
+                    <div class="hidden md:block">
+                        <h1 class="poppins-extrabold">
+                            DINAS PEMUDA, OLAHRAGA DAN PARIWISATA
+                        </h1>
+                        <h2 class="poppins-medium">
+                            PEMERINTAH KOTA SAMARINDA
+                        </h2>
+                    </div>
+                </a>
+                <!-- Mobile trigger -->
+                <button class="mobile relative self-center order-10  block w-10 h-10 lg:hidden" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <div class="absolute w-6 transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
+                        <span aria-hidden="true"
+                            class="absolute block h-0.5 w-9/12 -translate-y-2 transform rounded-full bg-slate-900 transition-all duration-300"></span>
+                        <span aria-hidden="true"
+                            class="absolute block h-0.5 w-6 transform rounded-full bg-slate-900 transition duration-300"></span>
+                        <span aria-hidden="true"
+                            class="absolute block h-0.5 w-1/2 origin-top-left translate-y-2 transform rounded-full bg-slate-900 transition-all duration-300"></span>
+                    </div>
+                </button>
+                <!-- Navigation links -->
+                <ul role="menubar" aria-label="Select page"
+                    class="navigation absolute top-0 left-0 z-[-1] ml-auto h-screen w-full justify-center overflow-hidden overflow-y-auto overscroll-contain bg-white/90 px-8 pb-12 pt-28 font-medium transition-[opacity,visibility] duration-300 lg:visible lg:relative lg:top-0 lg:z-0 lg:flex lg:h-full lg:w-auto lg:items-stretch lg:overflow-visible lg:bg-white/0 lg:px-0 lg:py-0 lg:pt-0 lg:opacity-100">
+                    <li role="none" class="flex items-stretch">
+                        <a role="menuitem" aria-haspopup="false"
+                            class="flex items-center gap-2 py-4 transition-colors duration-300 hover:text-base focus:text-base focus:outline-none focus-visible:outline-none lg:px-2.5"
+                            href="javascript:void(0)"> <span>Beranda</span></a>
+                    </li>
+                    <li role="none" class="flex items-stretch">
+                        <a role="menuitem" aria-current="page" aria-haspopup="false"
+                            class="flex items-center gap-2 py-4 transition-colors duration-300 text-base hover:text-base focus:text-base focus:outline-none focus-visible:outline-none lg:px-2.5"
+                            href="javascript:void(0)"> <span>Profil</span> </a>
+                    </li>
+                    <li role="none" class="flex items-stretch">
+                        <a role="menuitem" aria-haspopup="false"
+                            class="flex items-center gap-2 py-4 transition-colors duration-300 hover:text-base focus:text-base focus:outline-none focus-visible:outline-none lg:px-2.5"
+                            href="javascript:void(0)"> <span>Bidang</span> </a>
+                    </li>
+                    <li role="none" class="flex items-stretch">
+                        <a role="menuitem" aria-haspopup="false"
+                            class="flex items-center gap-2 py-4 transition-colors duration-300 hover:text-base focus:text-base focus:outline-none focus-visible:outline-none lg:px-2.5"
+                            href="javascript:void(0)"> <span>Berita & Informasi</span> </a>
+                    </li>
+                    <li role="none" class="flex items-stretch">
+                        <a role="menuitem" aria-haspopup="false"
+                            class="flex items-center gap-2 py-4 transition-colors duration-300 hover:text-base focus:text-base focus:outline-none focus-visible:outline-none lg:px-2.5"
+                            href="javascript:void(0)"> <span>Tourism</span> </a>
+                    </li>
+                    <li role="none" class="flex items-stretch">
+                        <a role="menuitem" aria-haspopup="false"
+                            class="flex items-center gap-2 py-4 transition-colors duration-300 hover:text-base focus:text-base focus:outline-none focus-visible:outline-none lg:px-2.5"
+                            href="javascript:void(0)"> <span>Informasi Publik</span> </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 
 </html>
