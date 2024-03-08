@@ -2,7 +2,6 @@ tailwind.config = {
   theme: {
     extend: {
       colors: {
-        clifford: "#da373d",
         base: "#192A56",
       },
       gridTemplateColumns: {
@@ -26,22 +25,22 @@ mobileButton.addEventListener("click", function () {
   mobileButton.setAttribute("aria-expanded", !expanded);
 
   // Toggle visibilitas menu navigasi
-  if (expanded) {
-    mobileButton.classList.remove("visible");
-    mobileButton.classList.remove("opacity-100");
-    navigationMenu.classList.remove("opacity-100");
-    navigationMenu.classList.remove("visible");
-    navigationMenu.classList.add("invisible");
-    navigationMenu.classList.add("opacity-0");
-    navigationMenu.setAttribute("aria-hidden", "true");
-  } else {
+  if (!expanded) {
     navigationMenu.classList.remove("opacity-0");
     navigationMenu.classList.remove("invisible");
     mobileButton.classList.add("visible");
     mobileButton.classList.add("opacity-100");
     navigationMenu.classList.add("opacity-100");
     navigationMenu.classList.add("visible");
-    navigationMenu.setAttribute("aria-hidden", "false");
+    // navigationMenu.setAttribute("aria-hidden", "true");
+  } else {
+    mobileButton.classList.remove("visible");
+    mobileButton.classList.remove("opacity-100");
+    navigationMenu.classList.remove("opacity-100");
+    navigationMenu.classList.remove("visible");
+    navigationMenu.classList.add("invisible");
+    navigationMenu.classList.add("opacity-0");
+    // navigationMenu.setAttribute("aria-hidden", "false");
   }
 });
 
