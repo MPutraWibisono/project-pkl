@@ -2,7 +2,7 @@ tailwind.config = {
   theme: {
     extend: {
       colors: {
-        base: "#192A56",
+        base: "#085D41",
       },
       gridTemplateColumns: {
         // Simple 16 column grid
