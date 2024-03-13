@@ -12,6 +12,18 @@ tailwind.config = {
   },
 };
 
+window.addEventListener("click", function (event) {
+  var dropdowns = document.getElementsByClassName("dropdown-content");
+  for (var i = 0; i < dropdowns.length; i++) {
+    var openDropdown = dropdowns[i];
+    if (openDropdown.parentElement.contains(event.target)) {
+      openDropdown.style.display = "block";
+    } else {
+      openDropdown.style.display = "none";
+    }
+  }
+});
+
 // Ambil elemen tombol mobile dan menu navigasi
 // const mobileButton = document.querySelector(".lg\\:hidden");
 const mobileButton = document.querySelector(".mobile");
