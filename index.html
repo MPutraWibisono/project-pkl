@@ -10,7 +10,7 @@
         Samarinda
     </title>
     <!-- <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" /> -->
-    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="output.css" />
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></script> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -23,36 +23,40 @@
 </head>
 
 <body onload="startTime()">
-    <div class="bg-base text-white flex px-4 md:px-20 items-center justify-center text-xs sm:text-medium">
-        <div class="poppins-bold flex justify-center">
-            <div class="" id="time"></div>
-        </div>
-        <div class="ms-auto flex gap-2 p-2 items-center justify-center">
-            <a href="" class="border px-2">Webmail</a>
-            <a href="" class="border px-2">Kontak kami</a>
-            <a href="" class="border px-2">SSO Login</a>
+    <div class="bg-base">
+        <div
+            class=" text-white flex px-4 min-[1000px]:px-20 items-center justify-center text-xs sm:text-medium 2xl:max-w-[96rem] mx-auto">
+            <div class="poppins-bold flex justify-center">
+                <div class="" id="time">
+                </div>
+            </div>
+            <div class="ms-auto flex items-center justify-center poppins-medium">
+                <a href="" class="border p-3"><i class="fa fa-envelope" aria-hidden="true"></i> Webmail</a>
+                <a href="" class="border p-3"><i class="fa fa-phone" aria-hidden="true"></i> Kontak kami</a>
+                <a href="" class="border p-3"><i class="fa fa-sign-in" aria-hidden="true"></i> SSO Login</a>
+            </div>
         </div>
     </div>
+
     <div
-        class="relative z-20 w-full border-b shadow-lg border-b-1 border-slate-200 bg-white/90 shadow-slate-700/5 after:absolute after:top-full after:left-0 after:z-10 after:block after:h-px after:w-full after:bg-slate-200 lg:border-slate-200 lg:backdrop-blur-sm lg:after:hidden">
-        <div class="relative mx-auto max-w-full px-6 lg:max-w-5xl xl:max-w-7xl 2xl:max-w-[96rem]">
+        class="relative w-full border-b shadow-lg border-b-1 border-slate-200 bg-white/90 shadow-slate-700/5 after:absolute after:top-full after:left-0  after:block after:h-px after:w-full lg:border-slate-200 lg:backdrop-blur-sm lg:after:hidden ">
+        <div class="relative mx-auto max-w-full px-4 min-[1000px]:px-20 2xl:max-w-[96rem]">
             <nav aria-label="main navigation"
                 class="flex h-[5.5rem] items-stretch justify-between font-medium text-slate-700" role="navigation">
                 <!-- Brand logo -->
                 <a id="WindUI" aria-label="WindUI logo" aria-current="page"
-                    class="flex items-center gap-2 py-3 text-lg whitespace-nowrap focus:outline-none lg:flex-1"
-                    href="javascript:void(0)">
-                    <img src="assets/logo3 (1) 1.png" alt="disporapar" class="h-full" />
+                    class="flex items-center gap-2 py-3  whitespace-nowrap focus:outline-none lg:flex-1" href="#">
+                    <img src="assets/logo-dlh.png" alt="dlh" class="h-full">
                     <div class="hidden md:block">
-                        <h1 class="poppins-extrabold">
-                            DINAS PEMUDA, OLAHRAGA DAN PARIWISATA
+                        <h1 class="poppins-extrabold text-lg">
+                            DINAS LINGKUNGAN HIDUP
                         </h1>
-                        <h2 class="poppins-medium">PEMERINTAH KOTA SAMARINDA</h2>
+                        <h2 class="poppins-medium text-sm">PEMERINTAH KOTA SAMARINDA</h2>
                     </div>
                 </a>
                 <!-- Mobile trigger -->
-                <button class="mobile relative self-center order-10 block w-10 h-10 lg:hidden" aria-expanded="false"
-                    aria-label="Toggle navigation">
+                <button class="mobile relative self-center order-10  block w-10 h-10 min-[1300px]:hidden"
+                    aria-expanded="false" aria-label="Toggle navigation">
                     <div class="absolute w-6 transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
                         <span aria-hidden="true"
                             class="absolute block h-0.5 w-9/12 -translate-y-2 transform rounded-full bg-slate-900 transition-all duration-300"></span>
@@ -64,61 +68,148 @@
                 </button>
                 <!-- Navigation links -->
                 <ul role="menubar" aria-label="Select page"
-                    class="navigation absolute top-0 left-0 z-[-1] ml-auto h-screen w-full justify-center overflow-hidden overflow-y-auto overscroll-contain bg-white/90 px-8 pb-12 pt-28 font-medium transition-[opacity,visibility] duration-300 lg:visible lg:relative lg:top-0 lg:z-0 lg:flex lg:h-full lg:w-auto lg:items-stretch lg:overflow-visible lg:bg-white/0 lg:px-0 lg:py-0 lg:pt-0 lg:opacity-100">
+                    class="navigation invisible opacity-0 absolute top-20 left-0  ml-auto h-screen w-full justify-center overflow-hidden overflow-y-auto overscroll-contain bg-white/90 pe-8 ps-6 md:ps-16 pb-12 pt-8 font-medium transition-[opacity,visibility] duration-300 min-[1300px]:visible min-[1300px]:relative min-[1300px]:top-0  min-[1300px]:flex min-[1300px]:h-full min-[1300px]:w-auto min-[1300px]:items-stretch min-[1300px]:overflow-visible min-[1300px]:bg-white/0 min-[1300px]:px-0 min-[1300px]:py-0 min-[1300px]:pt-0 min-[1300px]:opacity-100">
                     <li role="none" class="flex items-stretch">
-                        <a role="menuitem" aria-haspopup="false"
-                            class="flex items-center gap-2 py-4 transition-colors duration-300 hover:text-base focus:text-base focus:outline-none focus-visible:outline-none lg:px-2.5"
-                            href="javascript:void(0)">
-                            <span>Beranda</span></a>
+                        <button role="menuitem" aria-haspopup="false"
+                            class="flex items-center gap-2 py-2 xl:py-4 transition-colors duration-300 hover:text-base/70 focus:text-base focus:outline-none focus-visible:outline-none lg:px-2.5"
+                            href="#"> <span>Beranda</span></button>
                     </li>
-                    <li role="none" class="flex items-stretch">
-                        <a role="menuitem" aria-current="page" aria-haspopup="false"
-                            class="flex items-center gap-2 py-4 transition-colors duration-300 text-base hover:text-base focus:text-base focus:outline-none focus-visible:outline-none lg:px-2.5"
-                            href="javascript:void(0)">
+                    <!-- Component: Basic dropdown menu -->
+                    <div class="relative inline-flex ">
+                        <!--  Start Dropdown trigger -->
+                        <button
+                            class="flex items-center gap-2 py-2 xl:py-4 transition-colors duration-300 text-base hover:text-base/70 focus:text-base focus:outline-none focus-visible:outline-none lg:px-2.5">
                             <span>Profil</span>
-                        </a>
-                    </li>
-                    <li role="none" class="flex items-stretch">
-                        <a role="menuitem" aria-haspopup="false"
-                            class="flex items-center gap-2 py-4 transition-colors duration-300 hover:text-base focus:text-base focus:outline-none focus-visible:outline-none lg:px-2.5"
-                            href="javascript:void(0)">
+                            <span class="relative only:-mx-5">
+                                <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                            </span>
+                        </button>
+                        <!--  End Dropdown trigger -->
+                        <!-- Start Menu list -->
+                        <ul
+                            class="dropdown-content hidden absolute z-20 flex flex-col py-2 mt-1 list-none bg-white rounded shadow-md w-72 top-full shadow-slate-500/10">
+                            <li>
+                                <a class="flex items-start justify-start gap-2 p-2 px-5 transition-colors duration-300 text-slate-500 hover:bg-emerald-50 hover:text-emerald-500 focus:bg-emerald-50 focus:text-emerald-600 focus:outline-none focus-visible:outline-none"
+                                    href="#">
+                                    <span class="flex flex-col gap-1 overflow-hidden whitespace-nowrap">
+                                        <span class="leading-5 truncate">Dashboard</span>
+                                    </span>
+                                </a>
+                            </li>
+
+                        </ul>
+                        <!-- End Menu list -->
+                    </div>
+                    <div class="relative inline-flex ">
+                        <!--  Start Dropdown trigger -->
+                        <button
+                            class="flex items-center gap-2 py-2 xl:py-4 transition-colors duration-300 text-base hover:text-base/70 focus:text-base focus:outline-none focus-visible:outline-none lg:px-2.5">
                             <span>Bidang</span>
-                        </a>
-                    </li>
-                    <li role="none" class="flex items-stretch">
-                        <a role="menuitem" aria-haspopup="false"
-                            class="flex items-center gap-2 py-4 transition-colors duration-300 hover:text-base focus:text-base focus:outline-none focus-visible:outline-none lg:px-2.5"
-                            href="javascript:void(0)">
+                            <span class="relative only:-mx-5">
+                                <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                            </span>
+                        </button>
+                        <!--  End Dropdown trigger -->
+                        <!-- Start Menu list -->
+                        <ul
+                            class="dropdown-content hidden absolute z-20 flex flex-col py-2 mt-1 list-none bg-white rounded shadow-md w-72 top-full shadow-slate-500/10">
+                            <li>
+                                <a class="flex items-start justify-start gap-2 p-2 px-5 transition-colors duration-300 text-slate-500 hover:bg-emerald-50 hover:text-emerald-500 focus:bg-emerald-50 focus:text-emerald-600 focus:outline-none focus-visible:outline-none"
+                                    href="#">
+                                    <span class="flex flex-col gap-1 overflow-hidden whitespace-nowrap">
+                                        <span class="leading-5 truncate">Dashboard</span>
+                                    </span>
+                                </a>
+                            </li>
+
+                        </ul>
+                        <!-- End Menu list -->
+                    </div>
+                    <div class="relative inline-flex ">
+                        <!--  Start Dropdown trigger -->
+                        <button
+                            class="flex items-center gap-2 py-2 xl:py-4 transition-colors duration-300 text-base hover:text-base/70 focus:text-base focus:outline-none focus-visible:outline-none lg:px-2.5">
                             <span>Berita & Informasi</span>
-                        </a>
-                    </li>
-                    <li role="none" class="flex items-stretch">
-                        <a role="menuitem" aria-haspopup="false"
-                            class="flex items-center gap-2 py-4 transition-colors duration-300 hover:text-base focus:text-base focus:outline-none focus-visible:outline-none lg:px-2.5"
-                            href="javascript:void(0)">
+                            <span class="relative only:-mx-5">
+                                <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                            </span>
+                        </button>
+                        <!--  End Dropdown trigger -->
+                        <!-- Start Menu list -->
+                        <ul
+                            class="dropdown-content hidden absolute z-20 flex flex-col py-2 mt-1 list-none bg-white rounded shadow-md w-72 top-full shadow-slate-500/10">
+                            <li>
+                                <a class="flex items-start justify-start gap-2 p-2 px-5 transition-colors duration-300 text-slate-500 hover:bg-emerald-50 hover:text-emerald-500 focus:bg-emerald-50 focus:text-emerald-600 focus:outline-none focus-visible:outline-none"
+                                    href="#">
+                                    <span class="flex flex-col gap-1 overflow-hidden whitespace-nowrap">
+                                        <span class="leading-5 truncate">Dashboard</span>
+                                    </span>
+                                </a>
+                            </li>
+
+                        </ul>
+                        <!-- End Menu list -->
+                    </div>
+                    <div class="relative inline-flex ">
+                        <!--  Start Dropdown trigger -->
+                        <button
+                            class="flex items-center gap-2 py-2 xl:py-4 transition-colors duration-300 text-base hover:text-base/70 focus:text-base focus:outline-none focus-visible:outline-none lg:px-2.5">
                             <span>Tourism</span>
-                        </a>
-                    </li>
-                    <li role="none" class="flex items-stretch">
-                        <a role="menuitem" aria-haspopup="false"
-                            class="flex items-center gap-2 py-4 transition-colors duration-300 hover:text-base focus:text-base focus:outline-none focus-visible:outline-none lg:px-2.5"
-                            href="javascript:void(0)">
+                            <span class="relative only:-mx-5">
+                                <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                            </span>
+                        </button>
+                        <!--  End Dropdown trigger -->
+                        <!-- Start Menu list -->
+                        <ul
+                            class="dropdown-content hidden absolute z-20 flex flex-col py-2 mt-1 list-none bg-white rounded shadow-md w-72 top-full shadow-slate-500/10">
+                            <li>
+                                <a class="flex items-start justify-start gap-2 p-2 px-5 transition-colors duration-300 text-slate-500 hover:bg-emerald-50 hover:text-emerald-500 focus:bg-emerald-50 focus:text-emerald-600 focus:outline-none focus-visible:outline-none"
+                                    href="#">
+                                    <span class="flex flex-col gap-1 overflow-hidden whitespace-nowrap">
+                                        <span class="leading-5 truncate">Dashboard</span>
+                                    </span>
+                                </a>
+                            </li>
+
+                        </ul>
+                        <!-- End Menu list -->
+                    </div>
+                    <div class="relative inline-flex ">
+                        <!--  Start Dropdown trigger -->
+                        <button
+                            class="flex items-center gap-2 py-2 xl:py-4 transition-colors duration-300 text-base hover:text-base/70 focus:text-base focus:outline-none focus-visible:outline-none lg:px-2.5">
                             <span>Informasi Publik</span>
-                        </a>
-                    </li>
+                            <span class="relative only:-mx-5">
+                                <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                            </span>
+                        </button>
+                        <!--  End Dropdown trigger -->
+                        <!-- Start Menu list -->
+                        <ul
+                            class="dropdown-content hidden absolute z-20 flex flex-col py-2 mt-1 list-none bg-white rounded shadow-md w-72 top-full shadow-slate-500/10">
+                            <li>
+                                <a class="flex items-start justify-start gap-2 p-2 px-5 transition-colors duration-300 text-slate-500 hover:bg-emerald-50 hover:text-emerald-500 focus:bg-emerald-50 focus:text-emerald-600 focus:outline-none focus-visible:outline-none"
+                                    href="#">
+                                    <span class="flex flex-col gap-1 overflow-hidden whitespace-nowrap">
+                                        <span class="leading-5 truncate">Dashboard</span>
+                                    </span>
+                                </a>
+                            </li>
+
+                        </ul>
+                        <!-- End Menu list -->
+                    </div>
+                    <!-- End Basic dropdown menu-->
                 </ul>
             </nav>
         </div>
         <footer class="bg-base">
-            <div class="px-6 py-12 grid grid-cols-2 sm:grid-cols-6 gap-x-8">
-                <div class="col-span-6 md:col-span-2 flex flex-row md:flex-col" style="margin-bottom: 20px;">
-                    <div class="object-cover">
-                        <img src="/assets/logo-dlh.png" alt="logo-dlh" width="60" height="60" />
-                    </div>
-                    <div class="flex flex-col gap-y-2 md:flex-col grow">
-                        <p class="font-bold text-white text-sm md:text-2xl">
-                            DINAS LINGKUNGAN HIDUP
-                        </p>
+            <div class="px-6 py-12 grid grid-cols-6 gap-x-8 2xl:max-w-[96rem] mx-auto">
+                <div class="col-span-2 ">
+                    <div class="flex flex-col gap-y-2">
+                        <img src="/assets/logo-dlh.png" alt="logo-dlh" width="90">
+                        <p class="font-bold text-white text-2xl">DINAS LINGKUNGAN HIDUP</p>
                         <p class="text-sm text-white">PEMERINTAH KOTA SAMARINDA</p>
                         <div class="text-white text-sm flex flex-row items-center" id="footer-email">
                             <i class="fa-regular fa-envelope"></i>
