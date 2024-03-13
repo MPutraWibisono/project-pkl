@@ -12,16 +12,28 @@ tailwind.config = {
   },
 };
 
-window.addEventListener("click", function (event) {
-  var dropdowns = document.getElementsByClassName("dropdown-content");
-  for (var i = 0; i < dropdowns.length; i++) {
-    var openDropdown = dropdowns[i];
-    if (openDropdown.parentElement.contains(event.target)) {
-      openDropdown.style.display = "block";
-    } else {
-      openDropdown.style.display = "none";
-    }
-  }
+document.addEventListener("DOMContentLoaded", function () {
+  const dropdowns = document.querySelectorAll(".relative.flex");
+
+  document.addEventListener("click", function (event) {
+    dropdowns.forEach(function (dropdown) {
+      const isClickInside = dropdown.contains(event.target);
+
+      if (!isClickInside) {
+        const menuList = dropdown.querySelector(".dropdown-content");
+        menuList.classList.remove("block");
+        menuList.classList.add("hidden");
+      }
+    });
+  });
+
+  dropdowns.forEach(function (dropdown) {
+    dropdown.addEventListener("click", function (event) {
+      const menuList = dropdown.querySelector(".dropdown-content");
+      menuList.classList.toggle("hidden");
+      menuList.classList.toggle("block");
+    });
+  });
 });
 
 // Ambil elemen tombol mobile dan menu navigasi
