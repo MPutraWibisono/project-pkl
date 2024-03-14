@@ -5,7 +5,13 @@ module.exports = {
     extend: {
       colors: {
         base: "#085D41",
+        routebar: "#CFF1E6",
+        decorationRoute: "#085D41"
       },
+      fontSize: {
+        xxs: '10px'
+      },
+
       gridTemplateColumns: {
         // Simple 16 column grid
         16: "repeat(16, minmax(0, 1fr))",
