@@ -18,11 +18,13 @@ document.addEventListener("DOMContentLoaded", function () {
   document.addEventListener("click", function (event) {
     dropdowns.forEach(function (dropdown) {
       const isClickInside = dropdown.contains(event.target);
+      const arrowIcon = dropdown.querySelector(".fa-chevron-down");
 
       if (!isClickInside) {
         const menuList = dropdown.querySelector(".dropdown-content");
         menuList.classList.remove("block");
         menuList.classList.add("hidden");
+        arrowIcon.style.transform = "rotate(0deg)";
       }
     });
   });
@@ -30,8 +32,15 @@ document.addEventListener("DOMContentLoaded", function () {
   dropdowns.forEach(function (dropdown) {
     dropdown.addEventListener("click", function (event) {
       const menuList = dropdown.querySelector(".dropdown-content");
+      const arrowIcon = dropdown.querySelector(".fa-chevron-down");
       menuList.classList.toggle("hidden");
       menuList.classList.toggle("block");
+
+      if (menuList.classList.contains("block")) {
+        arrowIcon.style.transform = "rotate(180deg)";
+      } else {
+        arrowIcon.style.transform = "rotate(0deg)";
+      }
     });
   });
 });
