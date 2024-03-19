@@ -1,62 +1,38 @@
-tailwind.config = {
-  theme: {
-    extend: {
-      colors: {
-        base: "#085D41",
-      },
-      gridTemplateColumns: {
-        // Simple 16 column grid
-        16: "repeat(16, minmax(0, 1fr))",
-      },
-    },
-  },
-};
-
+// Dropdown Transform------------------------------------------------
 document.addEventListener("DOMContentLoaded", function () {
   const dropdowns = document.querySelectorAll(".relative.flex");
 
-  document.addEventListener("click", function (event) {
-    dropdowns.forEach(function (dropdown) {
-      const isClickInside = dropdown.contains(event.target);
-      const arrowIcon = dropdown.querySelector(".fa-chevron-down");
-
-      if (!isClickInside) {
-        const menuList = dropdown.querySelector(".dropdown-content");
-        menuList.classList.remove("block");
-        menuList.classList.add("hidden");
-        arrowIcon.style.transform = "rotate(0deg)";
-      }
-    });
-  });
-
   dropdowns.forEach(function (dropdown) {
-    dropdown.addEventListener("click", function (event) {
+    dropdown.addEventListener("mouseover", function (event) {
       const menuList = dropdown.querySelector(".dropdown-content");
       const arrowIcon = dropdown.querySelector(".fa-chevron-down");
-      menuList.classList.toggle("hidden");
-      menuList.classList.toggle("block");
 
-      if (menuList.classList.contains("block")) {
-        arrowIcon.style.transform = "rotate(180deg)";
-      } else {
-        arrowIcon.style.transform = "rotate(0deg)";
-      }
+      menuList.classList.add("block");
+      menuList.classList.remove("hidden");
+      arrowIcon.style.transform = "rotate(180deg)";
+    });
+
+    // Tambahan: reset transform saat mouse leave dropdown
+    dropdown.addEventListener("mouseleave", function (event) {
+      const menuList = dropdown.querySelector(".dropdown-content");
+      const arrowIcon = dropdown.querySelector(".fa-chevron-down");
+      arrowIcon.style.transform = "rotate(0deg)";
+      menuList.classList.remove("block");
+      menuList.classList.add("hidden");
     });
   });
 });
 
+// Tombol Mobile Hamburger Menu--------------------------------------
 // Ambil elemen tombol mobile dan menu navigasi
-// const mobileButton = document.querySelector(".lg\\:hidden");
 const mobileButton = document.querySelector(".mobile");
 const navigationMenu = document.querySelector(".navigation");
-
 // Tambahkan event listener untuk klik pada tombol mobile
 mobileButton.addEventListener("click", function () {
   // Toggle nilai aria-expanded tombol mobile
   const expanded =
     mobileButton.getAttribute("aria-expanded") === "true" || false;
   mobileButton.setAttribute("aria-expanded", !expanded);
-
   // Toggle visibilitas menu navigasi
   if (!expanded) {
     navigationMenu.classList.remove("opacity-0");
@@ -65,7 +41,6 @@ mobileButton.addEventListener("click", function () {
     mobileButton.classList.add("opacity-100");
     navigationMenu.classList.add("opacity-100");
     navigationMenu.classList.add("visible");
-    // navigationMenu.setAttribute("aria-hidden", "true");
   } else {
     mobileButton.classList.remove("visible");
     mobileButton.classList.remove("opacity-100");
@@ -73,10 +48,10 @@ mobileButton.addEventListener("click", function () {
     navigationMenu.classList.remove("visible");
     navigationMenu.classList.add("invisible");
     navigationMenu.classList.add("opacity-0");
-    // navigationMenu.setAttribute("aria-hidden", "false");
   }
 });
 
+// Fungsi Header Waktu-----------------------------------------------
 function startTime() {
   const today = new Date();
 
@@ -115,14 +90,14 @@ function startTime() {
   s = checkTime(s);
   const ampm = h >= 12 ? "PM" : "AM";
   document.getElementById("time").innerHTML =
+    day +
+    "&nbsp; /  &nbsp;" +
     d +
     " " +
     mo +
     " " +
     y +
-    " | " +
-    day +
-    " | " +
+    "&nbsp; /  &nbsp;" +
     h +
     ":" +
     m +
@@ -136,6 +111,6 @@ function startTime() {
 function checkTime(i) {
   if (i < 10) {
     i = "0" + i;
-  } // add zero in front of numbers < 10
+  }
   return i;
 }

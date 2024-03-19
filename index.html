@@ -8,7 +8,7 @@
     <title>
         Selamat Datang di Website Resmi Dinas Lingkungan Hidup Samarinda
     </title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
     <link rel="stylesheet" href="output.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -18,36 +18,62 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
         rel="stylesheet" />
+    <style>
+        #berita-terkini .swiper-pagination-bullet {
+            width: 40px;
+            height: 7px;
+            border-radius: 25px;
+            text-align: center;
+            line-height: 2px;
+            font-size: 12px;
+            /* color: #f1f1f1; */
+            /* opacity: 1; */
+            background: rgba(255, 255, 255);
+        }
+
+        #berita-terkini .swiper-pagination-bullet-active {
+            /* color: #fff; */
+            background: #ffffff;
+        }
+
+        .swiper-button-prev.prev-icon,
+        .swiper-button-next.next-icon {
+            color: #ffffff;
+        }
+    </style>
 </head>
 
-<body onload="startTime()">
-    <div class="bg-base">
+<body onload="startTime()" class="relative">
+    <!-- /Header Waktu -->
+    <div class="bg-base1">
         <div
-            class=" text-white flex px-4 min-[1000px]:px-20 items-center justify-center text-xs sm:text-medium 2xl:max-w-[96rem] mx-auto">
-            <div class="poppins-bold flex justify-center">
+            class="text-white flex px-4 min-[1000px]:px-16 items-center justify-center sm:text-medium 2xl:max-w-[96rem] mx-auto">
+            <div class="poppins-semibold flex justify-center text-[8px] md:text-xs lg:text-sm">
                 <div class="" id="time">
                 </div>
             </div>
-            <div class="ms-auto flex items-center justify-center poppins-medium">
-                <a href="" class="border p-3 h-[74px] min-[440px]:h-full"><i class="fa fa-envelope pe-1"
+            <div class="ms-auto flex items-center justify-center poppins-medium text-[10px] lg:text-xs ">
+                <a href="" class="border p-2.5 h-[67px] min-[340px]:h-full "><i class="fa fa-envelope pe-1"
                         aria-hidden="true"></i>
                     Webmail</a>
-                <a href="" class="border p-3"><i class="fa fa-phone pe-1" aria-hidden="true"></i> Hubungi kami</a>
-                <a href="" class="border p-3 min-[402px]:h-[74px] min-[442px]:h-full"><i class="fa fa-sign-in pe-1"
-                        aria-hidden="true"></i> SSO Login</a>
+                <a href="" class="border p-2.5"><i class="fa fa-phone pe-1" aria-hidden="true"></i> Hubungi kami</a>
+                <a href="" class="border p-2.5 h-[67px] min-[340px]:h-full"><i class="fa fa-sign-in pe-1"
+                        aria-hidden="true"></i> SSO
+                    Login</a>
             </div>
         </div>
     </div>
-
-    <div
-        class="relative w-full border-b shadow-lg border-b-1 border-slate-200 bg-white/90 shadow-slate-700/5 after:absolute after:top-full after:left-0  after:block after:h-px after:w-full lg:border-slate-200 lg:backdrop-blur-sm lg:after:hidden ">
-        <div class="relative mx-auto max-w-full px-4 min-[1000px]:px-20 2xl:max-w-[96rem]">
-            <nav aria-label="main navigation"
-                class="flex h-[5.5rem] items-stretch justify-between font-medium text-slate-700" role="navigation">
+    <!-- /Navbar -->
+    <nav
+        class="sticky top-0 w-full border-b shadow-lg border-b-1 border-slate-200 bg-white/90 shadow-slate-700/5 after:absolute after:top-full after:left-0  after:block after:h-px after:w-full lg:border-slate-200 lg:backdrop-blur-sm lg:after:hidden z-10">
+        <div class="relative mx-auto max-w-full px-4 min-[1000px]:px-16 2xl:max-w-[96rem]">
+            <div aria-label="main navigation"
+                class="flex h-[3.5rem] md:h-[5rem] lg:h-[5.5rem] items-stretch justify-between font-medium text-slate-700"
+                role="navigation">
                 <!-- Brand logo -->
                 <a id="WindUI" aria-label="WindUI logo" aria-current="page"
                     class="flex items-center gap-2 py-3  whitespace-nowrap focus:outline-none lg:flex-1" href="#">
-                    <img src="assets/logo-dlh.png" alt="dlh" class="h-full">
+                    <img src="assets/logo-dlh.png" alt="dlh" class="h-full  object-cover">
                     <div class="hidden md:block">
                         <h1 class="poppins-extrabold text-xl">
                             DINAS LINGKUNGAN HIDUP
@@ -56,7 +82,7 @@
                     </div>
                 </a>
                 <!-- Mobile trigger -->
-                <button class="mobile relative self-center order-10  block w-10 h-10 min-[1300px]:hidden"
+                <button class="mobile relative self-center order-10 block w-10 h-10 min-[1300px]:hidden"
                     aria-expanded="false" aria-label="Toggle navigation">
                     <div class="absolute w-6 transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
                         <span aria-hidden="true"
@@ -69,17 +95,17 @@
                 </button>
                 <!-- Navigation links -->
                 <ul role="menubar" aria-label="Select page"
-                    class="z-10 navigation invisible opacity-0 absolute top-20 left-0  ml-auto h-screen w-full justify-center overflow-hidden overflow-y-auto overscroll-contain bg-white/90 pe-8 ps-6 md:ps-16 pb-12 pt-8 font-medium transition-[opacity,visibility] duration-300 min-[1300px]:visible min-[1300px]:relative min-[1300px]:top-0  min-[1300px]:flex min-[1300px]:h-full min-[1300px]:w-auto min-[1300px]:items-stretch min-[1300px]:overflow-visible min-[1300px]:bg-white/0 min-[1300px]:px-0 min-[1300px]:py-0 min-[1300px]:pt-0 min-[1300px]:opacity-100">
+                    class="z-10 navigation invisible opacity-0 absolute top-12 md:top-20 left-0  ml-auto h-screen w-full justify-center overflow-hidden overflow-y-auto overscroll-contain bg-white/90 pe-8 ps-6 md:ps-16 pb-12 pt-8 font-medium transition-[opacity,visibility] duration-300 min-[1300px]:visible min-[1300px]:relative min-[1300px]:top-0  min-[1300px]:flex min-[1300px]:h-full min-[1300px]:w-auto min-[1300px]:items-stretch min-[1300px]:overflow-visible min-[1300px]:bg-white/0 min-[1300px]:px-0 min-[1300px]:py-0 min-[1300px]:pt-0 min-[1300px]:opacity-100 text-xs md:text-base">
                     <li role="none" class="flex items-stretch">
                         <button role="menuitem" aria-haspopup="false"
-                            class="flex items-center gap-2 py-2 xl:py-4 transition-colors duration-300 poppins-medium hover:text-base/70 focus:text-base focus:outline-none focus-visible:outline-none lg:px-2.5"
-                            href="#"> <span>Beranda</span></button>
+                            class="flex items-center gap-2 py-2 xl:py-4 transition-colors duration-300 poppins-medium hover:text-base1/70 focus:text-base1 focus:outline-none focus-visible:outline-none lg:px-2.5"
+                            href="#"> <span class="underscore-page text-[#008bf9]">Beranda</span></button>
                     </li>
                     <!-- Component: Basic dropdown menu -->
                     <div class="relative flex ">
                         <!--  Start Dropdown trigger -->
                         <button
-                            class="flex items-center gap-2 py-2 xl:py-4 transition-colors duration-300 poppins-medium hover:text-base/70 focus:text-base focus:outline-none focus-visible:outline-none lg:px-2.5">
+                            class="flex items-center gap-2 py-2 xl:py-4 transition-colors duration-300 poppins-medium hover:text-base1/70 focus:text-base1 focus:outline-none focus-visible:outline-none lg:px-2.5">
                             <span>Profil</span>
                             <span class="relative only:-mx-5">
                                 <i class="fa fa-chevron-down" aria-hidden="true"></i>
@@ -93,18 +119,29 @@
                                 <a class="flex items-start justify-start gap-2 p-2 px-5 transition-colors duration-300 text-slate-500 hover:bg-emerald-50 hover:text-emerald-500 focus:bg-emerald-50 focus:text-emerald-600 focus:outline-none focus-visible:outline-none"
                                     href="#">
                                     <span class="flex flex-col gap-1 overflow-hidden whitespace-nowrap">
-                                        <span class="leading-5 truncate">Menu</span>
+                                        <span class="leading-5 truncate">Tugas Pokok & Fungsi</span>
+                                    </span>
+                                </a>
+                                <a class="flex items-start justify-start gap-2 p-2 px-5 transition-colors duration-300 text-slate-500 hover:bg-emerald-50 hover:text-emerald-500 focus:bg-emerald-50 focus:text-emerald-600 focus:outline-none focus-visible:outline-none"
+                                    href="#">
+                                    <span class="flex flex-col gap-1 overflow-hidden whitespace-nowrap">
+                                        <span class="leading-5 truncate">Strktur Organisasi</span>
+                                    </span>
+                                </a>
+                                <a class="flex items-start justify-start gap-2 p-2 px-5 transition-colors duration-300 text-slate-500 hover:bg-emerald-50 hover:text-emerald-500 focus:bg-emerald-50 focus:text-emerald-600 focus:outline-none focus-visible:outline-none"
+                                    href="#">
+                                    <span class="flex flex-col gap-1 overflow-hidden whitespace-nowrap">
+                                        <span class="leading-5 truncate">Profil Pimpinan</span>
                                     </span>
                                 </a>
                             </li>
-
                         </ul>
                         <!-- End Menu list -->
                     </div>
                     <div class="relative flex ">
                         <!--  Start Dropdown trigger -->
                         <button
-                            class="flex items-center gap-2 py-2 xl:py-4 transition-colors duration-300 poppins-medium hover:text-base/70 focus:text-base focus:outline-none focus-visible:outline-none lg:px-2.5">
+                            class="flex items-center gap-2 py-2 xl:py-4 transition-colors duration-300 poppins-medium hover:text-base1/70 focus:text-base1 focus:outline-none focus-visible:outline-none lg:px-2.5">
                             <span>Bidang</span>
                             <span class="relative only:-mx-5">
                                 <i class="fa fa-chevron-down" aria-hidden="true"></i>
@@ -118,7 +155,39 @@
                                 <a class="flex items-start justify-start gap-2 p-2 px-5 transition-colors duration-300 text-slate-500 hover:bg-emerald-50 hover:text-emerald-500 focus:bg-emerald-50 focus:text-emerald-600 focus:outline-none focus-visible:outline-none"
                                     href="#">
                                     <span class="flex flex-col gap-1 overflow-hidden whitespace-nowrap">
-                                        <span class="leading-5 truncate">Menu</span>
+                                        <span class="leading-5 truncate">Sekretaris</span>
+                                    </span>
+                                </a>
+                                <a class="flex items-start justify-start gap-2 p-2 px-5 transition-colors duration-300 text-slate-500 hover:bg-emerald-50 hover:text-emerald-500 focus:bg-emerald-50 focus:text-emerald-600 focus:outline-none focus-visible:outline-none"
+                                    href="#">
+                                    <span class="flex flex-col gap-1 overflow-hidden whitespace-nowrap">
+                                        <span class="leading-5 truncate">Kepala Sub Bagian Umum</span>
+                                    </span>
+                                </a>
+                                <a class="flex items-start justify-start gap-2 p-2 px-5 transition-colors duration-300 text-slate-500 hover:bg-emerald-50 hover:text-emerald-500 focus:bg-emerald-50 focus:text-emerald-600 focus:outline-none focus-visible:outline-none"
+                                    href="#">
+                                    <span class="flex flex-col gap-1 overflow-hidden whitespace-nowrap">
+                                        <span class="leading-5 truncate">Bidang Tata Lingkungan</span>
+                                    </span>
+                                </a>
+                                <a class="flex items-start justify-start gap-2 p-2 px-5 transition-colors duration-300 text-slate-500 hover:bg-emerald-50 hover:text-emerald-500 focus:bg-emerald-50 focus:text-emerald-600 focus:outline-none focus-visible:outline-none"
+                                    href="#">
+                                    <span class="flex flex-col gap-1 overflow-hidden whitespace-nowrap">
+                                        <span class="leading-5 truncate">Bidang Pengelolaan Sampah dan Limbah B3</span>
+                                    </span>
+                                </a>
+                                <a class="flex items-start justify-start gap-2 p-2 px-5 transition-colors duration-300 text-slate-500 hover:bg-emerald-50 hover:text-emerald-500 focus:bg-emerald-50 focus:text-emerald-600 focus:outline-none focus-visible:outline-none"
+                                    href="#">
+                                    <span class="flex flex-col gap-1 overflow-hidden whitespace-nowrap">
+                                        <span class="leading-5 truncate">Bidang Pengendalian Pencemaran Dan Kerusakan
+                                            Lingkungan</span>
+                                    </span>
+                                </a>
+                                <a class="flex items-start justify-start gap-2 p-2 px-5 transition-colors duration-300 text-slate-500 hover:bg-emerald-50 hover:text-emerald-500 focus:bg-emerald-50 focus:text-emerald-600 focus:outline-none focus-visible:outline-none"
+                                    href="#">
+                                    <span class="flex flex-col gap-1 overflow-hidden whitespace-nowrap">
+                                        <span class="leading-5 truncate">Bidang Penataan Dan Peningkatan Kapasitas
+                                            Lingkungan</span>
                                     </span>
                                 </a>
                             </li>
@@ -129,7 +198,7 @@
                     <div class="relative flex ">
                         <!--  Start Dropdown trigger -->
                         <button
-                            class="flex items-center gap-2 py-2 xl:py-4 transition-colors duration-300 poppins-medium hover:text-base/70 focus:text-base focus:outline-none focus-visible:outline-none lg:px-2.5">
+                            class="flex items-center gap-2 py-2 xl:py-4 transition-colors duration-300 poppins-medium hover:text-base1/70 focus:text-base1 focus:outline-none focus-visible:outline-none lg:px-2.5">
                             <span>Berita & Informasi</span>
                             <span class="relative only:-mx-5">
                                 <i class="fa fa-chevron-down" aria-hidden="true"></i>
@@ -143,7 +212,31 @@
                                 <a class="flex items-start justify-start gap-2 p-2 px-5 transition-colors duration-300 text-slate-500 hover:bg-emerald-50 hover:text-emerald-500 focus:bg-emerald-50 focus:text-emerald-600 focus:outline-none focus-visible:outline-none"
                                     href="#">
                                     <span class="flex flex-col gap-1 overflow-hidden whitespace-nowrap">
-                                        <span class="leading-5 truncate">Menu</span>
+                                        <span class="leading-5 truncate">Agenda</span>
+                                    </span>
+                                </a>
+                                <a class="flex items-start justify-start gap-2 p-2 px-5 transition-colors duration-300 text-slate-500 hover:bg-emerald-50 hover:text-emerald-500 focus:bg-emerald-50 focus:text-emerald-600 focus:outline-none focus-visible:outline-none"
+                                    href="#">
+                                    <span class="flex flex-col gap-1 overflow-hidden whitespace-nowrap">
+                                        <span class="leading-5 truncate">Pengumuman</span>
+                                    </span>
+                                </a>
+                                <a class="flex items-start justify-start gap-2 p-2 px-5 transition-colors duration-300 text-slate-500 hover:bg-emerald-50 hover:text-emerald-500 focus:bg-emerald-50 focus:text-emerald-600 focus:outline-none focus-visible:outline-none"
+                                    href="#">
+                                    <span class="flex flex-col gap-1 overflow-hidden whitespace-nowrap">
+                                        <span class="leading-5 truncate">Kumpulan Berita</span>
+                                    </span>
+                                </a>
+                                <a class="flex items-start justify-start gap-2 p-2 px-5 transition-colors duration-300 text-slate-500 hover:bg-emerald-50 hover:text-emerald-500 focus:bg-emerald-50 focus:text-emerald-600 focus:outline-none focus-visible:outline-none"
+                                    href="#">
+                                    <span class="flex flex-col gap-1 overflow-hidden whitespace-nowrap">
+                                        <span class="leading-5 truncate">Layanan</span>
+                                    </span>
+                                </a>
+                                <a class="flex items-start justify-start gap-2 p-2 px-5 transition-colors duration-300 text-slate-500 hover:bg-emerald-50 hover:text-emerald-500 focus:bg-emerald-50 focus:text-emerald-600 focus:outline-none focus-visible:outline-none"
+                                    href="#">
+                                    <span class="flex flex-col gap-1 overflow-hidden whitespace-nowrap">
+                                        <span class="leading-5 truncate">Penghargaan</span>
                                     </span>
                                 </a>
                             </li>
@@ -154,8 +247,8 @@
                     <div class="relative flex ">
                         <!--  Start Dropdown trigger -->
                         <button
-                            class="flex items-center gap-2 py-2 xl:py-4 transition-colors duration-300 poppins-medium hover:text-base/70 focus:text-base focus:outline-none focus-visible:outline-none lg:px-2.5">
-                            <span>Tourism</span>
+                            class="flex items-center gap-2 py-2 xl:py-4 transition-colors duration-300 poppins-medium hover:text-base1/70 focus:text-base1 focus:outline-none focus-visible:outline-none lg:px-2.5">
+                            <span>Galeri</span>
                             <span class="relative only:-mx-5">
                                 <i class="fa fa-chevron-down" aria-hidden="true"></i>
                             </span>
@@ -168,7 +261,19 @@
                                 <a class="flex items-start justify-start gap-2 p-2 px-5 transition-colors duration-300 text-slate-500 hover:bg-emerald-50 hover:text-emerald-500 focus:bg-emerald-50 focus:text-emerald-600 focus:outline-none focus-visible:outline-none"
                                     href="#">
                                     <span class="flex flex-col gap-1 overflow-hidden whitespace-nowrap">
-                                        <span class="leading-5 truncate">Menu</span>
+                                        <span class="leading-5 truncate">Foto Kegiatan</span>
+                                    </span>
+                                </a>
+                                <a class="flex items-start justify-start gap-2 p-2 px-5 transition-colors duration-300 text-slate-500 hover:bg-emerald-50 hover:text-emerald-500 focus:bg-emerald-50 focus:text-emerald-600 focus:outline-none focus-visible:outline-none"
+                                    href="#">
+                                    <span class="flex flex-col gap-1 overflow-hidden whitespace-nowrap">
+                                        <span class="leading-5 truncate">Video Kegiatan</span>
+                                    </span>
+                                </a>
+                                <a class="flex items-start justify-start gap-2 p-2 px-5 transition-colors duration-300 text-slate-500 hover:bg-emerald-50 hover:text-emerald-500 focus:bg-emerald-50 focus:text-emerald-600 focus:outline-none focus-visible:outline-none"
+                                    href="#">
+                                    <span class="flex flex-col gap-1 overflow-hidden whitespace-nowrap">
+                                        <span class="leading-5 truncate">Kontak</span>
                                     </span>
                                 </a>
                             </li>
@@ -179,7 +284,7 @@
                     <div class="relative flex ">
                         <!--  Start Dropdown trigger -->
                         <button
-                            class="flex items-center gap-2 py-2 xl:py-4 transition-colors duration-300 poppins-medium hover:text-base/70 focus:text-base focus:outline-none focus-visible:outline-none lg:px-2.5">
+                            class="flex items-center gap-2 py-2 xl:py-4 transition-colors duration-300 poppins-medium hover:text-base1/70 focus:text-base1 focus:outline-none focus-visible:outline-none lg:px-2.5">
                             <span>Informasi Publik</span>
                             <span class="relative only:-mx-5">
                                 <i class="fa fa-chevron-down" aria-hidden="true"></i>
@@ -188,7 +293,7 @@
                         <!--  End Dropdown trigger -->
                         <!-- Start Menu list -->
                         <ul
-                            class="dropdown-content hidden absolute z-20 flex flex-col py-2 mt-1 list-none bg-white rounded shadow-md w-72 top-8 min-[1300px]:top-16 border shadow-slate-500/10">
+                            class="dropdown-content hidden absolute z-20 flex flex-col py-2 mt-1 list-none bg-white rounded shadow-md w-72 top-8 min-[1300px]:top-16 min-[1300px]:right-1 border shadow-slate-500/10">
                             <li>
                                 <a class="flex items-start justify-start gap-2 p-2 px-5 transition-colors duration-300 text-slate-500 hover:bg-emerald-50 hover:text-emerald-500 focus:bg-emerald-50 focus:text-emerald-600 focus:outline-none focus-visible:outline-none"
                                     href="#">
@@ -203,93 +308,197 @@
                     </div>
                     <!-- End Basic dropdown menu-->
                 </ul>
-            </nav>
-        </div>
-        <div class="swiper mySwiper z-0">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide"><img src="assets/Hero-Image 1.png" alt=""></div>
-                <div class="swiper-slide"><img src="assets/Hero-Image 1.png" alt=""></div>
-                <div class="swiper-slide"><img src="assets/Hero-Image 1.png" alt=""></div>
-                <div class="swiper-slide"><img src="assets/Hero-Image 1.png" alt=""></div>
             </div>
-            <!-- <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div> -->
-            <div class="swiper-pagination"></div>
         </div>
-        <footer class="bg-base z-0">
-            <div class="px-6 py-12 grid sm:grid-cols-6">
-                <div class="col-span-6 md:col-span-2 flex flex-row md:flex-col" style="margin-bottom: 20px;">
-                    <div class="object-cover">
-                        <img src="/assets/logo-dlh.png" alt="logo-dlh" width="60" height="60" />
-                    </div>
-                    <div class="flex flex-col gap-y-2 md:flex-col grow">
-                        <p class="font-bold text-white text-sm md:text-2xl">
-                            DINAS LINGKUNGAN HIDUP
-                        </p>
-                        <p class="text-sm text-white">PEMERINTAH KOTA SAMARINDA</p>
-                        <div class="text-white text-sm flex flex-row items-center" id="footer-email">
-                            <i class="fa-regular fa-envelope"></i>
-                            <p class="px-2">disporaparsmd22@gmail.com</p>
-                        </div>
-                        <div class="text-wrap text-white text-xs" id="footer-location">
-                            <p class="">
-                                Jl. MT. Haryono, Kel Air Putih, Kec. Samarinda Ulu,
-                                Samarinda 75124
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="flex  px-2 flex-col gap-y-2 col-span-2 md:col-span-1 text-white text-xs" id="footer-menu">
-                    <p class="font-bold text-sm md:text-xl">Menu</p>
-                    <a href="#">Beranda</a>
-                    <a href="">Profil</a>
-                    <a href="">Bidang</a>
-                    <a href="">Berita & Informasi</a>
-                    <a href="">Tourism</a>
-                    <a href="">Informasi Publik</a>
-                </div>
-                <div class="flex flex-col gap-y-2 px-2 text-white text-xs" id="footer-social-media">
-                    <p class="font-bold text-sm md:text-xl">Sosial Media</p>
-                    <a href="#">Instagram</a>
-                    <a href="">Twitter</a>
-                    <a href="">Facebook</a>
-                    <a href="">Youtube</a>
-                </div>
-                <div class="flex flex-col gap-y-2  px-2 text-white text-xs" id="footer-lainnya">
-                    <p class="font-bold text-sm md:text-xl">Lainnya</p>
-                    <a href="#">Bantuan & FAQ</a>
-                </div>
-                <div class="flex flex-col gap-y-2 px-2 text-white text-xs" id="footer-kontak">
-                    <p class="font-bold md:text-xl">Kontak Info</p>
-                    <div>
-                        <p>Dinas Lingkungan Hidup</p>
-                        <p>0541 - 760373</p>
-                    </div>
-                    <div>
-                        <p>Dinas Lingkungan Hidup</p>
-                        <p>0541 - 760373</p>
-                    </div>
-                </div>
+    </nav>
+    <!-- /Hero Section -->
+    <div class="swiper mySwiper z-0 2xl:max-w-[96rem] mx-auto">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="assets/Hero-Image 1.png" alt=""></div>
+            <div class="swiper-slide"><img src="assets/0b988eb4-1146-11ed-ba65-7cd30a6821ab.png" alt=""
+                    class="object-cover">
             </div>
-        </footer>
+            <div class="swiper-slide"><img src="assets/21d0c11a-1146-11ed-a26d-7cd30a6821ab.png" alt=""></div>
+        </div>
+        <!-- <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div> -->
+        <div class="swiper-pagination"></div>
     </div>
+    <!-- /Service -->
+    <div>
+        <div class="bg-base60">
+            <div class="flex 2xl:max-w-[96rem] mx-auto">
+                <span
+                    class="flex gap-3 items-center px-3 xl:ps-20 text-white poppins-semibold py-2 text-lg lg:text-xl"><i
+                        class="fa fa-bullhorn" aria-hidden="true"></i>
+                    <p class="w-52 hidden lg:block ">
+                        SEKILAS INFORMASI
+                    </p>
+                </span>
+                <marquee class="flex items-center text-white text-xs lg:text-xl">
+                    <p>MasyaAllah TabarakAllah</p>
+                </marquee>
+            </div>
+        </div>
+        <div class="2xl:max-w-[96rem] mx-auto py-5 lg:py-7">
+            <div class="flex flex-col justify-center mb-5 lg:mb-11">
+                <h2 class="text-center poppins-semibold text-[20px] md:text-[24px] lg:text-[32px]">LAYANAN</h2>
+                <p class="text-center poppins-medium text-[10px] md:text-[14px] lg:text-[18px]">
+                    Dinas Lingkungan Hidup
+                </p>
+            </div>
+            <div
+                class="flex justify-around gap-y-6 min-[1200px]:px-20 poppins-medium w-full text-[7px] sm:text-[13px] min-[400px]:text-[10px] lg:text-[17px] w-20 text-center lg:w-full text-base1">
+                <div class="flex flex-col items-center w-1/5 lg:w-full gap-3">
+                    <img src="assets/1 d.png" alt=""
+                        class="border border-base80 lg:p-2 rounded-full hover:scale-105  duration-150">
+                    <p class="">Penyediaan dan Penyediaan Taman Kota Samarinda</p>
+                </div>
+                <div class="flex flex-col items-center w-1/5 lg:w-full gap-3">
+                    <img src="assets/2 d.png" width="218" height="218" alt=""
+                        class="border border-base80 p-1 lg:p-6 rounded-full hover:scale-105  duration-150">
+                    <p class="">Penyuluhan Pengelolaan Lingkungan Hidup</p>
+                </div>
+                <div class="flex flex-col items-center w-1/5 lg:w-full gap-3">
+                    <img src="assets/3 d.png" alt=""
+                        class="border border-base80 lg:p-2 rounded-full hover:scale-105  duration-150">
+                    <p class="">Armada Tangki dan Surat Perintah Kerja (SPK)</p>
+                </div>
+                <div class="flex flex-col items-center w-1/5 lg:w-full gap-3">
+                    <img src="assets/4 d.png" alt=""
+                        class="border border-base80 lg:p-2 rounded-full hover:scale-105  duration-150">
+                    <p class="">Rekomendasi Kelayakan / Ketidaklayakan Lingkungan Hidup</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- /Berita Terkini-->
+    <div class="2xl:max-w-[96rem] mx-auto py-5 lg:py-7 flex">
+        <div class="px-4 min-[1000px]:px-16">
+            <h2
+                class="before:content-[''] before:border-4 before:me-2 before:border-base80 poppins-semibold text-3xl py-6">
+                BERITA TERKINI
+            </h2>
+            <div class="swiper mySwiper w-[40rem] rounded-lg">
+                <div class="swiper-wrapper poppins-regular">
+                    <div class="swiper-slide relative w-full"><img src="assets/Rectangle 35.png" alt="" class="">
+                        <div class="absolute bg-slate-950/60 inset-x-0 bottom-0 pt-3 pb-9 px-20 text-white">
+                            <p class="text-center line-clamp-2">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Voluptates
+                                dicta, eius accusamus quis atque voluptate fugiat voluptas eum aut. Autem quam error
+                                laborum minus cumque tenetur rem? Nesciunt, nobis saepe?</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide relative w-full"><img src="assets/Rectangle 35.png" alt="" class="">
+                        <div class="absolute bg-slate-950/60 inset-x-0 bottom-0 pt-3 pb-9 px-20 text-white">
+                            <p class="text-center line-clamp-2">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Voluptates
+                                dicta, eius accusamus quis atque voluptate fugiat voluptas eum aut. Autem quam error
+                                laborum minus cumque tenetur rem? Nesciunt, nobis saepe?</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide relative w-full"><img src="assets/Rectangle 35.png" alt="" class="">
+                        <div class="absolute bg-slate-950/60 inset-x-0 bottom-0 pt-3 pb-9 px-20 text-white">
+                            <p class="text-center line-clamp-2">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Voluptates
+                                dicta, eius accusamus quis atque voluptate fugiat voluptas eum aut. Autem quam error
+                                laborum minus cumque tenetur rem? Nesciunt, nobis saepe?</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-button-next next-icon"></div>
+                <div class="swiper-button-prev prev-icon"></div>
+                <div class="swiper-pagination" id="berita-terkini"></div>
+            </div>
+        </div>
+        <div class="min-[1000px]:px-4">
+            <h2 class="poppins-semibold text-3xl pb-2 pt-6 underscore">
+                PENGUMUMAN
+            </h2>
+        </div>
+        <div class="min-[1000px]:px-4">
+            <h2 class="poppins-semibold text-3xl pb-2 pt-6 underscore">
+                AGENDA
+            </h2>
+
+        </div>
+    </div>
+    <!-- /Footer-->
+    <footer class="bg-base1 z-0">
+        <div class="px-6 py-12 grid sm:grid-cols-6 2xl:max-w-[96rem] mx-auto">
+            <div class="col-span-6 md:col-span-2 flex flex-row md:flex-col" style="margin-bottom: 20px;">
+                <div class="object-cover">
+                    <img src="/assets/logo-dlh.png" alt="logo-dlh" width="60" height="60" />
+                </div>
+                <div class="flex flex-col gap-y-2 md:flex-col grow">
+                    <p class="font-bold text-white text-sm md:text-2xl">
+                        DINAS LINGKUNGAN HIDUP
+                    </p>
+                    <p class="text-sm text-white">PEMERINTAH KOTA SAMARINDA</p>
+                    <div class="text-white text-sm flex flex-row items-center" id="footer-email">
+                        <i class="fa-regular fa-envelope"></i>
+                        <p class="px-2">disporaparsmd22@gmail.com</p>
+                    </div>
+                    <div class="text-wrap text-white text-xs" id="footer-location">
+                        <p class="">
+                            Jl. MT. Haryono, Kel Air Putih, Kec. Samarinda Ulu,
+                            Samarinda 75124
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="flex  px-2 flex-col gap-y-2 col-span-2 md:col-span-1 text-white text-xs" id="footer-menu">
+                <p class="font-bold text-sm md:text-xl">Menu</p>
+                <a href="#">Beranda</a>
+                <a href="">Profil</a>
+                <a href="">Bidang</a>
+                <a href="">Berita & Informasi</a>
+                <a href="">Tourism</a>
+                <a href="">Informasi Publik</a>
+            </div>
+            <div class="flex flex-col gap-y-2 px-2 text-white text-xs" id="footer-social-media">
+                <p class="font-bold text-sm md:text-xl">Sosial Media</p>
+                <a href="#">Instagram</a>
+                <a href="">Twitter</a>
+                <a href="">Facebook</a>
+                <a href="">Youtube</a>
+            </div>
+            <div class="flex flex-col gap-y-2  px-2 text-white text-xs" id="footer-lainnya">
+                <p class="font-bold text-sm md:text-xl">Lainnya</p>
+                <a href="#">Bantuan & FAQ</a>
+            </div>
+            <div class="flex flex-col gap-y-2 px-2 text-white text-xs" id="footer-kontak">
+                <p class="font-bold md:text-xl">Kontak Info</p>
+                <div>
+                    <p>Dinas Lingkungan Hidup</p>
+                    <p>0541 - 760373</p>
+                </div>
+                <div>
+                    <p>Dinas Lingkungan Hidup</p>
+                    <p>0541 - 760373</p>
+                </div>
+            </div>
+        </div>
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
         var swiper = new Swiper(".mySwiper", {
-            spaceBetween: 30,
+            spaceBetween: 0,
+            // loop: true,
             centeredSlides: true,
             autoplay: {
-                delay: 2500,
+                delay: 5000,
                 disableOnInteraction: false,
             },
             pagination: {
                 el: ".swiper-pagination",
                 clickable: true,
             },
-            // navigation: {
-            //     nextEl: ".swiper-button-next",
-            //     prevEl: ".swiper-button-prev",
-            // },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
         });
     </script>
     <script src="script.js"></script>
