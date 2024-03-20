@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        base: "#085D41",
+        baseColor: "#085D41",
         accordion: "#10B981",
         routebar: "#CFF1E6",
         decorationRoute: "#085D41"
@@ -19,5 +19,9 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  daisyui: {
+    themes: ['light']
+
+  },
+  plugins: [require("daisyui")],
 }

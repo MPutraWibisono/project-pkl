@@ -1,16 +1,16 @@
-tailwind.config = {
-  theme: {
-    extend: {
-      colors: {
-        base: "#085D41",
-      },
-      gridTemplateColumns: {
-        // Simple 16 column grid
-        16: "repeat(16, minmax(0, 1fr))",
-      },
-    },
-  },
-};
+// tailwind.config = {
+//   theme: {
+//     extend: {
+//       colors: {
+//         base: "#085D41",
+//       },
+//       gridTemplateColumns: {
+//         // Simple 16 column grid
+//         16: "repeat(16, minmax(0, 1fr))",
+//       },
+//     },
+//   },
+// };
 
 document.addEventListener("DOMContentLoaded", function () {
   const dropdowns = document.querySelectorAll(".relative.flex");
