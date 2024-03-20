@@ -18,34 +18,53 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
         rel="stylesheet" />
+
     <style>
         #berita-terkini .swiper-pagination-bullet {
             width: 40px;
             height: 7px;
             border-radius: 25px;
-            text-align: center;
-            line-height: 2px;
-            font-size: 12px;
-            /* color: #f1f1f1; */
-            /* opacity: 1; */
             background: rgba(255, 255, 255);
         }
 
         #berita-terkini .swiper-pagination-bullet-active {
-            /* color: #fff; */
             background: #ffffff;
         }
 
-        .swiper-button-prev.prev-icon,
-        .swiper-button-next.next-icon {
+        #kumpulan-berita .swiper-pagination-bullet {
+            background: rgb(37, 37, 37);
+        }
+
+        #kumpulan-berita .swiper-pagination-bullet-active {
+            background: #000000;
+        }
+
+        .swiper-button-prev2.prev-icon,
+        .swiper-button-next2.next-icon {
             color: #ffffff;
+            transform: scale(.5);
+
+            @media (min-width: 1024px) {
+                transform: scale(1);
+            }
+        }
+
+        .swiper-button-prev3.prev-icon,
+        .swiper-button-next3.next-icon {
+            color: #ffffff;
+            transform: scale(.5);
+
+            @media (min-width: 1024px) {
+                transform: scale(1);
+            }
         }
     </style>
+
 </head>
 
 <body onload="startTime()" class="relative">
     <!-- /Header Waktu -->
-    <div class="bg-base1">
+    <div class="bg-baseColor">
         <div
             class="text-white flex px-4 min-[1000px]:px-16 items-center justify-center sm:text-medium 2xl:max-w-[96rem] mx-auto">
             <div class="poppins-semibold flex justify-center text-[8px] md:text-xs lg:text-sm">
@@ -98,14 +117,14 @@
                     class="z-10 navigation invisible opacity-0 absolute top-12 md:top-20 left-0  ml-auto h-screen w-full justify-center overflow-hidden overflow-y-auto overscroll-contain bg-white/90 pe-8 ps-6 md:ps-16 pb-12 pt-8 font-medium transition-[opacity,visibility] duration-300 min-[1300px]:visible min-[1300px]:relative min-[1300px]:top-0  min-[1300px]:flex min-[1300px]:h-full min-[1300px]:w-auto min-[1300px]:items-stretch min-[1300px]:overflow-visible min-[1300px]:bg-white/0 min-[1300px]:px-0 min-[1300px]:py-0 min-[1300px]:pt-0 min-[1300px]:opacity-100 text-xs md:text-base">
                     <li role="none" class="flex items-stretch">
                         <button role="menuitem" aria-haspopup="false"
-                            class="flex items-center gap-2 py-2 xl:py-4 transition-colors duration-300 poppins-medium hover:text-base1/70 focus:text-base1 focus:outline-none focus-visible:outline-none lg:px-2.5"
+                            class="flex items-center gap-2 py-2 xl:py-4 transition-colors duration-300 poppins-medium hover:text-baseColor/70 focus:text-baseColor focus:outline-none focus-visible:outline-none lg:px-2.5"
                             href="#"> <span class="underscore-page text-[#008bf9]">Beranda</span></button>
                     </li>
                     <!-- Component: Basic dropdown menu -->
                     <div class="relative flex ">
                         <!--  Start Dropdown trigger -->
                         <button
-                            class="flex items-center gap-2 py-2 xl:py-4 transition-colors duration-300 poppins-medium hover:text-base1/70 focus:text-base1 focus:outline-none focus-visible:outline-none lg:px-2.5">
+                            class="flex items-center gap-2 py-2 xl:py-4 transition-colors duration-300 poppins-medium hover:text-baseColor/70 focus:text-baseColor focus:outline-none focus-visible:outline-none lg:px-2.5">
                             <span>Profil</span>
                             <span class="relative only:-mx-5">
                                 <i class="fa fa-chevron-down" aria-hidden="true"></i>
@@ -141,7 +160,7 @@
                     <div class="relative flex ">
                         <!--  Start Dropdown trigger -->
                         <button
-                            class="flex items-center gap-2 py-2 xl:py-4 transition-colors duration-300 poppins-medium hover:text-base1/70 focus:text-base1 focus:outline-none focus-visible:outline-none lg:px-2.5">
+                            class="flex items-center gap-2 py-2 xl:py-4 transition-colors duration-300 poppins-medium hover:text-baseColor/70 focus:text-baseColor focus:outline-none focus-visible:outline-none lg:px-2.5">
                             <span>Bidang</span>
                             <span class="relative only:-mx-5">
                                 <i class="fa fa-chevron-down" aria-hidden="true"></i>
@@ -198,7 +217,7 @@
                     <div class="relative flex ">
                         <!--  Start Dropdown trigger -->
                         <button
-                            class="flex items-center gap-2 py-2 xl:py-4 transition-colors duration-300 poppins-medium hover:text-base1/70 focus:text-base1 focus:outline-none focus-visible:outline-none lg:px-2.5">
+                            class="flex items-center gap-2 py-2 xl:py-4 transition-colors duration-300 poppins-medium hover:text-baseColor/70 focus:text-baseColor focus:outline-none focus-visible:outline-none lg:px-2.5">
                             <span>Berita & Informasi</span>
                             <span class="relative only:-mx-5">
                                 <i class="fa fa-chevron-down" aria-hidden="true"></i>
@@ -247,7 +266,7 @@
                     <div class="relative flex ">
                         <!--  Start Dropdown trigger -->
                         <button
-                            class="flex items-center gap-2 py-2 xl:py-4 transition-colors duration-300 poppins-medium hover:text-base1/70 focus:text-base1 focus:outline-none focus-visible:outline-none lg:px-2.5">
+                            class="flex items-center gap-2 py-2 xl:py-4 transition-colors duration-300 poppins-medium hover:text-baseColor/70 focus:text-baseColor focus:outline-none focus-visible:outline-none lg:px-2.5">
                             <span>Galeri</span>
                             <span class="relative only:-mx-5">
                                 <i class="fa fa-chevron-down" aria-hidden="true"></i>
@@ -284,7 +303,7 @@
                     <div class="relative flex ">
                         <!--  Start Dropdown trigger -->
                         <button
-                            class="flex items-center gap-2 py-2 xl:py-4 transition-colors duration-300 poppins-medium hover:text-base1/70 focus:text-base1 focus:outline-none focus-visible:outline-none lg:px-2.5">
+                            class="flex items-center gap-2 py-2 xl:py-4 transition-colors duration-300 poppins-medium hover:text-baseColor/70 focus:text-baseColor focus:outline-none focus-visible:outline-none lg:px-2.5">
                             <span>Informasi Publik</span>
                             <span class="relative only:-mx-5">
                                 <i class="fa fa-chevron-down" aria-hidden="true"></i>
@@ -312,7 +331,7 @@
         </div>
     </nav>
     <!-- /Hero Section -->
-    <div class="swiper mySwiper z-0 2xl:max-w-[96rem] mx-auto">
+    <div class="swiper mySwiper1 z-0 2xl:max-w-[96rem] mx-auto">
         <div class="swiper-wrapper">
             <div class="swiper-slide"><img src="assets/Hero-Image 1.png" alt=""></div>
             <div class="swiper-slide"><img src="assets/0b988eb4-1146-11ed-ba65-7cd30a6821ab.png" alt=""
@@ -320,9 +339,7 @@
             </div>
             <div class="swiper-slide"><img src="assets/21d0c11a-1146-11ed-a26d-7cd30a6821ab.png" alt=""></div>
         </div>
-        <!-- <div class="swiper-button-next"></div>
-                        <div class="swiper-button-prev"></div> -->
-        <div class="swiper-pagination"></div>
+        <div class="swiper-pagination swiper-pagination1"></div>
     </div>
     <!-- /Service -->
     <div>
@@ -348,23 +365,23 @@
                 </p>
             </div>
             <div
-                class="flex justify-around gap-y-6 min-[1200px]:px-20 poppins-medium w-full text-[7px] sm:text-[13px] min-[400px]:text-[10px] lg:text-[17px] w-20 text-center lg:w-full text-base1">
-                <div class="flex flex-col items-center w-1/5 lg:w-full gap-3">
+                class="flex justify-around gap-y-6 min-[1200px]:px-20 poppins-semibold w-full text-[7px] sm:text-[13px] min-[400px]:text-[10px] lg:text-[17px] w-20 text-center lg:w-full text-baseColor">
+                <div class="flex flex-col items-center w-1/5 lg:w-full gap-5">
                     <img src="assets/1 d.png" alt=""
                         class="border border-base80 lg:p-2 rounded-full hover:scale-105  duration-150">
                     <p class="">Penyediaan dan Penyediaan Taman Kota Samarinda</p>
                 </div>
-                <div class="flex flex-col items-center w-1/5 lg:w-full gap-3">
+                <div class="flex flex-col items-center w-1/5 lg:w-full gap-5">
                     <img src="assets/2 d.png" width="218" height="218" alt=""
                         class="border border-base80 p-1 lg:p-6 rounded-full hover:scale-105  duration-150">
                     <p class="">Penyuluhan Pengelolaan Lingkungan Hidup</p>
                 </div>
-                <div class="flex flex-col items-center w-1/5 lg:w-full gap-3">
+                <div class="flex flex-col items-center w-1/5 lg:w-full gap-5">
                     <img src="assets/3 d.png" alt=""
                         class="border border-base80 lg:p-2 rounded-full hover:scale-105  duration-150">
                     <p class="">Armada Tangki dan Surat Perintah Kerja (SPK)</p>
                 </div>
-                <div class="flex flex-col items-center w-1/5 lg:w-full gap-3">
+                <div class="flex flex-col items-center w-1/5 lg:w-full gap-5">
                     <img src="assets/4 d.png" alt=""
                         class="border border-base80 lg:p-2 rounded-full hover:scale-105  duration-150">
                     <p class="">Rekomendasi Kelayakan / Ketidaklayakan Lingkungan Hidup</p>
@@ -374,58 +391,267 @@
         </div>
     </div>
     <!-- /Berita Terkini-->
-    <div class="2xl:max-w-[96rem] mx-auto py-5 lg:py-7 flex">
-        <div class="px-4 min-[1000px]:px-16">
+    <div class="2xl:max-w-[96rem] mx-auto py-5 lg:py-7 lg:flex">
+        <div class="px-4 min-[1000px]:ps-16 min-[1000px]:pe-10">
             <h2
-                class="before:content-[''] before:border-4 before:me-2 before:border-base80 poppins-semibold text-3xl py-6">
+                class="before:content-[''] before:border-2 before:me-2 before:border-base80 poppins-semibold text-xl py-2 lg:before:border-4 lg:before:me-2 poppins-semibold lg:text-2xl lg:py-6">
                 BERITA TERKINI
             </h2>
-            <div class="swiper mySwiper w-[40rem] rounded-lg">
+            <div class="swiper mySwiper2 w-[18rem] lg:w-[30rem] xl:w-[43rem] rounded-lg">
                 <div class="swiper-wrapper poppins-regular">
                     <div class="swiper-slide relative w-full"><img src="assets/Rectangle 35.png" alt="" class="">
-                        <div class="absolute bg-slate-950/60 inset-x-0 bottom-0 pt-3 pb-9 px-20 text-white">
-                            <p class="text-center line-clamp-2">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        <div
+                            class="absolute bg-slate-950/60 inset-x-0 bottom-0 pt-2 lg:pt-3 pb-5 lg:pb-9 px-5 lg:px-20 text-white">
+                            <p class="text-center text-xs lg:text-base line-clamp-2">Lorem ipsum dolor sit amet
+                                consectetur
+                                adipisicing elit.
                                 Voluptates
                                 dicta, eius accusamus quis atque voluptate fugiat voluptas eum aut. Autem quam error
                                 laborum minus cumque tenetur rem? Nesciunt, nobis saepe?</p>
                         </div>
                     </div>
                     <div class="swiper-slide relative w-full"><img src="assets/Rectangle 35.png" alt="" class="">
-                        <div class="absolute bg-slate-950/60 inset-x-0 bottom-0 pt-3 pb-9 px-20 text-white">
-                            <p class="text-center line-clamp-2">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        <div
+                            class="absolute bg-slate-950/60 inset-x-0 bottom-0 pt-2 lg:pt-3 pb-5 lg:pb-9 px-5 lg:px-20 text-white">
+                            <p class="text-center text-xs lg:text-base line-clamp-2">Lorem ipsum dolor sit amet
+                                consectetur
+                                adipisicing elit.
                                 Voluptates
                                 dicta, eius accusamus quis atque voluptate fugiat voluptas eum aut. Autem quam error
                                 laborum minus cumque tenetur rem? Nesciunt, nobis saepe?</p>
                         </div>
                     </div>
                     <div class="swiper-slide relative w-full"><img src="assets/Rectangle 35.png" alt="" class="">
-                        <div class="absolute bg-slate-950/60 inset-x-0 bottom-0 pt-3 pb-9 px-20 text-white">
-                            <p class="text-center line-clamp-2">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        <div
+                            class="absolute bg-slate-950/60 inset-x-0 bottom-0 pt-2 lg:pt-3 pb-5 lg:pb-9 px-5 lg:px-20 text-white">
+                            <p class="text-center text-xs lg:text-base line-clamp-2">Lorem ipsum dolor sit amet
+                                consectetur
+                                adipisicing elit.
                                 Voluptates
                                 dicta, eius accusamus quis atque voluptate fugiat voluptas eum aut. Autem quam error
                                 laborum minus cumque tenetur rem? Nesciunt, nobis saepe?</p>
                         </div>
                     </div>
                 </div>
-                <div class="swiper-button-next next-icon"></div>
-                <div class="swiper-button-prev prev-icon"></div>
-                <div class="swiper-pagination" id="berita-terkini"></div>
+                <div class="swiper-button-next swiper-button-next2 next-icon"></div>
+                <div class="swiper-button-prev swiper-button-prev2 prev-icon"></div>
+                <div class="swiper-pagination swiper-pagination2 !scale-50 lg:!scale-100" id="berita-terkini"></div>
             </div>
         </div>
-        <div class="min-[1000px]:px-4">
-            <h2 class="poppins-semibold text-3xl pb-2 pt-6 underscore">
-                PENGUMUMAN
-            </h2>
+        <div class="px-4 min-[1000px]:pe-16">
+            <div class="flex justify-between sm:justify-start sm:gap-5 lg:justify-between items-center">
+                <h2
+                    class="poppins-semibold xl:text-2xl lg:pb-2 lg:pt-6 mb-4 text-xl pb-1 pt-4 mb-2 underscore text-base80">
+                    PENGUMUMAN
+                </h2>
+                <h2 class="poppins-semibold xl:text-2xl lg:pb-2 lg:pt-6 mb-4 text-xl pb-1 pt-4 mb-2">
+                    AGENDA
+                </h2>
+            </div>
+            <div class="space-y-3">
+                <div class="border border-black/80 rounded-xl flex p-2 gap-3 h-full items-center">
+                    <div class="divide-y rounded-xl overflow-hidden border border-base70 h-fit min-w-20 lg:min-w-24 ">
+                        <div class="text-center poppins-semibold">
+                            <div class="bg-base70 py-1 px-3">
+                                <span class="text-white lg:text-[25px] text-[15px] w-full">
+                                    OCT
+                                </span>
+                            </div>
+                        </div>
+                        <div class="text-center poppins-semibold h-fit">
+                            <div class="text-base70 text-[27px] lg:text-[37px]">
+                                05
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-3/4 poppins-semibold">
+                        <h3 class="text-[15px] lg:text-[18px] pb-1 line-clamp-1">
+                            Festival Mahakam 2022
+                        </h3>
+                        <p
+                            class="text-[10px] lg:text-[12px] text-neutral-500 lg:line-clamp-2 xl:line-clamp-3  line-clamp-2 text-justify">
+                            Event Tahunan Kota Samarinda "Festival Mahakam 2022" yang akan di selenggarakan di Gor
+                            Segiri. Semua akan meriahkan acara ini hingga tengah malam suntuk.
+                        </p>
+                    </div>
+                </div>
+                <div class="border border-black/80 rounded-xl flex p-2 gap-3 h-full items-center">
+                    <div class="divide-y rounded-xl overflow-hidden border border-base70 h-fit min-w-20 lg:min-w-24">
+                        <div class="text-center poppins-semibold">
+                            <div class="bg-base70 py-1 px-3">
+                                <span class="text-white lg:text-[25px] text-[15px] w-full">
+                                    SEP
+                                </span>
+                            </div>
+                        </div>
+                        <div class="text-center poppins-semibold h-fit">
+                            <div class="text-base70 text-[27px] lg:text-[37px]">
+                                16
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-3/4 poppins-semibold">
+                        <h3 class="text-[15px] lg:text-[18px] pb-1 line-clamp-1">
+                            Event Tahunan Dinas Pemuda, Olahraga Dan Pariwisata
+                        </h3>
+                        <p
+                            class="text-[10px] lg:text-[12px] text-neutral-500 lg:line-clamp-2 xl:line-clamp-3  line-clamp-2 text-justify">
+                            Muda-mudi samarinda siapkan diri kalian untuk mengikuti pemilihan Duta Wisata yang akan
+                            dilaksanakan pada tanggal 16 September 2024.
+                        </p>
+                    </div>
+                </div>
+                <div class="border border-black/80 rounded-xl flex p-2 gap-3 h-full items-center">
+                    <div class="divide-y rounded-xl overflow-hidden border border-base70 h-fit min-w-20 lg:min-w-24">
+                        <div class="text-center poppins-semibold">
+                            <div class="bg-base70 py-1 px-3">
+                                <span class="text-white lg:text-[25px] text-[15px] w-full">
+                                    JUN
+                                </span>
+                            </div>
+                        </div>
+                        <div class="text-center poppins-semibold h-fit">
+                            <div class="text-base70 text-[27px] lg:text-[37px]">
+                                30
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-3/4 poppins-semibold">
+                        <h3 class="text-[15px] lg:text-[18px] pb-1 line-clamp-1">
+                            Kerja Bakti di Lingkungan Balaikota Samarinda
+                        </h3>
+                        <p
+                            class="text-[10px] lg:text-[12px] text-neutral-500 lg:line-clamp-2 xl:line-clamp-3  line-clamp-2 text-justify">
+                            Kerja Bakti/Gotong Royong di Lingkungan Balaikota Samarinda mengambil rute sebagai
+                            berikut
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="min-[1000px]:px-4">
-            <h2 class="poppins-semibold text-3xl pb-2 pt-6 underscore">
-                AGENDA
+    </div>
+    <!-- /Kumpulan Berita -->
+    <div class="2xl:max-w-[96rem] mx-auto py-5 lg:py-7">
+        <div class="px-4 min-[1000px]:ps-16 min-[1000px]:pe-10">
+            <h2
+                class="before:content-[''] before:border-2 before:me-2 before:border-base80 poppins-semibold text-xl py-2 lg:before:border-4 lg:before:me-2 poppins-semibold lg:text-2xl lg:py-6">
+                KUMPULAN BERITA
             </h2>
-
+            <div class="swiper mySwiper3 rounded-lg">
+                <div class="swiper-wrapper poppins-regular">
+                    <div class="swiper-slide bg-white rounded shadow-md text-slate-500 shadow-slate-200">
+                        <figure>
+                            <img src="assets/Rectangle 38.png" alt="card image" class=" w-full" />
+                        </figure>
+                        <div class="p-6">
+                            <header class="space-y-3">
+                                <h3 class="text-xl font-medium text-slate-700 line-clamp-2">Rapat Koordinasi di
+                                    Lingkungan Pemerintah
+                                    Kota Samarinda</h3>
+                                <div>
+                                    <div class="text-sm text-slate-400 flex gap-2"><i class="fa fa-calendar"
+                                            aria-hidden="true"></i>
+                                        <p>
+                                            04
+                                            September 2023
+                                        </p>
+                                    </div>
+                                    <div class="text-sm text-slate-400 flex gap-2"><i class="fa fa-user"
+                                            aria-hidden="true"></i>
+                                        <p>
+                                            Beni Maulana
+                                        </p>
+                                    </div>
+                                </div>
+                            </header>
+                        </div>
+                    </div>
+                    <div class="swiper-slide bg-white rounded shadow-md text-slate-500 shadow-slate-200">
+                        <figure>
+                            <img src="assets/Rectangle 38 (1).png" alt="card image" class=" w-full" />
+                        </figure>
+                        <div class="p-6">
+                            <header class="space-y-3">
+                                <h3 class="text-xl font-medium text-slate-700 line-clamp-2">Rapat Hasil Terbaik Atlit
+                                    Panahan Kota
+                                    Samarinda Pada Ajang HUT RI</h3>
+                                <div>
+                                    <div class="text-sm text-slate-400 flex gap-2"><i class="fa fa-calendar"
+                                            aria-hidden="true"></i>
+                                        <p>
+                                            03 September 2023
+                                        </p>
+                                    </div>
+                                    <div class="text-sm text-slate-400 flex gap-2"><i class="fa fa-user"
+                                            aria-hidden="true"></i>
+                                        <p>
+                                            Beni Maulana
+                                        </p>
+                                    </div>
+                                </div>
+                            </header>
+                        </div>
+                    </div>
+                    <div class="swiper-slide bg-white rounded shadow-md text-slate-500 shadow-slate-200">
+                        <figure>
+                            <img src="assets/Rectangle 38 (2).png" alt="card image" class=" w-full" />
+                        </figure>
+                        <div class="p-6">
+                            <header class="space-y-3">
+                                <h3 class="text-xl font-medium text-slate-700 line-clamp-2">Rapat Koordinasi Rencana
+                                    Pembangunan Dermaga Pariwisata</h3>
+                                <div>
+                                    <div class="text-sm text-slate-400 flex gap-2"><i class="fa fa-calendar"
+                                            aria-hidden="true"></i>
+                                        <p>
+                                            29 Agustus 2023
+                                        </p>
+                                    </div>
+                                    <div class="text-sm text-slate-400 flex gap-2"><i class="fa fa-user"
+                                            aria-hidden="true"></i>
+                                        <p>
+                                            Beni Maulana
+                                        </p>
+                                    </div>
+                                </div>
+                            </header>
+                        </div>
+                    </div>
+                    <div class="swiper-slide bg-white rounded shadow-md text-slate-500 shadow-slate-200">
+                        <figure>
+                            <img src="assets/Rectangle 38 (1).png" alt="card image" class=" w-full" />
+                        </figure>
+                        <div class="p-6">
+                            <header class="space-y-3">
+                                <h3 class="text-xl font-medium text-slate-700 line-clamp-2">Rapat Hasil Terbaik Atlit
+                                    Panahan Kota
+                                    Samarinda Pada Ajang HUT RI</h3>
+                                <div>
+                                    <div class="text-sm text-slate-400 flex gap-2"><i class="fa fa-calendar"
+                                            aria-hidden="true"></i>
+                                        <p>
+                                            03 September 2023
+                                        </p>
+                                    </div>
+                                    <div class="text-sm text-slate-400 flex gap-2"><i class="fa fa-user"
+                                            aria-hidden="true"></i>
+                                        <p>
+                                            Beni Maulana
+                                        </p>
+                                    </div>
+                                </div>
+                            </header>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-button-next swiper-button-next3 next-icon"></div>
+                <div class="swiper-button-prev swiper-button-prev3 prev-icon"></div>
+                <div class="swiper-pagination swiper-pagination3 !scale-50 lg:!scale-100" id="kumpulan-berita"></div>
+            </div>
         </div>
     </div>
     <!-- /Footer-->
-    <footer class="bg-base1 z-0">
+    <footer class="bg-baseColor z-0">
         <div class="px-6 py-12 grid sm:grid-cols-6 2xl:max-w-[96rem] mx-auto">
             <div class="col-span-6 md:col-span-2 flex flex-row md:flex-col" style="margin-bottom: 20px;">
                 <div class="object-cover">
@@ -483,7 +709,7 @@
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
-        var swiper = new Swiper(".mySwiper", {
+        var swiper = new Swiper(".mySwiper1", {
             spaceBetween: 0,
             loop: true,
             centeredSlides: true,
@@ -492,12 +718,49 @@
                 disableOnInteraction: false,
             },
             pagination: {
-                el: ".swiper-pagination",
+                el: ".swiper-pagination1",
                 clickable: true,
             },
             navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
+                nextEl: ".swiper-button-next1",
+                prevEl: ".swiper-button-prev1",
+            },
+        });
+
+        var swiper2 = new Swiper(".mySwiper2", {
+            spaceBetween: 0,
+            loop: true,
+            centeredSlides: true,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination2",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next2",
+                prevEl: ".swiper-button-prev2",
+            },
+        });
+
+        var swiper3 = new Swiper(".mySwiper3", {
+            slidesPerView: 3,
+            spaceBetween: 20,
+            loop: true,
+            centeredSlides: false,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination3",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next3",
+                prevEl: ".swiper-button-prev3",
             },
         });
     </script>
