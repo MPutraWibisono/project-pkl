@@ -5,6 +5,7 @@ module.exports = {
     extend: {
       colors: {
         baseColor: "#085D41",
+        green60: "#0D9A6C",
         accordion: "#10B981",
         routebar: "#CFF1E6",
         decorationRoute: "#085D41"
