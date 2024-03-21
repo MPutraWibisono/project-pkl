@@ -883,8 +883,8 @@ video {
   margin-top: 1.5rem;
 }
 
-.mb-auto {
-  margin-bottom: auto;
+.me-auto {
+  margin-inline-end: auto;
 }
 
 .box-border {
@@ -1060,12 +1060,12 @@ video {
   max-height: 13rem;
 }
 
-.min-h-\[32\.5rem\] {
-  min-height: 32.5rem;
-}
-
 .w-1\/2 {
   width: 50%;
+}
+
+.w-1\/3 {
+  width: 33.333333%;
 }
 
 .w-1\/5 {
@@ -1125,53 +1125,16 @@ video {
   width: 100%;
 }
 
-.w-2\/3 {
-  width: 66.666667%;
-}
-
-.w-1\/4 {
-  width: 25%;
-}
-
-.w-1\/3 {
-  width: 33.333333%;
-}
-
 .min-w-20 {
   min-width: 5rem;
-}
-
-.max-w-full {
-  max-width: 100%;
-}
-
-.max-w-fit {
-  max-width: -moz-fit-content;
-  max-width: fit-content;
-}
-
-.max-w-prose {
-  max-width: 65ch;
-}
-
-.max-w-64 {
-  max-width: 16rem;
-}
-
-.max-w-lg {
-  max-width: 32rem;
-}
-
-.max-w-xl {
-  max-width: 36rem;
 }
 
 .max-w-4xl {
   max-width: 56rem;
 }
 
-.max-w-5xl {
-  max-width: 64rem;
+.max-w-full {
+  max-width: 100%;
 }
 
 .flex-shrink {
@@ -1247,6 +1210,12 @@ video {
   --tw-scale-x: .5 !important;
   --tw-scale-y: .5 !important;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y)) !important;
+}
+
+.scale-50 {
+  --tw-scale-x: .5;
+  --tw-scale-y: .5;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .\!transform {
@@ -1751,10 +1720,6 @@ video {
   gap: 0.25rem;
 }
 
-.gap-10 {
-  gap: 2.5rem;
-}
-
 .gap-2 {
   gap: 0.5rem;
 }
@@ -1763,12 +1728,12 @@ video {
   gap: 0.75rem;
 }
 
-.gap-5 {
-  gap: 1.25rem;
+.gap-4 {
+  gap: 1rem;
 }
 
-.gap-8 {
-  gap: 2rem;
+.gap-5 {
+  gap: 1.25rem;
 }
 
 .gap-x-10 {
@@ -2293,6 +2258,11 @@ video {
   background-color: rgb(10 123 86 / var(--tw-bg-opacity));
 }
 
+.bg-base80 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(8 92 64 / var(--tw-bg-opacity));
+}
+
 .bg-baseColor {
   --tw-bg-opacity: 1;
   background-color: rgb(8 93 65 / var(--tw-bg-opacity));
@@ -2461,6 +2431,10 @@ video {
   padding: 1.25rem;
 }
 
+.p-8 {
+  padding: 2rem;
+}
+
 .px-10 {
   padding-left: 2.5rem;
   padding-right: 2.5rem;
@@ -2516,14 +2490,14 @@ video {
   padding-bottom: 0.75rem;
 }
 
-.py-5 {
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
-}
-
 .py-4 {
   padding-top: 1rem;
   padding-bottom: 1rem;
+}
+
+.py-5 {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
 }
 
 .pb-1 {
@@ -2639,6 +2613,14 @@ video {
   line-height: 2rem;
 }
 
+.text-\[0\.5rem\] {
+  font-size: 0.5rem;
+}
+
+.text-\[0\.8rem\] {
+  font-size: 0.8rem;
+}
+
 .text-\[10px\] {
   font-size: 10px;
 }
@@ -2653,6 +2635,10 @@ video {
 
 .text-\[27px\] {
   font-size: 27px;
+}
+
+.text-\[5px\] {
+  font-size: 5px;
 }
 
 .text-\[7px\] {
@@ -2685,18 +2671,6 @@ video {
 
 .text-xxs {
   font-size: 10px;
-}
-
-.text-\[2px\] {
-  font-size: 2px;
-}
-
-.text-\[4px\] {
-  font-size: 4px;
-}
-
-.text-\[3px\] {
-  font-size: 3px;
 }
 
 .font-bold {
@@ -3371,6 +3345,21 @@ video {
   color: rgb(16 185 129 / var(--tw-text-opacity));
 }
 
+.hover\:brightness-75:hover {
+  --tw-brightness: brightness(.75);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.hover\:brightness-90:hover {
+  --tw-brightness: brightness(.9);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.hover\:brightness-95:hover {
+  --tw-brightness: brightness(.95);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
 .before\:hover\:text-center:hover::before {
   content: var(--tw-content);
   text-align: center;
@@ -3438,6 +3427,21 @@ video {
   }
 }
 
+@media (min-width: 390px) {
+  .min-\[390px\]\:text-\[10px\] {
+    font-size: 10px;
+  }
+
+  .min-\[390px\]\:text-\[12px\] {
+    font-size: 12px;
+  }
+
+  .min-\[390px\]\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+}
+
 @media (min-width: 400px) {
   .min-\[400px\]\:text-\[10px\] {
     font-size: 10px;
@@ -3471,6 +3475,10 @@ video {
     justify-content: flex-start;
   }
 
+  .sm\:gap-4 {
+    gap: 1rem;
+  }
+
   .sm\:gap-5 {
     gap: 1.25rem;
   }
@@ -3481,26 +3489,6 @@ video {
 
   .sm\:text-\[15px\] {
     font-size: 15px;
-  }
-
-  .sm\:text-\[10px\] {
-    font-size: 10px;
-  }
-
-  .sm\:text-\[20px\] {
-    font-size: 20px;
-  }
-
-  .sm\:text-\[16px\] {
-    font-size: 16px;
-  }
-
-  .sm\:text-\[7px\] {
-    font-size: 7px;
-  }
-
-  .sm\:text-\[9px\] {
-    font-size: 9px;
   }
 
   .sm\:underline {
@@ -3562,6 +3550,14 @@ video {
     flex-direction: column;
   }
 
+  .md\:gap-6 {
+    gap: 1.5rem;
+  }
+
+  .md\:gap-8 {
+    gap: 2rem;
+  }
+
   .md\:px-10 {
     padding-left: 2.5rem;
     padding-right: 2.5rem;
@@ -3597,6 +3593,10 @@ video {
 
   .md\:text-\[14px\] {
     font-size: 14px;
+  }
+
+  .md\:text-\[15px\] {
+    font-size: 15px;
   }
 
   .md\:text-\[17px\] {
@@ -3724,12 +3724,16 @@ video {
     padding: 0.5rem;
   }
 
-  .lg\:p-6 {
-    padding: 1.5rem;
+  .lg\:p-3 {
+    padding: 0.75rem;
   }
 
   .lg\:p-5 {
     padding: 1.25rem;
+  }
+
+  .lg\:p-6 {
+    padding: 1.5rem;
   }
 
   .lg\:px-2 {
@@ -3752,6 +3756,16 @@ video {
     padding-right: 7rem;
   }
 
+  .lg\:py-0 {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+
+  .lg\:py-3 {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+  }
+
   .lg\:py-6 {
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
@@ -3760,16 +3774,6 @@ video {
   .lg\:py-7 {
     padding-top: 1.75rem;
     padding-bottom: 1.75rem;
-  }
-
-  .lg\:py-4 {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-  }
-
-  .lg\:py-3 {
-    padding-top: 0.75rem;
-    padding-bottom: 0.75rem;
   }
 
   .lg\:pb-2 {
@@ -3912,6 +3916,14 @@ video {
 
   .min-\[1300px\]\:relative {
     position: relative;
+  }
+
+  .min-\[1300px\]\:-right-52 {
+    right: -13rem;
+  }
+
+  .min-\[1300px\]\:-top-3 {
+    top: -0.75rem;
   }
 
   .min-\[1300px\]\:right-1 {

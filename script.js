@@ -5,18 +5,24 @@ document.addEventListener("DOMContentLoaded", function () {
   dropdowns.forEach(function (dropdown) {
     dropdown.addEventListener("mouseover", function (event) {
       const menuList = dropdown.querySelector(".dropdown-content");
-      const arrowIcon = dropdown.querySelector(".fa-chevron-down");
+      const arrowIcon =
+        dropdown.querySelector(".fa-chevron-down") ||
+        dropdown.querySelector(".fa-chevron-right");
 
       menuList.classList.add("block");
       menuList.classList.remove("hidden");
       arrowIcon.style.transform = "rotate(180deg)";
+      // arrowIcon.style.transform = "scale(0)";
     });
 
     // Tambahan: reset transform saat mouse leave dropdown
     dropdown.addEventListener("mouseleave", function (event) {
       const menuList = dropdown.querySelector(".dropdown-content");
-      const arrowIcon = dropdown.querySelector(".fa-chevron-down");
+      const arrowIcon =
+        dropdown.querySelector(".fa-chevron-down") ||
+        dropdown.querySelector(".fa-chevron-right");
       arrowIcon.style.transform = "rotate(0deg)";
+      // arrowIcon.style.transform = "scale(1)";
       menuList.classList.remove("block");
       menuList.classList.add("hidden");
     });
@@ -91,13 +97,13 @@ function startTime() {
   const ampm = h >= 12 ? "PM" : "AM";
   document.getElementById("time").innerHTML =
     day +
-    "&nbsp; /  &nbsp;" +
+    ",  " +
     d +
     " " +
     mo +
     " " +
     y +
-    "&nbsp; /  &nbsp;" +
+    "&nbsp;  &nbsp;" +
     h +
     ":" +
     m +
