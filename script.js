@@ -139,3 +139,25 @@ function checkTime(i) {
   } // add zero in front of numbers < 10
   return i;
 }
+
+// function buat page berita
+const categoryTitle = document.querySelectorAll(".category-title");
+const allCategoryBerita = document.querySelectorAll(".all");
+
+for (let i = 0; i < categoryTitle.length; i++){
+  categoryTitle[i].addEventListener('click', filterBerita.bind(this, categoryTitle[i]))
+}
+
+function filterBerita(item){
+  kategoriFilter(item)
+
+}
+
+function kategoriFilter(activeItem) {
+  for (let i = 0; i < categoryTitle.length; i++) {
+    categoryTitle[i].classList.remove("bg-accordion");
+    categoryTitle[i].classList.remove ("text-white");
+  }
+  activeItem.classList.add("bg-accordion");
+  activeItem.classList.add("text-white");
+}
