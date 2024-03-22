@@ -8,7 +8,7 @@
     <title>
         Selamat Datang di Website Resmi Dinas Lingkungan Hidup Samarinda
     </title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
     <link rel="stylesheet" href="output.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -18,45 +18,92 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
         rel="stylesheet" />
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/id_ID/sdk.js#xfbml=1&version=v19.0"
+        nonce="bbNvWDWG"></script>
+    <style>
+        #berita-terkini .swiper-pagination-bullet {
+            width: 40px;
+            height: 7px;
+            border-radius: 25px;
+            background: rgba(255, 255, 255);
+        }
+
+        #berita-terkini .swiper-pagination-bullet-active {
+            background: #ffffff;
+        }
+
+        #kumpulan-berita .swiper-pagination-bullet {
+            background: rgb(37, 37, 37);
+        }
+
+        #kumpulan-berita .swiper-pagination-bullet-active {
+            background: #000000;
+        }
+
+        .swiper-button-prev2.prev-icon,
+        .swiper-button-next2.next-icon {
+            color: #ffffff;
+            transform: scale(.5);
+
+            @media (min-width: 1024px) {
+                transform: scale(1);
+            }
+        }
+
+        .swiper-button-prev3.prev-icon,
+        .swiper-button-next3.next-icon {
+            color: #ffffff;
+            transform: scale(.5);
+
+            @media (min-width: 1024px) {
+                transform: scale(1);
+            }
+        }
+    </style>
+
 </head>
 
-<body onload="startTime()">
-    <div class="bg-base">
+<body onload="startTime()" class="relative poppins-regular">
+    <!-- /Header Waktu -->
+    <div class="bg-baseColor">
         <div
-            class=" text-white flex px-4 min-[1000px]:px-20 items-center justify-center text-xs sm:text-medium 2xl:max-w-[96rem] mx-auto">
-            <div class="poppins-bold flex justify-center">
+            class="text-white flex px-4 min-[1000px]:px-16 items-center justify-center sm:text-medium 2xl:max-w-[96rem] mx-auto">
+            <div class="poppins-semibold flex justify-center text-[8px] md:text-xs lg:text-sm">
                 <div class="" id="time">
                 </div>
             </div>
-            <div class="ms-auto flex items-center justify-center poppins-medium">
-                <a href="" class="border p-3 h-[74px] min-[440px]:h-full"><i class="fa fa-envelope pe-1"
+            <div class="ms-auto flex items-center justify-center poppins-medium text-[10px] lg:text-xs ">
+                <a href="" class="border p-2.5 h-[67px] min-[340px]:h-full "><i class="fa fa-envelope pe-1"
                         aria-hidden="true"></i>
                     Webmail</a>
-                <a href="" class="border p-3"><i class="fa fa-phone pe-1" aria-hidden="true"></i> Hubungi kami</a>
-                <a href="" class="border p-3 min-[402px]:h-[74px] min-[442px]:h-full"><i class="fa fa-sign-in pe-1"
-                        aria-hidden="true"></i> SSO Login</a>
+                <a href="" class="border p-2.5"><i class="fa fa-phone pe-1" aria-hidden="true"></i> Hubungi kami</a>
+                <a href="" class="border p-2.5 h-[67px] min-[340px]:h-full"><i class="fa fa-sign-in pe-1"
+                        aria-hidden="true"></i> SSO
+                    Login</a>
             </div>
         </div>
     </div>
-
-    <div
-        class="relative w-full border-b shadow-lg border-b-1 border-slate-200 bg-white/90 shadow-slate-700/5 after:absolute after:top-full after:left-0  after:block after:h-px after:w-full lg:border-slate-200 lg:backdrop-blur-sm lg:after:hidden ">
-        <div class="relative mx-auto max-w-full px-4 min-[1000px]:px-20 2xl:max-w-[96rem]">
-            <nav aria-label="main navigation"
-                class="flex h-[5.5rem] items-stretch justify-between font-medium text-slate-700" role="navigation">
+    <!-- /Navbar -->
+    <nav
+        class="sticky top-0 w-full border-b shadow-lg border-b-1 border-slate-200 bg-white/90 shadow-slate-700/5 after:absolute after:top-full after:left-0  after:block after:h-px after:w-full lg:border-slate-200 lg:backdrop-blur-sm lg:after:hidden z-10">
+        <div class="relative mx-auto max-w-full px-4 min-[1000px]:px-16 2xl:max-w-[96rem]">
+            <div aria-label="main navigation"
+                class="flex h-[3.5rem] md:h-[5rem] lg:h-[5.5rem] items-stretch justify-between font-medium text-slate-700"
+                role="navigation">
                 <!-- Brand logo -->
                 <a id="WindUI" aria-label="WindUI logo" aria-current="page"
-                    class="flex items-center gap-2 py-3  whitespace-nowrap focus:outline-none lg:flex-1" href="#">
-                    <img src="assets/logo-dlh.png" alt="dlh" class="h-full">
-                    <div class="hidden md:block">
-                        <h1 class="poppins-extrabold text-xl">
+                    class="flex items-center gap-2 py-3  whitespace-nowrap focus:outline-none lg:flex-1" href="">
+                    <img src="assets/logo-dlh.png" alt="dlh" class="h-full  object-cover">
+                    <div class="">
+                        <h1 class="poppins-extrabold text-[0.8rem] md:text-base lg:text-xl">
                             DINAS LINGKUNGAN HIDUP
                         </h1>
-                        <h2 class="poppins-medium text-md">PEMERINTAH KOTA SAMARINDA</h2>
+                        <h2 class="poppins-medium text-[0.5rem] md:text-xs lg:text-base">PEMERINTAH KOTA SAMARINDA</h2>
                     </div>
                 </a>
                 <!-- Mobile trigger -->
-                <button class="mobile relative self-center order-10  block w-10 h-10 min-[1300px]:hidden"
+                <button class="mobile relative self-center order-10 block w-10 h-10 min-[1300px]:hidden"
                     aria-expanded="false" aria-label="Toggle navigation">
                     <div class="absolute w-6 transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
                         <span aria-hidden="true"
@@ -69,17 +116,17 @@
                 </button>
                 <!-- Navigation links -->
                 <ul role="menubar" aria-label="Select page"
-                    class="z-10 navigation invisible opacity-0 absolute top-20 left-0  ml-auto h-screen w-full justify-center overflow-hidden overflow-y-auto overscroll-contain bg-white/90 pe-8 ps-6 md:ps-16 pb-12 pt-8 font-medium transition-[opacity,visibility] duration-300 min-[1300px]:visible min-[1300px]:relative min-[1300px]:top-0  min-[1300px]:flex min-[1300px]:h-full min-[1300px]:w-auto min-[1300px]:items-stretch min-[1300px]:overflow-visible min-[1300px]:bg-white/0 min-[1300px]:px-0 min-[1300px]:py-0 min-[1300px]:pt-0 min-[1300px]:opacity-100">
+                    class="z-10 navigation invisible opacity-0 absolute top-12 md:top-20 left-0  ml-auto h-screen w-full justify-center overflow-hidden overflow-y-auto overscroll-contain bg-white/90 pe-8 ps-6 md:ps-16 pb-12 pt-8 font-medium transition-[opacity,visibility] duration-300 min-[1300px]:visible min-[1300px]:relative min-[1300px]:top-0  min-[1300px]:flex min-[1300px]:h-full min-[1300px]:w-auto min-[1300px]:items-stretch min-[1300px]:overflow-visible min-[1300px]:bg-white/0 min-[1300px]:px-0 min-[1300px]:py-0 min-[1300px]:pt-0 min-[1300px]:opacity-100 text-xs md:text-base">
                     <li role="none" class="flex items-stretch">
                         <button role="menuitem" aria-haspopup="false"
-                            class="flex items-center gap-2 py-2 xl:py-4 transition-colors duration-300 poppins-medium hover:text-base/70 focus:text-base focus:outline-none focus-visible:outline-none lg:px-2.5"
-                            href="#"> <span>Beranda</span></button>
+                            class="flex items-center gap-2 py-2 xl:py-4 transition-colors duration-300 poppins-medium hover:text-baseColor/70 focus:text-baseColor focus:outline-none focus-visible:outline-none lg:px-2.5"
+                            href="#"> <span class="underscore-page text-[#008bf9]">Beranda</span></button>
                     </li>
-                    <!-- Component: Basic dropdown menu -->
+                    <!-- Profil -->
                     <div class="relative flex ">
                         <!--  Start Dropdown trigger -->
                         <button
-                            class="flex items-center gap-2 py-2 xl:py-4 transition-colors duration-300 poppins-medium hover:text-base/70 focus:text-base focus:outline-none focus-visible:outline-none lg:px-2.5">
+                            class="flex items-center gap-2 py-2 xl:py-4 transition-colors duration-300 poppins-medium hover:text-baseColor/70 focus:text-baseColor focus:outline-none focus-visible:outline-none lg:px-2.5">
                             <span>Profil</span>
                             <span class="relative only:-mx-5">
                                 <i class="fa fa-chevron-down" aria-hidden="true"></i>
@@ -93,18 +140,30 @@
                                 <a class="flex items-start justify-start gap-2 p-2 px-5 transition-colors duration-300 text-slate-500 hover:bg-emerald-50 hover:text-emerald-500 focus:bg-emerald-50 focus:text-emerald-600 focus:outline-none focus-visible:outline-none"
                                     href="#">
                                     <span class="flex flex-col gap-1 overflow-hidden whitespace-nowrap">
-                                        <span class="leading-5 truncate">Menu</span>
+                                        <span class="leading-5 truncate">Tugas Pokok & Fungsi</span>
+                                    </span>
+                                </a>
+                                <a class="flex items-start justify-start gap-2 p-2 px-5 transition-colors duration-300 text-slate-500 hover:bg-emerald-50 hover:text-emerald-500 focus:bg-emerald-50 focus:text-emerald-600 focus:outline-none focus-visible:outline-none"
+                                    href="#">
+                                    <span class="flex flex-col gap-1 overflow-hidden whitespace-nowrap">
+                                        <span class="leading-5 truncate">Strktur Organisasi</span>
+                                    </span>
+                                </a>
+                                <a class="flex items-start justify-start gap-2 p-2 px-5 transition-colors duration-300 text-slate-500 hover:bg-emerald-50 hover:text-emerald-500 focus:bg-emerald-50 focus:text-emerald-600 focus:outline-none focus-visible:outline-none"
+                                    href="#">
+                                    <span class="flex flex-col gap-1 overflow-hidden whitespace-nowrap">
+                                        <span class="leading-5 truncate">Profil Pimpinan</span>
                                     </span>
                                 </a>
                             </li>
-
                         </ul>
                         <!-- End Menu list -->
                     </div>
+                    <!-- Bidang -->
                     <div class="relative flex ">
                         <!--  Start Dropdown trigger -->
                         <button
-                            class="flex items-center gap-2 py-2 xl:py-4 transition-colors duration-300 poppins-medium hover:text-base/70 focus:text-base focus:outline-none focus-visible:outline-none lg:px-2.5">
+                            class="flex items-center gap-2 py-2 xl:py-4 transition-colors duration-300 poppins-medium hover:text-baseColor/70 focus:text-baseColor focus:outline-none focus-visible:outline-none lg:px-2.5">
                             <span>Bidang</span>
                             <span class="relative only:-mx-5">
                                 <i class="fa fa-chevron-down" aria-hidden="true"></i>
@@ -118,7 +177,39 @@
                                 <a class="flex items-start justify-start gap-2 p-2 px-5 transition-colors duration-300 text-slate-500 hover:bg-emerald-50 hover:text-emerald-500 focus:bg-emerald-50 focus:text-emerald-600 focus:outline-none focus-visible:outline-none"
                                     href="#">
                                     <span class="flex flex-col gap-1 overflow-hidden whitespace-nowrap">
-                                        <span class="leading-5 truncate">Menu</span>
+                                        <span class="leading-5 truncate">Sekretaris</span>
+                                    </span>
+                                </a>
+                                <a class="flex items-start justify-start gap-2 p-2 px-5 transition-colors duration-300 text-slate-500 hover:bg-emerald-50 hover:text-emerald-500 focus:bg-emerald-50 focus:text-emerald-600 focus:outline-none focus-visible:outline-none"
+                                    href="#">
+                                    <span class="flex flex-col gap-1 overflow-hidden whitespace-nowrap">
+                                        <span class="leading-5 truncate">Kepala Sub Bagian Umum</span>
+                                    </span>
+                                </a>
+                                <a class="flex items-start justify-start gap-2 p-2 px-5 transition-colors duration-300 text-slate-500 hover:bg-emerald-50 hover:text-emerald-500 focus:bg-emerald-50 focus:text-emerald-600 focus:outline-none focus-visible:outline-none"
+                                    href="#">
+                                    <span class="flex flex-col gap-1 overflow-hidden whitespace-nowrap">
+                                        <span class="leading-5 truncate">Bidang Tata Lingkungan</span>
+                                    </span>
+                                </a>
+                                <a class="flex items-start justify-start gap-2 p-2 px-5 transition-colors duration-300 text-slate-500 hover:bg-emerald-50 hover:text-emerald-500 focus:bg-emerald-50 focus:text-emerald-600 focus:outline-none focus-visible:outline-none"
+                                    href="#">
+                                    <span class="flex flex-col gap-1 overflow-hidden whitespace-nowrap">
+                                        <span class="leading-5 truncate">Bidang Pengelolaan Sampah dan Limbah B3</span>
+                                    </span>
+                                </a>
+                                <a class="flex items-start justify-start gap-2 p-2 px-5 transition-colors duration-300 text-slate-500 hover:bg-emerald-50 hover:text-emerald-500 focus:bg-emerald-50 focus:text-emerald-600 focus:outline-none focus-visible:outline-none"
+                                    href="#">
+                                    <span class="flex flex-col gap-1 overflow-hidden whitespace-nowrap">
+                                        <span class="leading-5 truncate">Bidang Pengendalian Pencemaran Dan Kerusakan
+                                            Lingkungan</span>
+                                    </span>
+                                </a>
+                                <a class="flex items-start justify-start gap-2 p-2 px-5 transition-colors duration-300 text-slate-500 hover:bg-emerald-50 hover:text-emerald-500 focus:bg-emerald-50 focus:text-emerald-600 focus:outline-none focus-visible:outline-none"
+                                    href="#">
+                                    <span class="flex flex-col gap-1 overflow-hidden whitespace-nowrap">
+                                        <span class="leading-5 truncate">Bidang Penataan Dan Peningkatan Kapasitas
+                                            Lingkungan</span>
                                     </span>
                                 </a>
                             </li>
@@ -126,10 +217,11 @@
                         </ul>
                         <!-- End Menu list -->
                     </div>
+                    <!-- Berita & Informasi -->
                     <div class="relative flex ">
                         <!--  Start Dropdown trigger -->
                         <button
-                            class="flex items-center gap-2 py-2 xl:py-4 transition-colors duration-300 poppins-medium hover:text-base/70 focus:text-base focus:outline-none focus-visible:outline-none lg:px-2.5">
+                            class="flex items-center gap-2 py-2 xl:py-4 transition-colors duration-300 poppins-medium hover:text-baseColor/70 focus:text-baseColor focus:outline-none focus-visible:outline-none lg:px-2.5">
                             <span>Berita & Informasi</span>
                             <span class="relative only:-mx-5">
                                 <i class="fa fa-chevron-down" aria-hidden="true"></i>
@@ -143,7 +235,52 @@
                                 <a class="flex items-start justify-start gap-2 p-2 px-5 transition-colors duration-300 text-slate-500 hover:bg-emerald-50 hover:text-emerald-500 focus:bg-emerald-50 focus:text-emerald-600 focus:outline-none focus-visible:outline-none"
                                     href="#">
                                     <span class="flex flex-col gap-1 overflow-hidden whitespace-nowrap">
-                                        <span class="leading-5 truncate">Menu</span>
+                                        <span class="leading-5 truncate">Agenda</span>
+                                    </span>
+                                </a>
+                                <a class="flex items-start justify-start gap-2 p-2 px-5 transition-colors duration-300 text-slate-500 hover:bg-emerald-50 hover:text-emerald-500 focus:bg-emerald-50 focus:text-emerald-600 focus:outline-none focus-visible:outline-none"
+                                    href="#">
+                                    <span class="flex flex-col gap-1 overflow-hidden whitespace-nowrap">
+                                        <span class="leading-5 truncate">Pengumuman</span>
+                                    </span>
+                                </a>
+                                <a class="flex items-start justify-start gap-2 p-2 px-5 transition-colors duration-300 text-slate-500 hover:bg-emerald-50 hover:text-emerald-500 focus:bg-emerald-50 focus:text-emerald-600 focus:outline-none focus-visible:outline-none"
+                                    href="#">
+                                    <span class="flex flex-col gap-1 overflow-hidden whitespace-nowrap">
+                                        <span class="leading-5 truncate">Kumpulan Berita</span>
+                                    </span>
+                                </a>
+                                <div class="relative flex items-start gap-2 p-2 px-5 transition-colors duration-300 text-slate-500 hover:bg-emerald-50 hover:text-emerald-500 focus:bg-emerald-50 focus:text-emerald-600 focus:outline-none focus-visible:outline-none"
+                                    href="#">
+                                    <button
+                                        class="flex justify-between items-center gap-1 overflow-hidden whitespace-nowrap w-full">
+                                        <span class="leading-5 truncate">Layanan</span>
+                                        <span class="relative">
+                                            <i class="fa fa-chevron-right ease-out duration-300" aria-hidden="true"></i>
+                                        </span>
+                                    </button>
+                                    <ul
+                                        class="dropdown-content hidden absolute z-20 flex py-2 mt-1 list-none bg-white rounded shadow-md w-52 top-8 min-[1300px]:-right-52 min-[1300px]:-top-3 border shadow-slate-500/10">
+                                        <li class="w-full">
+                                            <a class="flex items-start justify-start gap-2 p-2 px-5 transition-colors duration-300 text-slate-500 hover:bg-emerald-50 hover:text-emerald-500 focus:bg-emerald-50 focus:text-emerald-600 focus:outline-none focus-visible:outline-none"
+                                                href="#">
+                                                <span class="flex flex-col gap-1 overflow-hidden whitespace-nowrap">
+                                                    <span class="leading-5 truncate">SOP Layanan</span>
+                                                </span>
+                                            </a>
+                                            <a class="flex items-start justify-start gap-2 p-2 px-5 transition-colors duration-300 text-slate-500 hover:bg-emerald-50 hover:text-emerald-500 focus:bg-emerald-50 focus:text-emerald-600 focus:outline-none focus-visible:outline-none"
+                                                href="#">
+                                                <span class="flex flex-col gap-1 overflow-hidden whitespace-nowrap">
+                                                    <span class="leading-5 truncate">Produk & Layanan</span>
+                                                </span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <a class="flex items-start justify-start gap-2 p-2 px-5 transition-colors duration-300 text-slate-500 hover:bg-emerald-50 hover:text-emerald-500 focus:bg-emerald-50 focus:text-emerald-600 focus:outline-none focus-visible:outline-none"
+                                    href="#">
+                                    <span class="flex flex-col gap-1 overflow-hidden whitespace-nowrap">
+                                        <span class="leading-5 truncate">Penghargaan</span>
                                     </span>
                                 </a>
                             </li>
@@ -151,11 +288,12 @@
                         </ul>
                         <!-- End Menu list -->
                     </div>
+                    <!-- Galeri -->
                     <div class="relative flex ">
                         <!--  Start Dropdown trigger -->
                         <button
-                            class="flex items-center gap-2 py-2 xl:py-4 transition-colors duration-300 poppins-medium hover:text-base/70 focus:text-base focus:outline-none focus-visible:outline-none lg:px-2.5">
-                            <span>Tourism</span>
+                            class="flex items-center gap-2 py-2 xl:py-4 transition-colors duration-300 poppins-medium hover:text-baseColor/70 focus:text-baseColor focus:outline-none focus-visible:outline-none lg:px-2.5">
+                            <span>Galeri</span>
                             <span class="relative only:-mx-5">
                                 <i class="fa fa-chevron-down" aria-hidden="true"></i>
                             </span>
@@ -168,7 +306,13 @@
                                 <a class="flex items-start justify-start gap-2 p-2 px-5 transition-colors duration-300 text-slate-500 hover:bg-emerald-50 hover:text-emerald-500 focus:bg-emerald-50 focus:text-emerald-600 focus:outline-none focus-visible:outline-none"
                                     href="#">
                                     <span class="flex flex-col gap-1 overflow-hidden whitespace-nowrap">
-                                        <span class="leading-5 truncate">Menu</span>
+                                        <span class="leading-5 truncate">Foto Kegiatan</span>
+                                    </span>
+                                </a>
+                                <a class="flex items-start justify-start gap-2 p-2 px-5 transition-colors duration-300 text-slate-500 hover:bg-emerald-50 hover:text-emerald-500 focus:bg-emerald-50 focus:text-emerald-600 focus:outline-none focus-visible:outline-none"
+                                    href="#">
+                                    <span class="flex flex-col gap-1 overflow-hidden whitespace-nowrap">
+                                        <span class="leading-5 truncate">Video Kegiatan</span>
                                     </span>
                                 </a>
                             </li>
@@ -176,11 +320,12 @@
                         </ul>
                         <!-- End Menu list -->
                     </div>
+                    <!-- PPID Pelaksana -->
                     <div class="relative flex ">
                         <!--  Start Dropdown trigger -->
                         <button
-                            class="flex items-center gap-2 py-2 xl:py-4 transition-colors duration-300 poppins-medium hover:text-base/70 focus:text-base focus:outline-none focus-visible:outline-none lg:px-2.5">
-                            <span>Informasi Publik</span>
+                            class="flex items-center gap-2 py-2 xl:py-4 transition-colors duration-300 poppins-medium hover:text-baseColor/70 focus:text-baseColor focus:outline-none focus-visible:outline-none lg:px-2.5">
+                            <span>PPID Pelaksana</span>
                             <span class="relative only:-mx-5">
                                 <i class="fa fa-chevron-down" aria-hidden="true"></i>
                             </span>
@@ -188,7 +333,7 @@
                         <!--  End Dropdown trigger -->
                         <!-- Start Menu list -->
                         <ul
-                            class="dropdown-content hidden absolute z-20 flex flex-col py-2 mt-1 list-none bg-white rounded shadow-md w-72 top-8 min-[1300px]:top-16 border shadow-slate-500/10">
+                            class="dropdown-content hidden absolute z-20 flex flex-col py-2 mt-1 list-none bg-white rounded shadow-md w-72 top-8 min-[1300px]:top-16 min-[1300px]:right-1 border shadow-slate-500/10">
                             <li>
                                 <a class="flex items-start justify-start gap-2 p-2 px-5 transition-colors duration-300 text-slate-500 hover:bg-emerald-50 hover:text-emerald-500 focus:bg-emerald-50 focus:text-emerald-600 focus:outline-none focus-visible:outline-none"
                                     href="#">
@@ -201,95 +346,697 @@
                         </ul>
                         <!-- End Menu list -->
                     </div>
-                    <!-- End Basic dropdown menu-->
                 </ul>
-            </nav>
-        </div>
-        <div class="swiper mySwiper z-0">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide"><img src="assets/Hero-Image 1.png" alt=""></div>
-                <div class="swiper-slide"><img src="assets/Hero-Image 1.png" alt=""></div>
-                <div class="swiper-slide"><img src="assets/Hero-Image 1.png" alt=""></div>
-                <div class="swiper-slide"><img src="assets/Hero-Image 1.png" alt=""></div>
             </div>
-            <!-- <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div> -->
-            <div class="swiper-pagination"></div>
         </div>
-        <footer class="bg-base z-0">
-            <div class="px-6 py-12 grid sm:grid-cols-6">
-                <div class="col-span-6 md:col-span-2 flex flex-row md:flex-col" style="margin-bottom: 20px;">
-                    <div class="object-cover">
-                        <img src="/assets/logo-dlh.png" alt="logo-dlh" width="60" height="60" />
-                    </div>
-                    <div class="flex flex-col gap-y-2 md:flex-col grow">
-                        <p class="font-bold text-white text-sm md:text-2xl">
-                            DINAS LINGKUNGAN HIDUP
-                        </p>
-                        <p class="text-sm text-white">PEMERINTAH KOTA SAMARINDA</p>
-                        <div class="text-white text-sm flex flex-row items-center" id="footer-email">
-                            <i class="fa-regular fa-envelope"></i>
-                            <p class="px-2">disporaparsmd22@gmail.com</p>
-                        </div>
-                        <div class="text-wrap text-white text-xs" id="footer-location">
-                            <p class="">
-                                Jl. MT. Haryono, Kel Air Putih, Kec. Samarinda Ulu,
-                                Samarinda 75124
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="flex  px-2 flex-col gap-y-2 col-span-2 md:col-span-1 text-white text-xs" id="footer-menu">
-                    <p class="font-bold text-sm md:text-xl">Menu</p>
-                    <a href="#">Beranda</a>
-                    <a href="">Profil</a>
-                    <a href="">Bidang</a>
-                    <a href="">Berita & Informasi</a>
-                    <a href="">Tourism</a>
-                    <a href="">Informasi Publik</a>
-                </div>
-                <div class="flex flex-col gap-y-2 px-2 text-white text-xs" id="footer-social-media">
-                    <p class="font-bold text-sm md:text-xl">Sosial Media</p>
-                    <a href="#">Instagram</a>
-                    <a href="">Twitter</a>
-                    <a href="">Facebook</a>
-                    <a href="">Youtube</a>
-                </div>
-                <div class="flex flex-col gap-y-2  px-2 text-white text-xs" id="footer-lainnya">
-                    <p class="font-bold text-sm md:text-xl">Lainnya</p>
-                    <a href="#">Bantuan & FAQ</a>
-                </div>
-                <div class="flex flex-col gap-y-2 px-2 text-white text-xs" id="footer-kontak">
-                    <p class="font-bold md:text-xl">Kontak Info</p>
-                    <div>
-                        <p>Dinas Lingkungan Hidup</p>
-                        <p>0541 - 760373</p>
-                    </div>
-                    <div>
-                        <p>Dinas Lingkungan Hidup</p>
-                        <p>0541 - 760373</p>
-                    </div>
-                </div>
+    </nav>
+    <!-- /Hero Section -->
+    <div class="swiper mySwiper1 z-0 2xl:max-w-[96rem] mx-auto">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="assets/Hero-Image 1.png" alt="" class="w-full lg:min-h-[32.5rem] object-cover"">
             </div>
-        </footer>
+            <div class=" swiper-slide">
+                <img src="assets/0b988eb4-1146-11ed-ba65-7cd30a6821ab.png" alt=""
+                    class=" w-full lg:min-h-[32.5rem] object-cover">
+            </div>
+            <div class="swiper-slide">
+                <img src="assets/21d0c11a-1146-11ed-a26d-7cd30a6821ab.png" alt=""
+                    class=" w-full lg:min-h-[32.5rem] object-cover object-right">
+            </div>
+        </div>
+        <div class="swiper-pagination swiper-pagination1"></div>
     </div>
+    <!-- /Service -->
+    <div>
+        <div class="bg-base60">
+            <div class="flex 2xl:max-w-[96rem] mx-auto">
+                <span
+                    class="flex gap-3 items-center px-3 xl:ps-20 text-white poppins-semibold py-2 text-lg lg:text-xl"><i
+                        class="fa fa-bullhorn" aria-hidden="true"></i>
+                    <p class="w-52 hidden lg:block ">
+                        SEKILAS INFORMASI
+                    </p>
+                </span>
+                <marquee class="flex items-center text-white text-xs lg:text-xl">
+                    <p>MasyaAllah TabarakAllah</p>
+                </marquee>
+            </div>
+        </div>
+        <div class="2xl:max-w-[96rem] mx-auto py-5 lg:py-7">
+            <div class="flex flex-col justify-center mb-5 lg:mb-11">
+                <h2 class="text-center poppins-semibold text-[20px] md:text-[24px] lg:text-[32px]">LAYANAN</h2>
+                <p class="text-center poppins-medium text-[10px] md:text-[14px] lg:text-[18px]">
+                    Dinas Lingkungan Hidup
+                </p>
+            </div>
+            <div
+                class="flex justify-around gap-y-6 min-[1200px]:px-20 poppins-semibold w-full text-[7px] sm:text-[13px] min-[400px]:text-[10px] lg:text-[17px] w-20 text-center lg:w-full text-baseColor">
+                <a href="#" class="flex flex-col hover:scale-105 items-center w-1/5 lg:w-full gap-5 duration-150">
+                    <img src="assets/1 d.png" alt="" class="border border-base80 lg:p-2 rounded-full   ">
+                    <p class="">Penyediaan dan Penyediaan Taman Kota Samarinda</p>
+                </a>
+                <a href="#" class="flex flex-col hover:scale-105 items-center w-1/5 lg:w-full gap-5 duration-150">
+                    <img src="assets/2 d.png" width="218" height="218" alt=""
+                        class="border border-base80 p-1 lg:p-6 rounded-full   ">
+                    <p class="">Penyuluhan Pengelolaan Lingkungan Hidup</p>
+                </a>
+                <a href="#" class="flex flex-col hover:scale-105 items-center w-1/5 lg:w-full gap-5 duration-150">
+                    <img src="assets/3 d.png" alt="" class="border border-base80 lg:p-2 rounded-full   ">
+                    <p class="">Armada Tangki dan Surat Perintah Kerja (SPK)</p>
+                </a>
+                <a href="#" class="flex flex-col hover:scale-105 items-center w-1/5 lg:w-full gap-5 duration-150">
+                    <img src="assets/4 d.png" alt="" class="border border-base80 lg:p-2 rounded-full   ">
+                    <p class="">Rekomendasi Kelayakan / Ketidaklayakan Lingkungan Hidup</p>
+                </a>
+            </div>
+
+        </div>
+    </div>
+    <!-- /Berita Terkini-->
+    <div class="2xl:max-w-[96rem] mx-auto py-5 lg:py-7 lg:flex">
+        <div class="px-4 min-[1000px]:ps-16 min-[1000px]:pe-10">
+            <h2
+                class="before:content-[''] before:border-2 before:me-2 before:border-base80 poppins-semibold text-xl py-2 lg:before:border-4 lg:before:me-2 poppins-semibold lg:text-2xl lg:py-6">
+                BERITA TERKINI
+            </h2>
+            <div class="swiper mySwiper2 w-[18rem] lg:w-[30rem] xl:w-[43rem] rounded-lg">
+                <div class="swiper-wrapper  ">
+                    <a href="#" class="swiper-slide relative w-full hover:brightness-90 duration-500"><img
+                            src="assets/Rectangle 35.png" alt="" class="">
+                        <div
+                            class="absolute bg-slate-950/60 inset-x-0 bottom-0 pt-2 lg:pt-3 pb-5 lg:pb-9 px-5 lg:px-20 text-white">
+                            <p class="text-center text-xs lg:text-base line-clamp-2">Lorem ipsum dolor sit amet
+                                consectetur
+                                adipisicing elit.
+                                Voluptates
+                                dicta, eius accusamus quis atque voluptate fugiat voluptas eum aut. Autem quam error
+                                laborum minus cumque tenetur rem? Nesciunt, nobis saepe?</p>
+                        </div>
+                    </a>
+                    <a href="#" class="swiper-slide relative w-full hover:brightness-90 duration-500"><img
+                            src="assets/Rectangle 35.png" alt="" class="">
+                        <div
+                            class="absolute bg-slate-950/60 inset-x-0 bottom-0 pt-2 lg:pt-3 pb-5 lg:pb-9 px-5 lg:px-20 text-white">
+                            <p class="text-center text-xs lg:text-base line-clamp-2">Lorem ipsum dolor sit amet
+                                consectetur
+                                adipisicing elit.
+                                Voluptates
+                                dicta, eius accusamus quis atque voluptate fugiat voluptas eum aut. Autem quam error
+                                laborum minus cumque tenetur rem? Nesciunt, nobis saepe?</p>
+                        </div>
+                    </a>
+                    <a href="#" class="swiper-slide relative w-full hover:brightness-90 duration-500"><img
+                            src="assets/Rectangle 35.png" alt="" class="">
+                        <div
+                            class="absolute bg-slate-950/60 inset-x-0 bottom-0 pt-2 lg:pt-3 pb-5 lg:pb-9 px-5 lg:px-20 text-white">
+                            <p class="text-center text-xs lg:text-base line-clamp-2">Lorem ipsum dolor sit amet
+                                consectetur
+                                adipisicing elit.
+                                Voluptates
+                                dicta, eius accusamus quis atque voluptate fugiat voluptas eum aut. Autem quam error
+                                laborum minus cumque tenetur rem? Nesciunt, nobis saepe?</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-button-next swiper-button-next2 next-icon"></div>
+                <div class="swiper-button-prev swiper-button-prev2 prev-icon"></div>
+                <div class="swiper-pagination swiper-pagination2 !scale-50 lg:!scale-100" id="berita-terkini"></div>
+            </div>
+        </div>
+        <div class="px-4 min-[1000px]:pe-16">
+            <div class="flex justify-between sm:justify-start sm:gap-5 lg:justify-between items-center">
+                <h2
+                    class="poppins-semibold xl:text-2xl lg:pb-2 lg:pt-6 mb-4 text-xl pb-1 pt-4 mb-2 underscore text-base80">
+                    PENGUMUMAN
+                </h2>
+                <!-- <h2 class="poppins-semibold xl:text-2xl lg:pb-2 lg:pt-6 mb-4 text-xl pb-1 pt-4 mb-2">
+                    AGENDA
+                </h2> -->
+            </div>
+            <div class="space-y-3">
+                <div class="border border-black/80 rounded-xl flex p-2 gap-3 h-full items-center">
+                    <div class="divide-y rounded-xl overflow-hidden border border-base70 h-fit min-w-20 lg:min-w-24 ">
+                        <div class="text-center poppins-semibold">
+                            <div class="bg-base70 py-1 px-3">
+                                <span class="text-white lg:text-[25px] text-[15px] w-full">
+                                    OCT
+                                </span>
+                            </div>
+                        </div>
+                        <div class="text-center poppins-semibold h-fit">
+                            <div class="text-base70 text-[27px] lg:text-[37px]">
+                                05
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-3/4 poppins-semibold">
+                        <h3 class="text-[15px] lg:text-[18px] pb-1 line-clamp-1">
+                            Festival Mahakam 2022
+                        </h3>
+                        <p
+                            class="text-[10px] lg:text-[12px] text-neutral-500 lg:line-clamp-2 xl:line-clamp-3  line-clamp-2 text-justify">
+                            Event Tahunan Kota Samarinda "Festival Mahakam 2022" yang akan di selenggarakan di Gor
+                            Segiri. Semua akan meriahkan acara ini hingga tengah malam suntuk.
+                        </p>
+                    </div>
+                </div>
+                <div class="border border-black/80 rounded-xl flex p-2 gap-3 h-full items-center">
+                    <div class="divide-y rounded-xl overflow-hidden border border-base70 h-fit min-w-20 lg:min-w-24">
+                        <div class="text-center poppins-semibold">
+                            <div class="bg-base70 py-1 px-3">
+                                <span class="text-white lg:text-[25px] text-[15px] w-full">
+                                    SEP
+                                </span>
+                            </div>
+                        </div>
+                        <div class="text-center poppins-semibold h-fit">
+                            <div class="text-base70 text-[27px] lg:text-[37px]">
+                                16
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-3/4 poppins-semibold">
+                        <h3 class="text-[15px] lg:text-[18px] pb-1 line-clamp-1">
+                            Event Tahunan Dinas Pemuda, Olahraga Dan Pariwisata
+                        </h3>
+                        <p
+                            class="text-[10px] lg:text-[12px] text-neutral-500 lg:line-clamp-2 xl:line-clamp-3  line-clamp-2 text-justify">
+                            Muda-mudi samarinda siapkan diri kalian untuk mengikuti pemilihan Duta Wisata yang akan
+                            dilaksanakan pada tanggal 16 September 2024.
+                        </p>
+                    </div>
+                </div>
+                <div class="border border-black/80 rounded-xl flex p-2 gap-3 h-full items-center">
+                    <div class="divide-y rounded-xl overflow-hidden border border-base70 h-fit min-w-20 lg:min-w-24">
+                        <div class="text-center poppins-semibold">
+                            <div class="bg-base70 py-1 px-3">
+                                <span class="text-white lg:text-[25px] text-[15px] w-full">
+                                    JUN
+                                </span>
+                            </div>
+                        </div>
+                        <div class="text-center poppins-semibold h-fit">
+                            <div class="text-base70 text-[27px] lg:text-[37px]">
+                                30
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-3/4 poppins-semibold">
+                        <h3 class="text-[15px] lg:text-[18px] pb-1 line-clamp-1">
+                            Kerja Bakti di Lingkungan Balaikota Samarinda
+                        </h3>
+                        <p
+                            class="text-[10px] lg:text-[12px] text-neutral-500 lg:line-clamp-2 xl:line-clamp-3  line-clamp-2 text-justify">
+                            Kerja Bakti/Gotong Royong di Lingkungan Balaikota Samarinda mengambil rute sebagai
+                            berikut
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /Kumpulan Berita -->
+    <div class="2xl:max-w-[96rem] mx-auto py-5 lg:py-7">
+        <div class="px-4 min-[1000px]:ps-16 min-[1000px]:pe-10">
+            <div class="flex items-center justify-between">
+                <h2
+                    class="before:content-[''] before:border-2 before:me-2 before:border-base80 poppins-semibold text-xl py-2 lg:before:border-4 lg:before:me-2 poppins-semibold lg:text-2xl lg:py-6">
+                    KUMPULAN BERITA
+                </h2>
+                <a href="#" class="hover:scale-105 duration-200 text-[7px] lg:text-base text-blue-500">
+                    <span>
+                        Tampilkan Lainnya
+                    </span>
+                    <i class="fa fa-arrow-right" aria-hidden="true">
+                    </i>
+                </a>
+            </div>
+            <div class="swiper mySwiper3 rounded-lg">
+                <div class="swiper-wrapper  ">
+                    <a href="#">
+                        <div
+                            class="swiper-slide hover:brightness-95 duration-500 border rounded-xl overflow-hidden bg-white rounded shadow-md text-slate-500 shadow-slate-200">
+                            <figure class="relative">
+                                <img src="assets/Rectangle 38.png" alt="card image"
+                                    class=" w-full object-cover max-h-52" />
+                                <a href="#"
+                                    class="absolute right-1 top-1 bg-blue-500 rounded-xl p-2 text-white text-xs">Umum</a>
+                            </figure>
+                            <div class="p-5">
+                                <header class="space-y-3">
+                                    <h3 class="text-lg font-medium text-slate-700 line-clamp-2">Rapat Koordinasi di
+                                        Lingkungan Pemerintah
+                                        Kota Samarinda</h3>
+                                    <div>
+                                        <div class="text-sm text-slate-400 flex gap-2"><i class="fa fa-calendar"
+                                                aria-hidden="true"></i>
+                                            <p>
+                                                04
+                                                September 2023
+                                            </p>
+                                        </div>
+                                        <div class="text-sm text-slate-400 flex gap-2"><i class="fa fa-user"
+                                                aria-hidden="true"></i>
+                                            <p>
+                                                Beni Maulana
+                                            </p>
+                                        </div>
+                                    </div>
+                                </header>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div
+                            class="swiper-slide hover:brightness-95 duration-500 border rounded-xl overflow-hidden bg-white rounded shadow-md text-slate-500 shadow-slate-200">
+                            <figure class="relative">
+                                <img src="assets/Rectangle 38 (1).png" alt="card image"
+                                    class=" w-full object-cover max-h-52" />
+                                <a href="#"
+                                    class="absolute right-1 top-1 bg-blue-500 rounded-xl p-2 text-white text-xs">Olahraga</a>
+                            </figure>
+                            <div class="p-5">
+                                <header class="space-y-3">
+                                    <h3 class="text-lg font-medium text-slate-700 line-clamp-2">Rapat Hasil Terbaik
+                                        Atlit
+                                        Panahan Kota
+                                        Samarinda Pada Ajang HUT RI</h3>
+                                    <div>
+                                        <div class="text-sm text-slate-400 flex gap-2"><i class="fa fa-calendar"
+                                                aria-hidden="true"></i>
+                                            <p>
+                                                03 September 2023
+                                            </p>
+                                        </div>
+                                        <div class="text-sm text-slate-400 flex gap-2"><i class="fa fa-user"
+                                                aria-hidden="true"></i>
+                                            <p>
+                                                Beni Maulana
+                                            </p>
+                                        </div>
+                                    </div>
+                                </header>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div
+                            class="swiper-slide hover:brightness-95 duration-500 border rounded-xl overflow-hidden bg-white rounded shadow-md text-slate-500 shadow-slate-200">
+                            <figure class="relative">
+                                <img src="assets/Rectangle 38 (2).png" alt="card image"
+                                    class=" w-full object-cover max-h-52" />
+                                <a href="#"
+                                    class="absolute right-1 top-1 bg-blue-500 rounded-xl p-2 text-white text-xs">Pariwisata</a>
+                            </figure>
+                            <div class="p-5">
+                                <header class="space-y-3">
+                                    <h3 class="text-lg font-medium text-slate-700 line-clamp-2">Rapat Koordinasi Rencana
+                                        Pembangunan Dermaga Pariwisata</h3>
+                                    <div>
+                                        <div class="text-sm text-slate-400 flex gap-2"><i class="fa fa-calendar"
+                                                aria-hidden="true"></i>
+                                            <p>
+                                                29 Agustus 2023
+                                            </p>
+                                        </div>
+                                        <div class="text-sm text-slate-400 flex gap-2"><i class="fa fa-user"
+                                                aria-hidden="true"></i>
+                                            <p>
+                                                Beni Maulana
+                                            </p>
+                                        </div>
+                                    </div>
+                                </header>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div
+                            class="swiper-slide hover:brightness-95 duration-500 border rounded-xl overflow-hidden bg-white rounded shadow-md text-slate-500 shadow-slate-200">
+                            <figure class="relative">
+                                <img src="assets/Rectangle 38 (1).png" alt="card image"
+                                    class=" w-full object-cover max-h-52" />
+                                <a href="#"
+                                    class="absolute right-1 top-1 bg-blue-500 rounded-xl p-2 text-white text-xs">Olahraga</a>
+                            </figure>
+                            <div class="p-5">
+                                <header class="space-y-3">
+                                    <h3 class="text-lg font-medium text-slate-700 line-clamp-2">Rapat Hasil Terbaik
+                                        Atlit
+                                        Panahan Kota
+                                        Samarinda Pada Ajang HUT RI</h3>
+                                    <div>
+                                        <div class="text-sm text-slate-400 flex gap-2"><i class="fa fa-calendar"
+                                                aria-hidden="true"></i>
+                                            <p>
+                                                03 September 2023
+                                            </p>
+                                        </div>
+                                        <div class="text-sm text-slate-400 flex gap-2"><i class="fa fa-user"
+                                                aria-hidden="true"></i>
+                                            <p>
+                                                Beni Maulana
+                                            </p>
+                                        </div>
+                                    </div>
+                                </header>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-button-next swiper-button-next3 next-icon"></div>
+                <div class="swiper-button-prev swiper-button-prev3 prev-icon"></div>
+                <div class="swiper-pagination swiper-pagination3 !scale-50 lg:!scale-100 translate-y-2"
+                    id="kumpulan-berita">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Dokumentasi Berita -->
+    <div class="2xl:max-w-[96rem] mx-auto py-5 lg:py-7">
+        <div class="px-4 min-[1000px]:ps-16 min-[1000px]:pe-10">
+            <h2
+                class="before:content-[''] before:border-2 before:me-2 before:border-base80 poppins-semibold text-xl py-2 lg:before:border-4 lg:before:me-2 poppins-semibold lg:text-2xl lg:py-6">
+                DOKUMENTASI BERITA
+            </h2>
+            <div class="grid grid-cols-2 gap-4 md:gap-8 px-2 lg:px-28">
+                <a href="#">
+                    <div class="relative hover:brightness-75">
+                        <img src="assets/Rectangle 44.png" alt="" class="w-full h-full object-cover">
+                        <p
+                            class="absolute bottom-1 left-1 xl:bottom-4 xl:left-2 p-2 center poppins-bold text-[7px] sm:text-[15px] md:text-[17px] lg:text-[20px] text-white line-clamp-3">
+                            Rapat
+                            Koordinasi
+                            dilingkungan
+                            Pemerintah Kota
+                            Samarinda</p>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="relative hover:brightness-75">
+                        <img src="assets/Rectangle 45.png" alt="" class="w-full h-full object-cover">
+                        <p
+                            class="absolute bottom-1 left-1 xl:bottom-4 xl:left-2 p-2 center poppins-bold text-[7px] sm:text-[15px] md:text-[17px] lg:text-[20px] text-white line-clamp-3">
+                            Kick Off Meeting Penyusunan Rancangan Awal RPJPD Kota Samarinda Tahun 2025 - 2045</p>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="relative hover:brightness-75">
+                        <img src="assets/Rectangle 46.png" alt="" class="w-full h-full object-cover">
+                        <p
+                            class="absolute bottom-1 left-1 xl:bottom-4 xl:left-2 p-2 center poppins-bold text-[7px] sm:text-[15px] md:text-[17px] lg:text-[20px] text-white line-clamp-3">
+                            Audiensi Pengurus Pemuda Lingkungan Asri dan Bersih (Pepelingasih) Kota Samarinda</p>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="relative hover:brightness-75">
+                        <img src="assets/Rectangle 47.png" alt="" class="w-full h-full object-cover">
+                        <p
+                            class="absolute bottom-1 left-1 xl:bottom-4 xl:left-2 p-2 center poppins-bold text-[7px] sm:text-[15px] md:text-[17px] lg:text-[20px] text-white line-clamp-3">
+                            Hasil Terbaik Atlit Panahan Kota Samarinda Pada Ajang Pekan Olahraga Pelajar Nasional
+                            (POPNAS)
+                            Palembang</p>
+                    </div>
+                </a>
+            </div>
+            <div class="flex justify-center">
+                <a href="#" class="m-4">
+                    <button
+                        class="border border-base60 rounded-2xl p-2 lg:p-3 text-base60 hover:scale-105 duration-300 flex items-center gap-2 text-[7px] lg:text-base">
+                        <span>
+                            Dokumentasi Selengkapnya
+                        </span>
+                        <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                    </button>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- Kepala Dinas DLH & Embed Sosmed -->
+    <div class="2xl:max-w-[96rem] mx-auto py-5 lg:py-7 lg:flex">
+        <div class="px-4 min-[1000px]:ps-16 min-[1000px]:pe-10 max-w-4xl">
+            <h2
+                class="before:content-[''] before:border-2 before:me-2 before:border-base80 poppins-semibold text-xl py-2 lg:before:border-4 lg:before:me-2 poppins-semibold lg:text-2xl lg:py-6">
+                KEPALA DINAS LINGKUNGAN HIDUP
+            </h2>
+            <div class="border rounded-2xl border-base60 p-2 lg:p-5 flex gap-2 sm:gap-4 md:gap-6 lg:gap-10 w-fit">
+                <div class="flex items-center w-1/3">
+                    <img src="assets/Image.png" alt="" class="object-contain rounded-xl ">
+                </div>
+                <div class="w-1/2 flex flex-col">
+                    <h3 class="poppins-bold text-[10px] min-[390px]:text-lg md:text-xl lg:text-2xl lg:py-3">
+                        Nurrahmani, SIP, MM.
+                    </h3>
+                    <div
+                        class="  text-[5px] min-[390px]:text-[10px] md:text-xs lg:text-sm text-justify text-neutral-500">
+                        <p>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius ipsam quia tenetur, veritatis
+                            inventore sed eaque neque rem voluptatibus magnam dolor consectetur
+                        </p>
+                        <p>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius ipsam quia tenetur, veritatis
+                            inventore sed eaque neque rem voluptatibus magnam dolor consectetur
+                        </p>
+                    </div>
+                    <a href="#" class="text-[7px] min-[390px]:text-[12px] md:text-sm lg:text-base text-base60 my-auto">
+                        <span class=" ">
+                            Profil Lengkap
+                        </span>
+                        <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="px-4 py-4 lg:py-0 min-[1000px]:ps-16 min-[1000px]:pe-10 max-w-4xl">
+            <h2
+                class="before:content-[''] before:border-2 before:me-2 before:border-base80 poppins-semibold text-xl py-2 lg:before:border-4 lg:before:me-2 poppins-semibold lg:text-2xl lg:py-6">
+                FACEBOOK
+            </h2>
+            <div class="">
+                <div class="fb-page" data-href="https://www.facebook.com/dlh.samarinda/" data-tabs="timeline"
+                    data-width="" data-height="" data-small-header="false" data-adapt-container-width="true"
+                    data-hide-cover="false" data-show-facepile="true">
+                    <blockquote cite="https://www.facebook.com/dlh.samarinda/?locale=id_ID"
+                        class="fb-xfbml-parse-ignore">
+                        <a href="https://www.facebook.com/dlh.samarinda/?locale=id_ID">Dinas Lingkungan Hidup Kota
+                            Samarinda
+                        </a>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Layanan Publik -->
+    <div class="2xl:max-w-[96rem] mx-auto py-5 lg:py-7">
+        <div class="px-4 min-[1000px]:ps-16 min-[1000px]:pe-10 ">
+            <h2
+                class="before:content-[''] before:border-2 before:me-2 before:border-base80 poppins-semibold text-xl py-2 lg:before:border-4 lg:before:me-2 poppins-semibold lg:text-2xl lg:py-6">
+                LAYANAN PUBLIK
+            </h2>
+            <div class="swiper mySwiper4 rounded-lg py-4">
+                <div class="swiper-wrapper  ">
+                    <div class="swiper-slide ">
+                        <img src="assets/MIN 1.png" alt="card image" class="w-full" />
+                        <p class="text-center text-[10px] md:text-[15px] lg:text-20">SAMARINDA KOTA</p>
+                    </div>
+                    <div class="swiper-slide ">
+                        <img src="assets/MIN 1-1.png" alt="card image" class="w-full" />
+                        <p class="text-center text-[10px] md:text-[15px] lg:text-20">KEMENTERIAN DALAM NEGERI</p>
+                    </div>
+                    <div class="swiper-slide ">
+                        <img src="assets/MIN 1-2.png" alt="card image" class="w-full" />
+                        <p class="text-center text-[10px] md:text-[15px] lg:text-20">BPBD</p>
+                    </div>
+                    <div class="swiper-slide ">
+                        <img src="assets/MIN 1-3.png" alt="card image" class="w-full" />
+                        <p class="text-center text-[10px] md:text-[15px] lg:text-20">BAPPENAS</p>
+                    </div>
+                    <div class="swiper-slide ">
+                        <img src="assets/MIN 1-4.png" alt="card image" class="w-full" />
+                        <p class="text-center text-[10px] md:text-[15px] lg:text-20">SP4N LAPOR</p>
+                    </div>
+                    <div class="swiper-slide ">
+                        <img src="assets/MIN 1(1).png" alt="card image" class="w-full" />
+                        <p class="text-center text-[10px] md:text-[15px] lg:text-20">PPID</p>
+                    </div>
+                    <div class="swiper-slide ">
+                        <img src="assets/MIN 1-1(1).png" alt="card image" class="w-full" />
+                        <p class="text-center text-[10px] md:text-[15px] lg:text-20">SANTER</p>
+                    </div>
+                    <div class="swiper-slide ">
+                        <img src="assets/MIN 1-2(1).png" alt=" card image" class="w-full" />
+                        <p class="text-center text-[10px] md:text-[15px] lg:text-20">SIRUP</p>
+                    </div>
+                    <div class="swiper-slide ">
+                        <img src="assets/MIN 1-3(1).png" alt="card image" class="w-full" />
+                        <p class="text-center text-[10px] md:text-[15px] lg:text-20">LPSE</p>
+                    </div>
+                    <div class="swiper-slide ">
+                        <img src="assets/MIN 1-4(1).png" alt="card image" class="w-full" />
+                        <p class="text-center text-[10px] md:text-[15px] lg:text-20">SAMARINDA 112</p>
+                    </div>
+                </div>
+                <div class="swiper-button-next swiper-button-next4 next-icon  rounded-full bg-base80 p-8 scale-50"
+                    style="color: #ffffff; right: -0.5rem !important;"></div>
+                <div class="swiper-button-prev swiper-button-prev4 prev-icon rounded-full bg-base80 p-8 scale-50"
+                    style="color: #ffffff; left: -0.5rem !important;">
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- /Footer-->
+    <footer class="bg-baseColor z-0">
+        <div class="px-6 py-12 grid sm:grid-cols-6 2xl:max-w-[96rem] mx-auto">
+            <div class="col-span-6 md:col-span-2 flex flex-row md:flex-col" style="margin-bottom: 20px;">
+                <div class="object-cover">
+                    <img src="/assets/logo-dlh.png" alt="logo-dlh" width="60" height="60" />
+                </div>
+                <div class="flex flex-col gap-y-2 md:flex-col grow">
+                    <p class="font-bold text-white text-sm md:text-2xl">
+                        DINAS LINGKUNGAN HIDUP
+                    </p>
+                    <p class="text-sm text-white">PEMERINTAH KOTA SAMARINDA</p>
+                    <div class="text-white text-sm flex flex-row items-center" id="footer-email">
+                        <i class="fa-regular fa-envelope"></i>
+                        <p class="px-2">disporaparsmd22@gmail.com</p>
+                    </div>
+                    <div class="text-wrap text-white text-xs" id="footer-location">
+                        <p class="">
+                            Jl. MT. Haryono, Kel Air Putih, Kec. Samarinda Ulu,
+                            Samarinda 75124
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="flex  px-2 flex-col gap-y-2 col-span-2 md:col-span-1 text-white text-xs" id="footer-menu">
+                <p class="font-bold text-sm md:text-xl">Menu</p>
+                <a href="#">Beranda</a>
+                <a href="">Profil</a>
+                <a href="">Bidang</a>
+                <a href="">Berita & Informasi</a>
+                <a href="">Tourism</a>
+                <a href="">Informasi Publik</a>
+            </div>
+            <div class="flex flex-col gap-y-2 px-2 text-white text-xs" id="footer-social-media">
+                <p class="font-bold text-sm md:text-xl">Sosial Media</p>
+                <a href="#">Instagram</a>
+                <a href="">Twitter</a>
+                <a href="">Facebook</a>
+                <a href="">Youtube</a>
+            </div>
+            <div class="flex flex-col gap-y-2  px-2 text-white text-xs" id="footer-lainnya">
+                <p class="font-bold text-sm md:text-xl">Lainnya</p>
+                <a href="#">Bantuan & FAQ</a>
+            </div>
+            <div class="flex flex-col gap-y-2 px-2 text-white text-xs" id="footer-kontak">
+                <p class="font-bold md:text-xl">Kontak Info</p>
+                <div>
+                    <p>Dinas Lingkungan Hidup</p>
+                    <p>0541 - 760373</p>
+                </div>
+                <div>
+                    <p>Dinas Lingkungan Hidup</p>
+                    <p>0541 - 760373</p>
+                </div>
+            </div>
+        </div>
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
-        var swiper = new Swiper(".mySwiper", {
-            spaceBetween: 30,
+        var swiper = new Swiper(".mySwiper1", {
+            spaceBetween: 0,
+            loop: true,
             centeredSlides: true,
             autoplay: {
-                delay: 2500,
+                delay: 50000,
                 disableOnInteraction: false,
             },
             pagination: {
-                el: ".swiper-pagination",
+                el: ".swiper-pagination1",
                 clickable: true,
             },
-            // navigation: {
-            //     nextEl: ".swiper-button-next",
-            //     prevEl: ".swiper-button-prev",
-            // },
+            navigation: {
+                nextEl: ".swiper-button-next1",
+                prevEl: ".swiper-button-prev1",
+            },
+        });
+
+        var swiper2 = new Swiper(".mySwiper2", {
+            spaceBetween: 0,
+            loop: true,
+            centeredSlides: true,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination2",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next2",
+                prevEl: ".swiper-button-prev2",
+            },
+        });
+
+        var swiper3 = new Swiper(".mySwiper3", {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            loop: true,
+            centeredSlides: false,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination3",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next3",
+                prevEl: ".swiper-button-prev3",
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                },
+                768: {
+                    slidesPerView: 3,
+                    spaceBetween: 40,
+                },
+            },
+        });
+
+        var swiper4 = new Swiper(".mySwiper4", {
+            slidesPerView: 3,
+            spaceBetween: 20,
+            loop: true,
+            centeredSlides: false,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination4",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next4",
+                prevEl: ".swiper-button-prev4",
+            },
+            breakpoints: {
+                768: {
+                    slidesPerView: 4,
+                    spaceBetween: 40,
+                },
+                1024: {
+                    slidesPerView: 5,
+                    spaceBetween: 40,
+                },
+            },
         });
     </script>
     <script src="script.js"></script>
