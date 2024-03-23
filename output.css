@@ -10160,10 +10160,6 @@ html:has(.drawer-open.drawer-open) {
   padding: 2rem;
 }
 
-.p-4 {
-  padding: 1rem;
-}
-
 .px-1 {
   padding-left: 0.25rem;
   padding-right: 0.25rem;
@@ -10269,6 +10265,10 @@ html:has(.drawer-open.drawer-open) {
   padding-right: 0.5rem;
 }
 
+.pr-4 {
+  padding-right: 1rem;
+}
+
 .pr-5 {
   padding-right: 1.25rem;
 }
@@ -10358,6 +10358,10 @@ html:has(.drawer-open.drawer-open) {
   font-size: 0.5rem;
 }
 
+.text-\[0\.7rem\] {
+  font-size: 0.7rem;
+}
+
 .text-\[0\.8rem\] {
   font-size: 0.8rem;
 }
@@ -10368,6 +10372,10 @@ html:has(.drawer-open.drawer-open) {
 
 .text-\[15px\] {
   font-size: 15px;
+}
+
+.text-\[1rem\] {
+  font-size: 1rem;
 }
 
 .text-\[20px\] {
@@ -10412,30 +10420,6 @@ html:has(.drawer-open.drawer-open) {
 
 .text-xxs {
   font-size: 10px;
-}
-
-.text-\[0\.1rem\] {
-  font-size: 0.1rem;
-}
-
-.text-\[0\.2rem\] {
-  font-size: 0.2rem;
-}
-
-.text-\[0\.3rem\] {
-  font-size: 0.3rem;
-}
-
-.text-\[1rem\] {
-  font-size: 1rem;
-}
-
-.text-\[1\.2rem\] {
-  font-size: 1.2rem;
-}
-
-.text-\[0\.7rem\] {
-  font-size: 0.7rem;
 }
 
 .font-bold {
@@ -11331,11 +11315,6 @@ html:has(.drawer-open.drawer-open) {
     font-size: 15px;
   }
 
-  .sm\:text-xs {
-    font-size: 0.75rem;
-    line-height: 1rem;
-  }
-
   .sm\:text-sm {
     font-size: 0.875rem;
     line-height: 1.25rem;
@@ -11634,6 +11613,10 @@ html:has(.drawer-open.drawer-open) {
 
   .lg\:p-6 {
     padding: 1.5rem;
+  }
+
+  .lg\:p-16 {
+    padding: 4rem;
   }
 
   .lg\:px-2 {
