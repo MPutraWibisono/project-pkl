@@ -13,7 +13,8 @@ module.exports = {
         routebar: "#CFF1E6",
         decorationRoute: "#085D41",
         instagram: "#DD2B7B",
-        facebook:"#1877F2"
+        facebook: "#1877F2",
+        primary20: "#AFE7D5",
       },
       fontSize: {
         xxs: "10px",
@@ -25,8 +26,7 @@ module.exports = {
     },
   },
   daisyui: {
-    themes: ['light']
-
+    themes: ["light"],
   },
   plugins: [require("daisyui")],
-}
+};
