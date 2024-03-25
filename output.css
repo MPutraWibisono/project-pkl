@@ -8425,6 +8425,11 @@ html:has(.drawer-open.drawer-open) {
   margin-bottom: 0.5rem;
 }
 
+.my-3 {
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
 .my-5 {
   margin-top: 1.25rem;
   margin-bottom: 1.25rem;
@@ -8433,6 +8438,14 @@ html:has(.drawer-open.drawer-open) {
 .my-auto {
   margin-top: auto;
   margin-bottom: auto;
+}
+
+.mb-0 {
+  margin-bottom: 0px;
+}
+
+.mb-1 {
+  margin-bottom: 0.25rem;
 }
 
 .mb-10 {
@@ -8445,6 +8458,10 @@ html:has(.drawer-open.drawer-open) {
 
 .mb-2 {
   margin-bottom: 0.5rem;
+}
+
+.mb-20 {
+  margin-bottom: 5rem;
 }
 
 .mb-3 {
@@ -8461,6 +8478,10 @@ html:has(.drawer-open.drawer-open) {
 
 .mb-6 {
   margin-bottom: 1.5rem;
+}
+
+.me-1 {
+  margin-inline-end: 0.25rem;
 }
 
 .ml-auto {
@@ -10263,6 +10284,10 @@ html:has(.drawer-open.drawer-open) {
   padding-right: 1rem;
 }
 
+.pr-5 {
+  padding-right: 1.25rem;
+}
+
 .ps-6 {
   padding-inline-start: 1.5rem;
 }
@@ -11310,6 +11335,11 @@ html:has(.drawer-open.drawer-open) {
     line-height: 1.25rem;
   }
 
+  .sm\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+
   .sm\:underline {
     text-decoration-line: underline;
   }
@@ -11613,6 +11643,10 @@ html:has(.drawer-open.drawer-open) {
     padding: 1.5rem;
   }
 
+  .lg\:p-4 {
+    padding: 1rem;
+  }
+
   .lg\:px-2 {
     padding-left: 0.5rem;
     padding-right: 0.5rem;
@@ -11653,6 +11687,11 @@ html:has(.drawer-open.drawer-open) {
     padding-bottom: 1.75rem;
   }
 
+  .lg\:py-4 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
   .lg\:pb-2 {
     padding-bottom: 0.5rem;
   }
@@ -11667,6 +11706,18 @@ html:has(.drawer-open.drawer-open) {
 
   .lg\:pt-6 {
     padding-top: 1.5rem;
+  }
+
+  .lg\:pb-4 {
+    padding-bottom: 1rem;
+  }
+
+  .lg\:pb-7 {
+    padding-bottom: 1.75rem;
+  }
+
+  .lg\:pb-10 {
+    padding-bottom: 2.5rem;
   }
 
   .lg\:text-2xl {
