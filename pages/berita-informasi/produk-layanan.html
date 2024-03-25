@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../style.css" />
+    <title>
+        Selamat Datang di Website Resmi Dinas Lingkungan Hidup Samarinda
+    </title>
+    <link rel="stylesheet" href="../../output.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.0.3/css/dataTables.dataTables.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/rowreorder/1.5.0/css/rowReorder.dataTables.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/responsive/3.0.0/css/responsive.dataTables.css">
+</head>
+
+<body onload="startTime()" class="relative poppins-regular">
+    <!-- /Header Waktu -->
+    <div class="bg-baseColor">
+        <div
+            class="text-white flex px-4 min-[1000px]:px-16 items-center justify-center sm:text-medium 2xl:max-w-[96rem] mx-auto">
+            <div class="poppins-semibold flex justify-center text-[8px] md:text-xs lg:text-sm">
+                <div class="" id="time">
+                </div>
+            </div>
+            <div class="ms-auto flex items-center justify-center poppins-medium text-[10px] lg:text-xs ">
+                <a href="" class="border p-2.5 h-[67px] min-[340px]:h-full "><i class="fa fa-envelope pe-1"
+                        aria-hidden="true"></i>
+                    Webmail</a>
+                <a href="" class="border p-2.5"><i class="fa fa-phone pe-1" aria-hidden="true"></i> Hubungi kami</a>
+                <a href="" class="border p-2.5 h-[67px] min-[340px]:h-full"><i class="fa fa-sign-in pe-1"
+                        aria-hidden="true"></i> SSO
+                    Login</a>
+            </div>
+        </div>
+    </div>
+    <!-- /Navbar -->
+    <nav
+        class="sticky top-0 w-full border-b shadow-lg border-b-1 border-slate-200 bg-white/90 shadow-slate-700/5 after:absolute after:top-full after:left-0  after:block after:h-px after:w-full lg:border-slate-200 lg:backdrop-blur-sm lg:after:hidden z-10">
+        <div class="relative mx-auto max-w-full px-4 min-[1000px]:px-16 2xl:max-w-[96rem]">
+            <div aria-label="main navigation"
+                class="flex h-[3.5rem] md:h-[5rem] lg:h-[5.5rem] items-stretch justify-between font-medium text-slate-700"
+                role="navigation">
+                <!-- Brand logo -->
+                <a id="WindUI" aria-label="WindUI logo" aria-current="page"
+                    class="flex items-center gap-2 py-3  whitespace-nowrap focus:outline-none lg:flex-1" href="">
+                    <img src="../../assets/logo-dlh.png" alt="dlh" class="h-full  object-cover">
+                    <div class="">
+                        <h1 class="poppins-extrabold text-[0.8rem] md:text-base lg:text-xl">
+                            DINAS LINGKUNGAN HIDUP
+                        </h1>
+                        <h2 class="poppins-medium text-[0.5rem] md:text-xs lg:text-base">PEMERINTAH KOTA SAMARINDA</h2>
+                    </div>
+                </a>
+                <!-- Mobile trigger -->
+                <button class="mobile relative self-center order-10 block w-10 h-10 min-[1300px]:hidden"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <div class="absolute w-6 transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
+                        <span aria-hidden="true"
+                            class="absolute block h-0.5 w-9/12 -translate-y-2 transform rounded-full bg-slate-900 transition-all duration-300"></span>
+                        <span aria-hidden="true"
+                            class="absolute block h-0.5 w-6 transform rounded-full bg-slate-900 transition duration-300"></span>
+                        <span aria-hidden="true"
+                            class="absolute block h-0.5 w-1/2 origin-top-left translate-y-2 transform rounded-full bg-slate-900 transition-all duration-300"></span>
+                    </div>
+                </button>
+                <!-- Navigation links -->
+                <ul role="menubar" aria-label="Select page"
+                    class="z-10 navigation invisible opacity-0 absolute top-12 md:top-20 left-0  ml-auto h-screen w-full justify-center overflow-hidden overflow-y-auto overscroll-contain bg-white/90 pe-8 ps-6 md:ps-16 pb-12 pt-8 font-medium transition-[opacity,visibility] duration-300 min-[1300px]:visible min-[1300px]:relative min-[1300px]:top-0  min-[1300px]:flex min-[1300px]:h-full min-[1300px]:w-auto min-[1300px]:items-stretch min-[1300px]:overflow-visible min-[1300px]:bg-white/0 min-[1300px]:px-0 min-[1300px]:py-0 min-[1300px]:pt-0 min-[1300px]:opacity-100 text-xs md:text-base">
+                    <li role="none" class="flex items-stretch">
+                        <button role="menuitem" aria-haspopup="false"
+                            class="flex items-center gap-2 py-2 xl:py-4 transition-colors duration-300 poppins-medium hover:text-baseColor/70 focus:text-baseColor focus:outline-none focus-visible:outline-none lg:px-2.5"
+                            href="#"> <span class="">Beranda</span></button>
+                    </li>
+                    <!-- Profil -->
+                    <div class="relative flex ">
+                        <!--  Start Dropdown trigger -->
+                        <button
+                            class="flex items-center gap-2 py-2 xl:py-4 transition-colors duration-300 poppins-medium hover:text-baseColor/70 focus:text-baseColor focus:outline-none focus-visible:outline-none lg:px-2.5">
+                            <span>Profil</span>
+                            <span class="relative only:-mx-5">
+                                <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                            </span>
+                        </button>
+                        <!--  End Dropdown trigger -->
+                        <!-- Start Menu list -->
+                        <ul
+                            class="dropdown-content hidden absolute z-20 flex flex-col py-2 mt-1 list-none bg-white rounded shadow-md w-72 top-8 min-[1300px]:top-16 border shadow-slate-500/10">
+                            <li>
+                                <a class="flex items-start justify-start gap-2 p-2 px-5 transition-colors duration-300 text-slate-500 hover:bg-emerald-50 hover:text-emerald-500 focus:bg-emerald-50 focus:text-emerald-600 focus:outline-none focus-visible:outline-none"
+                                    href="#">
+                                    <span class="flex flex-col gap-1 overflow-hidden whitespace-nowrap">
+                                        <span class="leading-5 truncate">Tugas Pokok & Fungsi</span>
+                                    </span>
+                                </a>
+                                <a class="flex items-start justify-start gap-2 p-2 px-5 transition-colors duration-300 text-slate-500 hover:bg-emerald-50 hover:text-emerald-500 focus:bg-emerald-50 focus:text-emerald-600 focus:outline-none focus-visible:outline-none"
+                                    href="#">
+                                    <span class="flex flex-col gap-1 overflow-hidden whitespace-nowrap">
+                                        <span class="leading-5 truncate">Strktur Organisasi</span>
+                                    </span>
+                                </a>
+                                <a class="flex items-start justify-start gap-2 p-2 px-5 transition-colors duration-300 text-slate-500 hover:bg-emerald-50 hover:text-emerald-500 focus:bg-emerald-50 focus:text-emerald-600 focus:outline-none focus-visible:outline-none"
+                                    href="#">
+                                    <span class="flex flex-col gap-1 overflow-hidden whitespace-nowrap">
+                                        <span class="leading-5 truncate">Profil Pimpinan</span>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                        <!-- End Menu list -->
+                    </div>
+                    <!-- Bidang -->
+                    <div class="relative flex ">
+                        <!--  Start Dropdown trigger -->
+                        <button
+                            class="flex items-center gap-2 py-2 xl:py-4 transition-colors duration-300 poppins-medium hover:text-baseColor/70 focus:text-baseColor focus:outline-none focus-visible:outline-none lg:px-2.5">
+                            <span>Bidang</span>
+                            <span class="relative only:-mx-5">
+                                <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                            </span>
+                        </button>
+                        <!--  End Dropdown trigger -->
+                        <!-- Start Menu list -->
+                        <ul
+                            class="dropdown-content hidden absolute z-20 flex flex-col py-2 mt-1 list-none bg-white rounded shadow-md w-72 top-8 min-[1300px]:top-16 border shadow-slate-500/10">
+                            <li>
+                                <a class="flex items-start justify-start gap-2 p-2 px-5 transition-colors duration-300 text-slate-500 hover:bg-emerald-50 hover:text-emerald-500 focus:bg-emerald-50 focus:text-emerald-600 focus:outline-none focus-visible:outline-none"
+                                    href="#">
+                                    <span class="flex flex-col gap-1 overflow-hidden whitespace-nowrap">
+                                        <span class="leading-5 truncate">Sekretaris</span>
+                                    </span>
+                                </a>
+                                <a class="flex items-start justify-start gap-2 p-2 px-5 transition-colors duration-300 text-slate-500 hover:bg-emerald-50 hover:text-emerald-500 focus:bg-emerald-50 focus:text-emerald-600 focus:outline-none focus-visible:outline-none"
+                                    href="#">
+                                    <span class="flex flex-col gap-1 overflow-hidden whitespace-nowrap">
+                                        <span class="leading-5 truncate">Kepala Sub Bagian Umum</span>
+                                    </span>
+                                </a>
+                                <a class="flex items-start justify-start gap-2 p-2 px-5 transition-colors duration-300 text-slate-500 hover:bg-emerald-50 hover:text-emerald-500 focus:bg-emerald-50 focus:text-emerald-600 focus:outline-none focus-visible:outline-none"
+                                    href="#">
+                                    <span class="flex flex-col gap-1 overflow-hidden whitespace-nowrap">
+                                        <span class="leading-5 truncate">Bidang Tata Lingkungan</span>
+                                    </span>
+                                </a>
+                                <a class="flex items-start justify-start gap-2 p-2 px-5 transition-colors duration-300 text-slate-500 hover:bg-emerald-50 hover:text-emerald-500 focus:bg-emerald-50 focus:text-emerald-600 focus:outline-none focus-visible:outline-none"
+                                    href="#">
+                                    <span class="flex flex-col gap-1 overflow-hidden whitespace-nowrap">
+                                        <span class="leading-5 truncate">Bidang Pengelolaan Sampah dan Limbah B3</span>
+                                    </span>
+                                </a>
+                                <a class="flex items-start justify-start gap-2 p-2 px-5 transition-colors duration-300 text-slate-500 hover:bg-emerald-50 hover:text-emerald-500 focus:bg-emerald-50 focus:text-emerald-600 focus:outline-none focus-visible:outline-none"
+                                    href="#">
+                                    <span class="flex flex-col gap-1 overflow-hidden whitespace-nowrap">
+                                        <span class="leading-5 truncate">Bidang Pengendalian Pencemaran Dan Kerusakan
+                                            Lingkungan</span>
+                                    </span>
+                                </a>
+                                <a class="flex items-start justify-start gap-2 p-2 px-5 transition-colors duration-300 text-slate-500 hover:bg-emerald-50 hover:text-emerald-500 focus:bg-emerald-50 focus:text-emerald-600 focus:outline-none focus-visible:outline-none"
+                                    href="#">
+                                    <span class="flex flex-col gap-1 overflow-hidden whitespace-nowrap">
+                                        <span class="leading-5 truncate">Bidang Penataan Dan Peningkatan Kapasitas
+                                            Lingkungan</span>
+                                    </span>
+                                </a>
+                            </li>
+
+                        </ul>
+                        <!-- End Menu list -->
+                    </div>
+                    <!-- Berita & Informasi -->
+                    <div class="relative flex ">
+                        <!--  Start Dropdown trigger -->
+                        <button
+                            class="flex items-center gap-2 py-2 xl:py-4 transition-colors duration-300 poppins-medium hover:text-baseColor/70 focus:text-baseColor focus:outline-none focus-visible:outline-none lg:px-2.5">
+                            <span class="underscore-page text-[#008bf9]">Berita & Informasi</span>
+                            <span class="relative only:-mx-5">
+                                <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                            </span>
+                        </button>
+                        <!--  End Dropdown trigger -->
+                        <!-- Start Menu list -->
+                        <ul
+                            class="dropdown-content hidden absolute z-20 flex flex-col py-2 mt-1 list-none bg-white rounded shadow-md w-72 top-8 min-[1300px]:top-16 border shadow-slate-500/10">
+                            <li>
+                                <a class="flex items-start justify-start gap-2 p-2 px-5 transition-colors duration-300 text-slate-500 hover:bg-emerald-50 hover:text-emerald-500 focus:bg-emerald-50 focus:text-emerald-600 focus:outline-none focus-visible:outline-none"
+                                    href="#">
+                                    <span class="flex flex-col gap-1 overflow-hidden whitespace-nowrap">
+                                        <span class="leading-5 truncate">Agenda</span>
+                                    </span>
+                                </a>
+                                <a class="flex items-start justify-start gap-2 p-2 px-5 transition-colors duration-300 text-slate-500 hover:bg-emerald-50 hover:text-emerald-500 focus:bg-emerald-50 focus:text-emerald-600 focus:outline-none focus-visible:outline-none"
+                                    href="#">
+                                    <span class="flex flex-col gap-1 overflow-hidden whitespace-nowrap">
+                                        <span class="leading-5 truncate">Pengumuman</span>
+                                    </span>
+                                </a>
+                                <a class="flex items-start justify-start gap-2 p-2 px-5 transition-colors duration-300 text-slate-500 hover:bg-emerald-50 hover:text-emerald-500 focus:bg-emerald-50 focus:text-emerald-600 focus:outline-none focus-visible:outline-none"
+                                    href="#">
+                                    <span class="flex flex-col gap-1 overflow-hidden whitespace-nowrap">
+                                        <span class="leading-5 truncate">Kumpulan Berita</span>
+                                    </span>
+                                </a>
+                                <div class="relative flex items-start gap-2 p-2 px-5 transition-colors duration-300 text-slate-500 hover:bg-emerald-50 hover:text-emerald-500 focus:bg-emerald-50 focus:text-emerald-600 focus:outline-none focus-visible:outline-none"
+                                    href="#">
+                                    <button
+                                        class="flex justify-between items-center gap-1 overflow-hidden whitespace-nowrap w-full">
+                                        <span class="leading-5 truncate">Layanan</span>
+                                        <span class="relative">
+                                            <i class="fa fa-chevron-right ease-out duration-300" aria-hidden="true"></i>
+                                        </span>
+                                    </button>
+                                    <ul
+                                        class="dropdown-content hidden absolute z-20 flex py-2 mt-1 list-none bg-white rounded shadow-md w-52 top-8 min-[1300px]:-right-52 min-[1300px]:-top-3 border shadow-slate-500/10">
+                                        <li class="w-full">
+                                            <a class="flex items-start justify-start gap-2 p-2 px-5 transition-colors duration-300 text-slate-500 hover:bg-emerald-50 hover:text-emerald-500 focus:bg-emerald-50 focus:text-emerald-600 focus:outline-none focus-visible:outline-none"
+                                                href="#">
+                                                <span class="flex flex-col gap-1 overflow-hidden whitespace-nowrap">
+                                                    <span class="leading-5 truncate">SOP Layanan</span>
+                                                </span>
+                                            </a>
+                                            <a class="flex items-start justify-start gap-2 p-2 px-5 transition-colors duration-300 text-slate-500 hover:bg-emerald-50 hover:text-emerald-500 focus:bg-emerald-50 focus:text-emerald-600 focus:outline-none focus-visible:outline-none"
+                                                href="#">
+                                                <span class="flex flex-col gap-1 overflow-hidden whitespace-nowrap">
+                                                    <span class="leading-5 truncate">Produk & Layanan</span>
+                                                </span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <a class="flex items-start justify-start gap-2 p-2 px-5 transition-colors duration-300 text-slate-500 hover:bg-emerald-50 hover:text-emerald-500 focus:bg-emerald-50 focus:text-emerald-600 focus:outline-none focus-visible:outline-none"
+                                    href="#">
+                                    <span class="flex flex-col gap-1 overflow-hidden whitespace-nowrap">
+                                        <span class="leading-5 truncate">Penghargaan</span>
+                                    </span>
+                                </a>
+                            </li>
+
+                        </ul>
+                        <!-- End Menu list -->
+                    </div>
+                    <!-- Galeri -->
+                    <div class="relative flex ">
+                        <!--  Start Dropdown trigger -->
+                        <button
+                            class="flex items-center gap-2 py-2 xl:py-4 transition-colors duration-300 poppins-medium hover:text-baseColor/70 focus:text-baseColor focus:outline-none focus-visible:outline-none lg:px-2.5">
+                            <span>Galeri</span>
+                            <span class="relative only:-mx-5">
+                                <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                            </span>
+                        </button>
+                        <!--  End Dropdown trigger -->
+                        <!-- Start Menu list -->
+                        <ul
+                            class="dropdown-content hidden absolute z-20 flex flex-col py-2 mt-1 list-none bg-white rounded shadow-md w-72 top-8 min-[1300px]:top-16 border shadow-slate-500/10">
+                            <li>
+                                <a class="flex items-start justify-start gap-2 p-2 px-5 transition-colors duration-300 text-slate-500 hover:bg-emerald-50 hover:text-emerald-500 focus:bg-emerald-50 focus:text-emerald-600 focus:outline-none focus-visible:outline-none"
+                                    href="#">
+                                    <span class="flex flex-col gap-1 overflow-hidden whitespace-nowrap">
+                                        <span class="leading-5 truncate">Foto Kegiatan</span>
+                                    </span>
+                                </a>
+                                <a class="flex items-start justify-start gap-2 p-2 px-5 transition-colors duration-300 text-slate-500 hover:bg-emerald-50 hover:text-emerald-500 focus:bg-emerald-50 focus:text-emerald-600 focus:outline-none focus-visible:outline-none"
+                                    href="#">
+                                    <span class="flex flex-col gap-1 overflow-hidden whitespace-nowrap">
+                                        <span class="leading-5 truncate">Video Kegiatan</span>
+                                    </span>
+                                </a>
+                            </li>
+
+                        </ul>
+                        <!-- End Menu list -->
+                    </div>
+                    <!-- PPID Pelaksana -->
+                    <div class="relative flex ">
+                        <!--  Start Dropdown trigger -->
+                        <button
+                            class="flex items-center gap-2 py-2 xl:py-4 transition-colors duration-300 poppins-medium hover:text-baseColor/70 focus:text-baseColor focus:outline-none focus-visible:outline-none lg:px-2.5">
+                            <span>PPID Pelaksana</span>
+                            <span class="relative only:-mx-5">
+                                <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                            </span>
+                        </button>
+                        <!--  End Dropdown trigger -->
+                        <!-- Start Menu list -->
+                        <ul
+                            class="dropdown-content hidden absolute z-20 flex flex-col py-2 mt-1 list-none bg-white rounded shadow-md w-72 top-8 min-[1300px]:top-16 min-[1300px]:right-1 border shadow-slate-500/10">
+                            <li>
+                                <a class="flex items-start justify-start gap-2 p-2 px-5 transition-colors duration-300 text-slate-500 hover:bg-emerald-50 hover:text-emerald-500 focus:bg-emerald-50 focus:text-emerald-600 focus:outline-none focus-visible:outline-none"
+                                    href="#">
+                                    <span class="flex flex-col gap-1 overflow-hidden whitespace-nowrap">
+                                        <span class="leading-5 truncate">PPID Pelaksana</span>
+                                    </span>
+                                </a>
+                                <a class="flex items-start justify-start gap-2 p-2 px-5 transition-colors duration-300 text-slate-500 hover:bg-emerald-50 hover:text-emerald-500 focus:bg-emerald-50 focus:text-emerald-600 focus:outline-none focus-visible:outline-none"
+                                    href="#">
+                                    <span class="flex flex-col gap-1 overflow-hidden whitespace-nowrap">
+                                        <span class="leading-5 truncate">PPID Pembantu</span>
+                                    </span>
+                                </a>
+                                <a class="flex items-start justify-start gap-2 p-2 px-5 transition-colors duration-300 text-slate-500 hover:bg-emerald-50 hover:text-emerald-500 focus:bg-emerald-50 focus:text-emerald-600 focus:outline-none focus-visible:outline-none"
+                                    href="#">
+                                    <span class="flex flex-col gap-1 overflow-hidden whitespace-nowrap">
+                                        <span class="leading-5 truncate">Pengadaan Barang dan Jasa</span>
+                                    </span>
+                                </a>
+                            </li>
+
+                        </ul>
+                        <!-- End Menu list -->
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- start routebar -->
+    <section class="bg-routebar">
+        <div class="flex px-4 min-[1000px]:px-20 py-2 md:text-sm text-xs text-slate-600 2xl:max-w-[96rem] mx-auto">
+            <a href="/index.html">Beranda</a>
+            <p class="px-2">&gt;</p>
+            <a href="">Berita & Informasi</a>
+            <p class="px-2">&gt;</p>
+            <a href="../berita-informasi/sop-layanan.html">Produk & Layanan</a>
+        </div>
+    </section>
+    <!-- end routebar -->
+    <!-- banner -->
+    <section class="h-fit w-fit 2xl:max-w-[96rem] mx-auto">
+        <div class="object-cover">
+            <img class="w-screen" src="../../assets/layanan.png" alt="banner-produk-layanan" />
+        </div>
+    </section>
+
+    <section class="2xl:max-w-[96rem] mx-auto">
+        <!-- table -->
+        <div class="p-5 lg:p-10">
+            <h2
+                class="before:content-[''] before:border-2 before:me-2 before:border-base80 poppins-semibold text-lg py-3 lg:before:border-4 lg:before:me-2 poppins-semibold lg:text-xl lg:py-7">
+                Produk & Layanan
+            </h2>
+            <div>
+                <table id="myTable" class="display" style="width:100%">
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Nama Produk & Layanan</th>
+                            <th>Bidang</th>
+                            <th>Narahubung</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Pembersihan Sungai</td>
+                            <td>Bidang Pengelolaan Sampah</td>
+                            <td>0812345678</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Penataan Taman</td>
+                            <td>Bidang Tata Lingkungan</td>
+                            <td>0812345678</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th>No</th>
+                            <th>Nama SOP</th>
+                            <th>Bidang</th>
+                            <th>Narahubung</th>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="bg-baseColor">
+        <div class="px-2 min-[1000px]:px-20 py-12 grid sm:grid-cols-6 2xl:max-w-[96rem] mx-auto">
+            <div class="col-span-6 md:col-span-2 flex flex-row md:flex-col" style="margin-bottom: 20px">
+                <div class="object-cover py-4 pr-4">
+                    <img src="../../assets/logo-dlh.png" alt="logo-dlh" width="60" height="60" />
+                </div>
+                <div class="flex flex-col gap-y-2 md:flex-col grow">
+                    <p class="font-bold text-white text-sm md:text-2xl">
+                        DINAS LINGKUNGAN HIDUP
+                    </p>
+                    <p class="text-sm text-white">PEMERINTAH KOTA SAMARINDA</p>
+                    <div class="text-white text-sm flex flex-row items-center" id="footer-email">
+                        <i class="fa-solid fa-envelope"></i>
+                        <p class="px-2">dlhsmd22@gmail.com</p>
+                    </div>
+                    <div class="text-wrap text-white text-xxs flex flex-row items-center align-middle"
+                        id="footer-location">
+                        <i class="fa-solid fa-location-dot text-sm"></i>
+                        <p class="px-2 items-center align-middle">
+                            Jl. MT. Haryono, Kel Air Putih, Kec. Samarinda Ulu, Samarinda
+                            75124
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="flex px-2 flex-col gap-y-2 col-span-2 md:col-span-1 text-white text-xs md:text-sm"
+                id="footer-menu">
+                <p class="font-bold text-sm md:text-xl">Menu</p>
+                <a href="#">Beranda</a>
+                <a href="">Profil</a>
+                <a href="">Bidang</a>
+                <a href="">Berita & Informasi</a>
+                <a href="">Tourism</a>
+                <a href="">Informasi Publik</a>
+            </div>
+            <div class="flex flex-col gap-y-2 px-2 text-white text-xs md:text-sm" id="footer-social-media">
+                <p class="font-bold text-sm md:text-xl">Sosial Media</p>
+                <a href="#">Instagram</a>
+                <a href="">Twitter</a>
+                <a href="">Facebook</a>
+                <a href="">Youtube</a>
+            </div>
+            <div class="flex flex-col gap-y-2 px-2 text-white text-xs md:text-sm" id="footer-lainnya">
+                <p class="font-bold text-sm md:text-xl">Lainnya</p>
+                <a href="#">Bantuan & FAQ</a>
+            </div>
+            <div class="flex flex-col gap-y-2 px-2 text-white text-xs md:text-sm" id="footer-kontak">
+                <p class="font-bold md:text-xl">Kontak Info</p>
+                <div>
+                    <p>Dinas Lingkungan Hidup</p>
+                    <p>0541 - 760373</p>
+                </div>
+                <div>
+                    <p>Dinas Lingkungan Hidup</p>
+                    <p>0541 - 760373</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://cdn.datatables.net/2.0.3/js/dataTables.js"></script>
+    <script src="https://cdn.datatables.net/rowreorder/1.5.0/js/dataTables.rowReorder.js"></script>
+    <script src="https://cdn.datatables.net/rowreorder/1.5.0/js/rowReorder.dataTables.js"></script>
+    <script src="https://cdn.datatables.net/responsive/3.0.0/js/dataTables.responsive.js"></script>
+    <script src="https://cdn.datatables.net/responsive/3.0.0/js/responsive.dataTables.js"></script>
+    <script>
+        new DataTable('#myTable', {
+            responsive: true,
+            rowReorder: {
+                selector: 'td:nth-child(2)'
+            }
+        });
+    </script>
+    <script src="../../script.js"></script>
+</body>
+
+</html>

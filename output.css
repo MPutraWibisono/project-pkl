@@ -9847,6 +9847,10 @@ html:has(.drawer-open.drawer-open) {
   border-width: 1px;
 }
 
+.border-2 {
+  border-width: 2px;
+}
+
 .border-x {
   border-left-width: 1px;
   border-right-width: 1px;
@@ -9931,6 +9935,16 @@ html:has(.drawer-open.drawer-open) {
 .border-slate-200 {
   --tw-border-opacity: 1;
   border-color: rgb(226 232 240 / var(--tw-border-opacity));
+}
+
+.border-b-base60 {
+  --tw-border-opacity: 1;
+  border-bottom-color: rgb(13 154 107 / var(--tw-border-opacity));
+}
+
+.border-b-base80 {
+  --tw-border-opacity: 1;
+  border-bottom-color: rgb(8 92 64 / var(--tw-border-opacity));
 }
 
 .bg-\[rgb\(255\2c 0\2c 0\)\] {
@@ -11595,6 +11609,14 @@ html:has(.drawer-open.drawer-open) {
     border-color: rgb(226 232 240 / var(--tw-border-opacity));
   }
 
+  .lg\:p-10 {
+    padding: 2.5rem;
+  }
+
+  .lg\:p-16 {
+    padding: 4rem;
+  }
+
   .lg\:p-2 {
     padding: 0.5rem;
   }
@@ -11613,10 +11635,6 @@ html:has(.drawer-open.drawer-open) {
 
   .lg\:p-6 {
     padding: 1.5rem;
-  }
-
-  .lg\:p-16 {
-    padding: 4rem;
   }
 
   .lg\:px-2 {

@@ -110,3 +110,5 @@ const berita = [
     dilihat: "219 kali",
   },
 ];
+
+export default berita;
