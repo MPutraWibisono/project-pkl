@@ -9,6 +9,9 @@
     </title>
     <!-- <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" /> -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fullcalendar/core@6.1.11/index.global.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fullcalendar/web-component@6.1.11/index.global.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fullcalendar/daygrid@6.1.11/index.global.min.js"></script>
     <link rel="stylesheet" href="../../output.css" />
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></script> -->
     <link
@@ -133,7 +136,7 @@
                       <!--  Start Dropdown trigger -->
                       <button
                           class="flex items-center gap-2 py-2 xl:py-4 transition-colors duration-300 poppins-medium hover:text-baseColor/70 focus:text-baseColor focus:outline-none focus-visible:outline-none lg:px-2.5">
-                          <span class="underscore-page text-[#008bf9]">Bidang</span>
+                          <span>Bidang</span>
                           <span class="relative only:-mx-5">
                               <i class="fa fa-chevron-down" aria-hidden="true"></i>
                           </span>
@@ -259,36 +262,36 @@
                   </div>
                   <!-- Galeri -->
                   <div class="relative flex ">
-                    <!--  Start Dropdown trigger -->
-                    <button
-                        class="flex items-center gap-2 py-2 xl:py-4 transition-colors duration-300 poppins-medium hover:text-baseColor/70 focus:text-baseColor focus:outline-none focus-visible:outline-none lg:px-2.5">
-                        <span >Galeri</span>
-                        <span class="relative only:-mx-5">
-                            <i class="fa fa-chevron-down" aria-hidden="true"></i>
-                        </span>
-                    </button>
-                    <!--  End Dropdown trigger -->
-                    <!-- Start Menu list -->
-                    <ul
-                        class="dropdown-content hidden absolute z-20 flex flex-col py-2 mt-1 list-none bg-white rounded shadow-md w-72 top-8 min-[1300px]:top-16 border shadow-slate-500/10">
-                        <li>
-                            <a class="flex items-start justify-start gap-2 p-2 px-5 transition-colors duration-300 text-slate-500 hover:bg-emerald-50 hover:text-emerald-500 focus:bg-emerald-50 focus:text-emerald-600 focus:outline-none focus-visible:outline-none"
-                                href="../galeri/foto-kegiatan.html">
-                                <span class="flex flex-col gap-1 overflow-hidden whitespace-nowrap">
-                                    <span class="leading-5 truncate">Foto Kegiatan</span>
-                                </span>
-                            </a>
-                            <a class="flex items-start justify-start gap-2 p-2 px-5 transition-colors duration-300 text-slate-500 hover:bg-emerald-50 hover:text-emerald-500 focus:bg-emerald-50 focus:text-emerald-600 focus:outline-none focus-visible:outline-none"
-                                href="../galeri/video-kegiatan.html">
-                                <span class="flex flex-col gap-1 overflow-hidden whitespace-nowrap">
-                                    <span class="leading-5 truncate">Video Kegiatan</span>
-                                </span>
-                            </a>
-                        </li>
+                      <!--  Start Dropdown trigger -->
+                      <button
+                          class="flex items-center gap-2 py-2 xl:py-4 transition-colors duration-300 poppins-medium hover:text-baseColor/70 focus:text-baseColor focus:outline-none focus-visible:outline-none lg:px-2.5">
+                          <span class="underscore-page text-[#008bf9]">Galeri</span>
+                          <span class="relative only:-mx-5">
+                              <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                          </span>
+                      </button>
+                      <!--  End Dropdown trigger -->
+                      <!-- Start Menu list -->
+                      <ul
+                          class="dropdown-content hidden absolute z-20 flex flex-col py-2 mt-1 list-none bg-white rounded shadow-md w-72 top-8 min-[1300px]:top-16 border shadow-slate-500/10">
+                          <li>
+                              <a class="flex items-start justify-start gap-2 p-2 px-5 transition-colors duration-300 text-slate-500 hover:bg-emerald-50 hover:text-emerald-500 focus:bg-emerald-50 focus:text-emerald-600 focus:outline-none focus-visible:outline-none"
+                                  href="../galeri/foto-kegiatan.html">
+                                  <span class="flex flex-col gap-1 overflow-hidden whitespace-nowrap">
+                                      <span class="leading-5 truncate">Foto Kegiatan</span>
+                                  </span>
+                              </a>
+                              <a class="flex items-start justify-start gap-2 p-2 px-5 transition-colors duration-300 text-slate-500 hover:bg-emerald-50 hover:text-emerald-500 focus:bg-emerald-50 focus:text-emerald-600 focus:outline-none focus-visible:outline-none"
+                                  href="../galeri/video-kegiatan.html">
+                                  <span class="flex flex-col gap-1 overflow-hidden whitespace-nowrap">
+                                      <span class="leading-5 truncate">Video Kegiatan</span>
+                                  </span>
+                              </a>
+                          </li>
 
-                    </ul>
-                    <!-- End Menu list -->
-                </div>
+                      </ul>
+                      <!-- End Menu list -->
+                  </div>
                   <!-- PPID Pelaksana -->
                   <div class="relative flex ">
                       <!--  Start Dropdown trigger -->
@@ -332,220 +335,136 @@
       </div>
   </nav>
       </div>
-      <!-- routebar -->
+      <!-- start routebar -->
       <section>
         <div
           class="flex bg-routebar px-4 min-[1000px]:px-20 py-2 md:text-sm text-xs text-slate-600"
         >
           <a href="/index.html">Beranda</a>
           <p class="px-2">&gt;</p>
-          <a href="">Bidang</a>
+          <a href="">Galeri</a>
           <p class="px-2">&gt;</p>
-          <a href="/pages/bidang/sub-bagian-umum.html">Kepala Sub Bagian Umum</a>
+          <a href="/pages/galeri/video-kegiatan.html">Video Kegiatan</a>
         </div>
       </section>
+      <!-- end routebar -->
 
       <!-- banner -->
       <section class="h-fit w-fit">
-        <img
-        class="w-screen"
-          src="../../assets/banner-bidang-sub-bagian-umum.jpg"
-          alt="banner-bidang-sub-bagian-umum"
-        />
+        <div class="object-cover">
+          <img
+            class="w-screen"
+            src="../../assets/banner-galeri-video-kegiatan.jpg"
+            alt="banner-berita-agenda"
+          />
+        </div>
       </section>
 
       <!-- konten -->
-      <!-- visi misi masih dummy -->
-      <section
-        class="px-4 min-[1000px]:px-20 py-14 flex flex-col items-center text-center"
-      >
-        <div class="px-10 ">
-          <img
-            src="../../assets/foto-bidang-kepala-sub-bagian.jpg"
-            alt="foto-bidang-sekretaris"
-            class="object-cover"
-            width="350
-            he"
-          />
-        </div>
-        <p class="mt-2 mb-10 text-slate-400 font-semibold text-2xl">
-          Zulkifli T. S.Sos
-        </p>
+      <section class="px-4 min-[1000px]:px-20 py-14 flex flex-col gap-y-10" >
 
-        <!-- tugas bidang -->
-        <p class="text-sm md:text-base text-justify">
-          Kepala Sub Bagian Umum memiliki tanggung jawab utama dalam mengelola kegiatan administrasi umum dan keuangan dinas lingkungan hidup. Mereka bertanggung jawab atas pengelolaan anggaran, pembukuan, serta koordinasi administratif dengan unit-unit lain di dalam dinas. Kepala Sub Bagian Umum memastikan bahwa keuangan dan administrasi dinas terorganisir dengan baik dan efisien.
-        </p>
+        <!-- start card berita -->
+        <div class=" card-berita grid grid-cols-1 gap-5 md:grid-cols-3">
+            <div class="w-full">
+                <iframe class="rounded-xl w-full" width="400" height="315" src="https://www.youtube.com/embed/uVzyWsMAsP8?si=0n5S6IGGEo0aS4xL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div class="w-full">
+                <iframe class="rounded-xl w-full" width="400" height="315" src="https://www.youtube.com/embed/-217up_ILDk?si=QODqgYYTG9IMnemY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div class="w-full">
+                <iframe  class="rounded-xl w-full" width="400"  height="315" src="https://www.youtube.com/embed/9s4xGlcMLAg?si=R1qjKmqawR4oWdnq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </div>
+        <!-- end card berita -->
 
-        <!-- start accordion uraian tugas, fungsi, dan program -->
-        <div class="bg-accordion w-full rounded mt-5">
-          <div class="relative overflow-hidden">
-            <input
-              type="checkbox"
-              class="peer absolute top-0 inset-x-0 w-full h-12 opacity-0 z-10 cursor-pointer"
-            />
-            <div class="h-12 w-full pl-5 flex items-center">
-              <h1 class="font-bold text-white text-xl">Uraian Tugas</h1>
-            </div>
-            <div
-              class="absolute top-3 right-3 transition-transform duration-500 rotate-0 peer-checked:-rotate-180"
-            >
-              <i class="fa-solid fa-chevron-down text-white"></i>
-            </div>
-            <div
-              class="overflow-hidden bg-white transition-all duration-500 max-h-0 peer-checked:max-h-40"
-            >
-              <div class="px-5 md:px-10 py-5 text-justify border-t">
-                <p class="text-sm md:text-base">
-                  Mengelola kegiatan administrasi umum dan keuangan dinas, termasuk mengelola anggaran dan pembukuan serta mengkoordinasikan kegiatan administratif dengan bagian-bagian lain di dalam dinas
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="bg-accordion w-full rounded mt-5">
-          <div class="relative overflow-hidden">
-            <input
-              type="checkbox"
-              class="peer absolute top-0 inset-x-0 w-full h-12 opacity-0 z-10 cursor-pointer"
-            />
-            <div class="h-12 w-full pl-5 flex items-center">
-              <h1 class="font-bold text-white text-xl">Fungsi</h1>
-            </div>
-            <div
-              class="absolute top-3 right-3 transition-transform duration-500 rotate-0 peer-checked:-rotate-180"
-            >
-              <i class="fa-solid fa-chevron-down text-white"></i>
-            </div>
-            <div
-              class="overflow-hidden bg-white transition-all duration-500 max-h-0 peer-checked:max-h-40"
-            >
-              <div class="px-5 md:px-14 py-5 text-justify border-t">
-                <ol class="list-disc text-sm md:text-base">
-                  <li>Menjaga keuangan dan administrasi agar tetap teratur dan efisien</li>
-                  <li>Memonitor pengeluaran dan pendapatan dinas</li>
-                  <li>Menyediakan laporan keuangan dan administrasi yang akurat</li>
-                </ol>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="bg-accordion w-full rounded my-5">
-          <div class="relative overflow-hidden">
-            <input
-              type="checkbox"
-              class="peer absolute top-0 inset-x-0 w-full h-12 opacity-0 z-10 cursor-pointer"
-            />
-            <div class="h-12 w-full pl-5 flex items-center">
-              <h1 class="font-bold text-white text-xl">Program & Kegiatan</h1>
-            </div>
-            <div
-              class="absolute top-3 right-3 transition-transform duration-500 rotate-0 peer-checked:-rotate-180"
-            >
-              <i class="fa-solid fa-chevron-down text-white"></i>
-            </div>
-            <div
-              class="overflow-hidden bg-white transition-all duration-500 max-h-0 peer-checked:max-h-48"
-            >
-              <div class="px-5 md:px-14 py-5 text-justify border-t">
-               <ol class="list-disc text-sm md:text-base ">
-                <li>Penyuluhan manajemen keuangan kepada seluruh staf dinas</li>
-                <li>Pelatihan pembukuan dan pelaporan keuangan secara berkala</li>
-                <li>Pengembangan sistem pemantauan pengeluaran dan pendapatan dinas secara real-time</li>
-                <li>Evaluasi efisiensi anggaran dan identifikasi potensi penghematan</li>
-                <li>Audit internal untuk memastikan kepatuhan terhadap regulasi keuangan</li>
-                <li>Penyusunan panduan pengadaan barang dan jasa yang lebih efektif</li>
-               </ol>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- end accordion uraian tugas, fungsi, dan program -->
+    
       </section>
+      <!-- end konten -->
 
       <!-- footer -->
-        <!-- footer -->
-        <footer class="bg-baseColor">
-          <div class="px-2 min-[1000px]:px-20 py-12 grid sm:grid-cols-6">
-            <div
-              class="col-span-6 md:col-span-2 flex flex-row md:flex-col"
-              style="margin-bottom: 20px"
-            >
-              <div class="object-cover">
-                <img
-                  src="/../../assets/logo-dlh.png"
-                  alt="logo-dlh"
-                  width="60"
-                  height="60"
-                />
+      <footer class="bg-baseColor">
+        <div class="px-2 min-[1000px]:px-20 py-12 grid sm:grid-cols-6">
+          <div
+            class="col-span-6 md:col-span-2 flex flex-row md:flex-col"
+            style="margin-bottom: 20px"
+          >
+            <div class="object-cover">
+              <img
+                src="/../../assets/logo-dlh.png"
+                alt="logo-dlh"
+                width="60"
+                height="60"
+              />
+            </div>
+            <div class="flex flex-col gap-y-2 md:flex-col grow">
+              <p class="font-bold text-white text-sm md:text-2xl">
+                DINAS LINGKUNGAN HIDUP
+              </p>
+              <p class="text-sm text-white">PEMERINTAH KOTA SAMARINDA</p>
+              <div
+                class="text-white text-sm flex flex-row items-center"
+                id="footer-email"
+              >
+                <i class="fa-solid fa-envelope"></i>
+                <p class="px-2">dlhsmd22@gmail.com</p>
               </div>
-              <div class="flex flex-col gap-y-2 md:flex-col grow">
-                <p class="font-bold text-white text-sm md:text-2xl">
-                  DINAS LINGKUNGAN HIDUP
+              <div
+                class="text-wrap text-white text-xxs flex flex-row items-center align-middle"
+                id="footer-location"
+              >
+                <i class="fa-solid fa-location-dot text-sm"></i>
+                <p class="px-2 items-center align-middle">
+                  Jl. MT. Haryono, Kel Air Putih, Kec. Samarinda Ulu, Samarinda
+                  75124
                 </p>
-                <p class="text-sm text-white">PEMERINTAH KOTA SAMARINDA</p>
-                <div
-                  class="text-white text-sm flex flex-row items-center"
-                  id="footer-email"
-                >
-                  <i class="fa-solid fa-envelope"></i>
-                  <p class="px-2">dlhsmd@gmail.com</p>
-                </div>
-                <div class="text-wrap text-white text-xxs flex flex-row items-center align-middle" id="footer-location">
-                  <i class="fa-solid fa-location-dot text-sm"></i>
-                  <p class="px-2 items-center align-middle">
-                    Jl. MT. Haryono, Kel Air Putih, Kec. Samarinda Ulu, Samarinda
-                    75124
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div
-              class="flex px-2 flex-col gap-y-2 col-span-2 md:col-span-1 text-white text-xs md:text-sm"
-              id="footer-menu"
-            >
-              <p class="font-bold text-sm md:text-xl">Menu</p>
-              <a href="#">Beranda</a>
-              <a href="">Profil</a>
-              <a href="">Bidang</a>
-              <a href="">Berita & Informasi</a>
-              <a href="">Tourism</a>
-              <a href="">Informasi Publik</a>
-            </div>
-            <div
-              class="flex flex-col gap-y-2 px-2 text-white text-xs md:text-sm"
-              id="footer-social-media"
-            >
-              <p class="font-bold text-sm md:text-xl">Sosial Media</p>
-              <a href="#">Instagram</a>
-              <a href="">Twitter</a>
-              <a href="">Facebook</a>
-              <a href="">Youtube</a>
-            </div>
-            <div
-              class="flex flex-col gap-y-2 px-2 text-white text-xs md:text-sm"
-              id="footer-lainnya"
-            >
-              <p class="font-bold text-sm md:text-xl">Lainnya</p>
-              <a href="#">Bantuan & FAQ</a>
-            </div>
-            <div
-              class="flex flex-col gap-y-2 px-2 text-white text-xs md:text-sm"
-              id="footer-kontak"
-            >
-              <p class="font-bold md:text-xl">Kontak Info</p>
-              <div>
-                <p>Dinas Lingkungan Hidup</p>
-                <p>0541 - 760373</p>
-              </div>
-              <div>
-                <p>Dinas Lingkungan Hidup</p>
-                <p>0541 - 760373</p>
               </div>
             </div>
           </div>
-        </footer>
+          <div
+            class="flex px-2 flex-col gap-y-2 col-span-2 md:col-span-1 text-white text-xs md:text-sm"
+            id="footer-menu"
+          >
+            <p class="font-bold text-sm md:text-xl">Menu</p>
+            <a href="#">Beranda</a>
+            <a href="">Profil</a>
+            <a href="">Bidang</a>
+            <a href="">Berita & Informasi</a>
+            <a href="">Tourism</a>
+            <a href="">Informasi Publik</a>
+          </div>
+          <div
+            class="flex flex-col gap-y-2 px-2 text-white text-xs md:text-sm"
+            id="footer-social-media"
+          >
+            <p class="font-bold text-sm md:text-xl">Sosial Media</p>
+            <a href="#">Instagram</a>
+            <a href="">Twitter</a>
+            <a href="">Facebook</a>
+            <a href="">Youtube</a>
+          </div>
+          <div
+            class="flex flex-col gap-y-2 px-2 text-white text-xs md:text-sm"
+            id="footer-lainnya"
+          >
+            <p class="font-bold text-sm md:text-xl">Lainnya</p>
+            <a href="#">Bantuan & FAQ</a>
+          </div>
+          <div
+            class="flex flex-col gap-y-2 px-2 text-white text-xs md:text-sm"
+            id="footer-kontak"
+          >
+            <p class="font-bold md:text-xl">Kontak Info</p>
+            <div>
+              <p>Dinas Lingkungan Hidup</p>
+              <p>0541 - 760373</p>
+            </div>
+            <div>
+              <p>Dinas Lingkungan Hidup</p>
+              <p>0541 - 760373</p>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
     <script src="../../script.js"></script>
   </body>
