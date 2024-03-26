@@ -8425,6 +8425,11 @@ html:has(.drawer-open.drawer-open) {
   margin-bottom: 0.5rem;
 }
 
+.my-3 {
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
 .my-5 {
   margin-top: 1.25rem;
   margin-bottom: 1.25rem;
@@ -8433,6 +8438,14 @@ html:has(.drawer-open.drawer-open) {
 .my-auto {
   margin-top: auto;
   margin-bottom: auto;
+}
+
+.mb-0 {
+  margin-bottom: 0px;
+}
+
+.mb-1 {
+  margin-bottom: 0.25rem;
 }
 
 .mb-10 {
@@ -8445,6 +8458,10 @@ html:has(.drawer-open.drawer-open) {
 
 .mb-2 {
   margin-bottom: 0.5rem;
+}
+
+.mb-20 {
+  margin-bottom: 5rem;
 }
 
 .mb-3 {
@@ -8461,6 +8478,10 @@ html:has(.drawer-open.drawer-open) {
 
 .mb-6 {
   margin-bottom: 1.5rem;
+}
+
+.me-1 {
+  margin-inline-end: 0.25rem;
 }
 
 .ml-auto {
@@ -8662,6 +8683,10 @@ html:has(.drawer-open.drawer-open) {
 
 .max-h-52 {
   max-height: 13rem;
+}
+
+.max-h-\[420px\] {
+  max-height: 420px;
 }
 
 .w-1\/2 {
@@ -9401,6 +9426,10 @@ html:has(.drawer-open.drawer-open) {
 
 .gap-y-6 {
   row-gap: 1.5rem;
+}
+
+.gap-y-3 {
+  row-gap: 0.75rem;
 }
 
 .space-x-2 > :not([hidden]) ~ :not([hidden]) {
@@ -10259,6 +10288,10 @@ html:has(.drawer-open.drawer-open) {
   padding-right: 1rem;
 }
 
+.pr-5 {
+  padding-right: 1.25rem;
+}
+
 .ps-6 {
   padding-inline-start: 1.5rem;
 }
@@ -10406,6 +10439,14 @@ html:has(.drawer-open.drawer-open) {
 
 .text-xxs {
   font-size: 10px;
+}
+
+.text-\[17px\] {
+  font-size: 17px;
+}
+
+.text-\[18px\] {
+  font-size: 18px;
 }
 
 .font-bold {
@@ -11711,6 +11752,14 @@ html:has(.drawer-open.drawer-open) {
   .lg\:text-xs {
     font-size: 0.75rem;
     line-height: 1rem;
+  }
+
+  .lg\:text-\[22px\] {
+    font-size: 22px;
+  }
+
+  .lg\:text-\[14px\] {
+    font-size: 14px;
   }
 
   .lg\:backdrop-blur-sm {
