@@ -123,6 +123,11 @@ function checkTime(i) {
 // function buat page berita-----------------------------------------
 const categoryTitle = document.querySelectorAll(".category-title");
 const allCategoryBerita = document.querySelectorAll(".all");
+// console.log(allCategoryBerita)
+// allCategoryBerita.classList.add("text-white")
+
+categoryTitle[0].classList.add("text-white");
+categoryTitle[0].classList.add("bg-accordion");
 
 for (let i = 0; i < categoryTitle.length; i++) {
   categoryTitle[i].addEventListener(
@@ -135,13 +140,14 @@ function filterBerita(item) {
   kategoriFilter(item);
 }
 
+
 function kategoriFilter(activeItem) {
   for (let i = 0; i < categoryTitle.length; i++) {
     categoryTitle[i].classList.remove("bg-accordion");
     categoryTitle[i].classList.remove("text-white");
   }
-  activeItem.classList.add("bg-accordion");
   activeItem.classList.add("text-white");
+  activeItem.classList.add("bg-accordion");
 }
 
 //paginate berita----------------------------------------------------

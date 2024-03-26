@@ -8425,11 +8425,6 @@ html:has(.drawer-open.drawer-open) {
   margin-bottom: 0.5rem;
 }
 
-.my-3 {
-  margin-top: 0.75rem;
-  margin-bottom: 0.75rem;
-}
-
 .my-5 {
   margin-top: 1.25rem;
   margin-bottom: 1.25rem;
@@ -8438,14 +8433,6 @@ html:has(.drawer-open.drawer-open) {
 .my-auto {
   margin-top: auto;
   margin-bottom: auto;
-}
-
-.mb-0 {
-  margin-bottom: 0px;
-}
-
-.mb-1 {
-  margin-bottom: 0.25rem;
 }
 
 .mb-10 {
@@ -8458,10 +8445,6 @@ html:has(.drawer-open.drawer-open) {
 
 .mb-2 {
   margin-bottom: 0.5rem;
-}
-
-.mb-20 {
-  margin-bottom: 5rem;
 }
 
 .mb-3 {
@@ -8478,10 +8461,6 @@ html:has(.drawer-open.drawer-open) {
 
 .mb-6 {
   margin-bottom: 1.5rem;
-}
-
-.me-1 {
-  margin-inline-end: 0.25rem;
 }
 
 .ml-auto {
@@ -9862,6 +9841,10 @@ html:has(.drawer-open.drawer-open) {
   border-bottom-width: 2px;
 }
 
+.border-b-4 {
+  border-bottom-width: 4px;
+}
+
 .border-e {
   border-inline-end-width: 1px;
 }
@@ -10274,10 +10257,6 @@ html:has(.drawer-open.drawer-open) {
 
 .pr-4 {
   padding-right: 1rem;
-}
-
-.pr-5 {
-  padding-right: 1.25rem;
 }
 
 .ps-6 {
@@ -11369,6 +11348,10 @@ html:has(.drawer-open.drawer-open) {
 
   .md\:h-\[5rem\] {
     height: 5rem;
+  }
+
+  .md\:w-1\/12 {
+    width: 8.333333%;
   }
 
   .md\:w-1\/3 {
